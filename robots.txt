@@ -3,4 +3,4 @@ User-agent: *
 Allow: /
 
 # Sitemap declaration
-Sitemap: https://calculee.com/sitemap.xml
+Sitemap: https://calculee.io/sitemap.xml
