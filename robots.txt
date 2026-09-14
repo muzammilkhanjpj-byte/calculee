@@ -1,0 +1,6 @@
+# robots.txt for Tocris Dilution Calculator (Calculee)
+User-agent: *
+Allow: /
+
+# Sitemap declaration
+Sitemap: https://calculee.com/sitemap.xml

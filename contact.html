@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Contact Us & Feedback — Tocris Dilution Calculator</title>
+  <meta name="description" content="Contact the Tocris Dilution Calculator team. Submit formula feature requests, report bugs, suggest unit conversions, or send general scientific feedback.">
+  <link rel="canonical" href="https://calculee.com/contact.html">
+  <meta property="og:title" content="Contact Us & Feedback — Tocris Dilution Calculator">
+  <meta property="og:description" content="Contact the Tocris Dilution Calculator team. Submit formula feature requests, report bugs, suggest unit conversions, or send general scientific feedback.">
+  <meta property="og:url" content="https://calculee.com/contact.html">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Calculee — Tocris Dilution Calculator">
+  <meta property="og:image" content="https://calculee.com/logo.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Contact Us & Feedback — Tocris Dilution Calculator">
+  <meta name="twitter:description" content="Contact the Tocris Dilution Calculator team for bug reports and scientific feedback.">
+  <meta name="twitter:image" content="https://calculee.com/logo.png">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="192x192" href="logo.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="logo.png?v=2">
+  <link rel="apple-touch-icon" href="logo.png?v=2">
+  <style>
+    :root {
+      --color-primary-ink: #1d1d1f;
+      --color-deep-gray: #424245;
+      --color-mid-gray: #6e6e73;
+      --color-canvas: #f5f5f7;
+      --color-paper: #ffffff;
+      --color-electric-blue: #0071e3;
+      --color-electric-blue-hover: #0077ed;
+      --color-hairline: #d2d2d7;
+      --color-cool-wash: #e8e8ed;
+      --font-stack: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-stack);
+      background-color: var(--color-canvas);
+      color: var(--color-primary-ink);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--color-hairline);
+      padding: 14px 24px;
+      z-index: 1000;
+    }
+
+    .top-nav-container {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .back-link {
+      color: var(--color-electric-blue);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: opacity 0.15s ease;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .nav-brand {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+    }
+
+    /* Main Container */
+    .main-wrapper {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+
+    .content-card {
+      background: var(--color-paper);
+      border-radius: 24px;
+      padding: 48px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04);
+      margin-bottom: 32px;
+    }
+
+    h1 {
+      font-size: clamp(32px, 4vw, 42px);
+      font-weight: 700;
+      letter-spacing: -0.8px;
+      line-height: 1.15;
+      color: var(--color-primary-ink);
+      margin-bottom: 16px;
+    }
+
+    .lead-text {
+      font-size: 18px;
+      color: var(--color-deep-gray);
+      line-height: 1.55;
+      margin-bottom: 32px;
+      border-bottom: 1px solid var(--color-cool-wash);
+      padding-bottom: 24px;
+    }
+
+    h2 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+      color: var(--color-primary-ink);
+      margin: 28px 0 12px;
+    }
+
+    p {
+      font-size: 15px;
+      color: var(--color-deep-gray);
+      margin-bottom: 16px;
+    }
+
+    /* Contact Details Grid */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+      margin-bottom: 32px;
+    }
+
+    .contact-box {
+      background-color: var(--color-canvas);
+      padding: 20px 24px;
+      border-radius: 16px;
+    }
+
+    .contact-box strong {
+      display: block;
+      color: var(--color-primary-ink);
+      font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    .contact-box span, .contact-box a {
+      font-size: 14px;
+      color: var(--color-electric-blue);
+      text-decoration: none;
+      word-break: break-all;
+    }
+
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+
+    /* Feedback Form */
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      margin-top: 20px;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .form-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+    }
+
+    .form-input, .form-select, .form-textarea {
+      font-family: var(--font-stack);
+      font-size: 15px;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--color-hairline);
+      background: var(--color-paper);
+      color: var(--color-primary-ink);
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+      outline: none;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--color-electric-blue);
+      box-shadow: 0 0 0 3px rgba(0, 113, 227, 0.15);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .btn-submit {
+      align-self: flex-start;
+      background-color: var(--color-electric-blue);
+      color: #ffffff;
+      font-family: var(--font-stack);
+      font-size: 15px;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 980px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .btn-submit:hover {
+      background-color: var(--color-electric-blue-hover);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 14px rgba(0, 113, 227, 0.3);
+    }
+
+    .btn-submit:active {
+      transform: scale(0.98);
+    }
+
+    /* Footer Navigation */
+    footer a {
+      color: var(--color-electric-blue);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Mobile & Multi-Device Responsiveness */
+    img, svg {
+      max-width: 100%;
+      height: auto;
+    }
+
+    html, body {
+      width: 100%;
+      overflow-x: hidden;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .main-wrapper {
+        margin: 24px auto;
+        padding: 0 16px;
+      }
+      .content-card {
+        padding: 32px 20px;
+        border-radius: 20px;
+      }
+      .top-nav {
+        padding: 12px 16px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      .lead-text {
+        font-size: 16px;
+        margin-bottom: 24px;
+        padding-bottom: 18px;
+      }
+      .btn-submit {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .main-wrapper {
+        margin: 16px auto;
+        padding: 0 12px;
+      }
+      .content-card {
+        padding: 24px 16px;
+        border-radius: 16px;
+      }
+      .top-nav {
+        padding: 10px 12px;
+      }
+      .back-link {
+        font-size: 13px;
+      }
+      .nav-brand {
+        font-size: 15px;
+      }
+      h1 {
+        font-size: 24px;
+      }
+      .form-control {
+        font-size: 14px;
+        padding: 10px 12px;
+      }
+      .form-label {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <nav class="top-nav" aria-label="Top Navigation">
+    <div class="top-nav-container">
+      <a href="index.html" class="back-link">← Back to Calculator</a>
+      <a href="index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none; color: inherit;">
+        <img src="logo.png" alt="Calculee Logo" style="width: 28px; height: 34px; object-fit: contain;">
+        <span class="nav-brand" style="font-size: 17px; font-weight: 700; color: var(--color-primary-ink); letter-spacing: -0.3px;">Calculee</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-wrapper">
+    <article class="content-card">
+      <h1>Contact Us &amp; Feedback</h1>
+      <p class="lead-text">
+        Have a question about a calculation, a recommendation for a new unit conversion, or want to report a technical anomaly? We welcome all researcher feedback.
+      </p>
+
+      <div class="contact-grid">
+        <div class="contact-box">
+          <strong>Direct Email Support:</strong>
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&to=muzammilkhanjpj@gmail.com&su=Inquiry%20-%20Tocris%20Dilution%20Calculator" target="_blank" rel="noopener noreferrer" title="Open in Gmail">muzammilkhanjpj@gmail.com</a>
+        </div>
+        <div class="contact-box">
+          <strong>Expected Response Window:</strong>
+          <span style="color: var(--color-deep-gray);">24 to 48 business hours</span>
+        </div>
+        <div class="contact-box">
+          <strong>Bug Reports &amp; Formulations:</strong>
+          <span style="color: var(--color-deep-gray);">Cross-validated by scientific team</span>
+        </div>
+      </div>
+
+      <h2>Send Us a Message</h2>
+      <p>
+        Please fill out the form below with as much detail as possible (e.g., compound name, molecular weight, specific inputs used, or expected output). Submitting will open your Gmail composer directly with your message pre-filled.
+      </p>
+
+      <form class="contact-form" id="contact-form-el">
+        <div class="form-group">
+          <label class="form-label" for="user-name">Your Name / Lab Affiliation</label>
+          <input type="text" id="user-name" name="name" class="form-input" placeholder="e.g. Dr. Jane Smith, Pharmacology Dept." required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="user-email">Email Address</label>
+          <input type="email" id="user-email" name="email" class="form-input" placeholder="e.g. jsmith@university.edu" required>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="inquiry-type">Inquiry Type</label>
+          <select id="inquiry-type" name="inquiry_type" class="form-select">
+            <option value="Feature Request / New Unit Suggestion">Feature Request / New Unit Suggestion</option>
+            <option value="Formula Calculation Anomaly / Bug Report">Formula Calculation Anomaly / Bug Report</option>
+            <option value="General User Experience Feedback">General User Experience Feedback</option>
+            <option value="Research Partnership / Open-Access Inquiries">Research Partnership / Open-Access Inquiries</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="user-message">Message Details</label>
+          <textarea id="user-message" name="message" class="form-textarea" placeholder="Describe the calculation scenario, requested unit, or question..." required></textarea>
+        </div>
+
+        <div style="margin-top: 8px;">
+          <button type="submit" class="btn-submit" id="btn-submit-gmail" style="display: inline-flex; align-items: center; gap: 8px;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+            </svg>
+            <span>Send via Gmail (Auto-Fills Details) &rarr;</span>
+          </button>
+        </div>
+
+        <div id="redirect-status" style="display: none; margin-top: 14px; padding: 12px 16px; background-color: #ecfdf5; border: 1px solid #10b981; color: #065f46; border-radius: 12px; font-size: 14px;">
+          ✓ <strong>Opening Gmail:</strong> All message details and recipient (<strong>muzammilkhanjpj@gmail.com</strong>) have been prefilled.
+        </div>
+      </form>
+    </article>
+  </main>
+
+  <!-- Uniform Footer -->
+  <footer style="margin-top: 60px; padding: 40px 24px 30px; background-color: var(--color-canvas); border-top: 1px solid var(--color-hairline);">
+    <div style="max-width: 900px; margin: 0 auto;">
+      <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+        <img src="logo.png" alt="Calculee Logo" style="width: 42px; height: 50px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));">
+        <div>
+          <div style="font-family: var(--font-stack); font-size: 20px; font-weight: 700; color: var(--color-primary-ink); letter-spacing: -0.4px; line-height: 1.1;">Calculee</div>
+          <div style="font-size: 13px; color: var(--color-mid-gray); font-weight: 400; margin-top: 2px;">Precision Laboratory Solution &amp; Dilution Calculator</div>
+        </div>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px; padding-top: 20px; border-top: 1px solid var(--color-hairline); font-size: 14px; font-weight: 500;">
+        <div style="display: flex; gap: 18px; flex-wrap: wrap;">
+          <a href="index.html" style="color: var(--color-electric-blue); text-decoration: none;">Calculator</a>
+          <a href="about.html" style="color: var(--color-electric-blue); text-decoration: none;">About Us</a>
+          <a href="disclaimer.html" style="color: var(--color-electric-blue); text-decoration: none;">Disclaimer</a>
+          <a href="terms.html" style="color: var(--color-electric-blue); text-decoration: none;">Terms of Service</a>
+          <a href="privacy.html" style="color: var(--color-electric-blue); text-decoration: none;">Privacy Policy</a>
+          <a href="contact.html" style="color: var(--color-electric-blue); text-decoration: none;">Contact Us</a>
+        </div>
+        <span style="color: var(--color-mid-gray); font-size: 12px; font-weight: 400;">&copy; 2026 Calculee (Tocris Dilution Calculator). All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function compileMessageData() {
+      var name = document.getElementById('user-name').value.trim() || 'Laboratory Researcher';
+      var email = document.getElementById('user-email').value.trim() || 'Not Provided';
+      var type = document.getElementById('inquiry-type').value;
+      var details = document.getElementById('user-message').value.trim() || '';
+
+      var subject = '[Tocris Dilution Calculator] ' + type + ' - ' + name;
+      var body = 'Sender Name / Lab: ' + name + '\n' +
+                 'Sender Email: ' + email + '\n' +
+                 'Inquiry Category: ' + type + '\n\n' +
+                 '--- Message Details ---\n' +
+                 details + '\n\n' +
+                 'Sent via Tocris Dilution Calculator Contact Form';
+
+      return {
+        subject: encodeURIComponent(subject),
+        body: encodeURIComponent(body),
+        rawSubject: subject,
+        rawBody: body
+      };
+    }
+
+    // Gmail Compose Handler
+    document.getElementById('contact-form-el').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var data = compileMessageData();
+      var statusEl = document.getElementById('redirect-status');
+      if (statusEl) {
+        statusEl.style.display = 'block';
+      }
+
+      var gmailUrl = 'https://mail.google.com/mail/?view=cm&fs=1&to=muzammilkhanjpj@gmail.com&su=' + data.subject + '&body=' + data.body;
+      
+      var newWin = window.open(gmailUrl, '_blank');
+      if (!newWin || newWin.closed || typeof newWin.closed === 'undefined') {
+        // Popup blocked fallback: redirect directly
+        window.location.href = gmailUrl;
+      }
+    });
+  </script>
+
+</body>
+</html>
