@@ -47,14 +47,12 @@
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
-</urlset>                                                                                                                       
-
-  <!-- standard deviation calculator -->
+  <!-- Standard Deviation Calculator -->
   <url>
     <loc>https://calculee.io/standard-deviation-calculator.html</loc>
-    <lastmod>2026-09-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
 </urlset>
 
