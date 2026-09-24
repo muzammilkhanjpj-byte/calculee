@@ -54,5 +54,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Poisson-Verteilung Rechner (Poisson Distribution Calculator) -->
+  <url>
+    <loc>https://calculee.io/de/poisson-verteilung-rechner.html</loc>
+    <lastmod>2026-09-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
 
