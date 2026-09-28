@@ -2,5 +2,8 @@
 User-agent: *
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
 # Sitemap declaration
 Sitemap: https://calculee.io/sitemap.xml
