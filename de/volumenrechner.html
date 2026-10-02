@@ -1,0 +1,2862 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  
+  <!-- SEO & Technische Meta-Tags -->
+  <title>Volumenrechner für Behälter in Litern (mit Summe) | Calculee</title>
+  <meta name="description" content="Volumen von Behältern präzise in Litern (L) berechnen: Quader, Zylinder, Kugel &amp; Kegel. Mit praktischer Summenfunktion, Füllgewicht (kg) und Formelweg.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://calculee.io/de/volumenrechner.html">
+  
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calculee.io/de/volumenrechner.html">
+  <meta property="og:title" content="Volumenrechner für Behälter in Litern (mit Summe) | Calculee">
+  <meta property="og:description" content="Volumen von Behältern präzise in Litern (L) berechnen: Quader, Zylinder, Kugel &amp; Kegel. Mit praktischer Summenfunktion, Füllgewicht (kg) und Formelweg.">
+  <meta property="og:site_name" content="Calculee">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Volumenrechner für Behälter in Litern (mit Summe) | Calculee">
+  <meta name="twitter:description" content="Volumen von Behältern präzise in Litern (L) berechnen: Quader, Zylinder, Kugel &amp; Kegel. Mit praktischer Summenfunktion, Füllgewicht (kg) und Formelweg.">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebApplication",
+        "@id": "https://calculee.io/de/volumenrechner.html#webapp",
+        "name": "Volumenrechner für Behälter in Litern",
+        "url": "https://calculee.io/de/volumenrechner.html",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Erfordert JavaScript und HTML5",
+        "description": "Volumen von Behältern präzise in Litern (L) berechnen: Quader, Zylinder, Kugel & Kegel. Mit praktischer Summenfunktion, Füllgewicht (kg) und Formelweg.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "EUR"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://calculee.io/de/volumenrechner.html#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Startseite",
+            "item": "https://calculee.io/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 2,
+            "name": "Geometrie-Rechner",
+            "item": "https://calculee.io/de/"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
+            "name": "Volumenrechner",
+            "item": "https://calculee.io/de/volumenrechner.html"
+          }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://calculee.io/de/volumenrechner.html#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Wie berechne ich das Volumen aus den Maßen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Bestimmen Sie zuerst die Körperform. Beim Quader gilt Länge × Breite × Höhe, beim Zylinder π × Radius² × Höhe. Maße in Zentimetern ergeben cm³, Maße in Fuß ergeben ft³."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kann dieser Rechner einen Würfel berechnen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Ja. Wählen Sie den Quader und geben Sie dieselbe Kantenlänge für Länge, Breite und Höhe ein. Ein Würfel mit 10 cm Kantenlänge hat 10³ = 1.000 cm³, genau 1 Liter."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie gebe ich Fuß und Zoll ein?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Wählen Sie ft und verwenden Sie Dezimalfuß: 5 Fuß 6 Zoll sind 5 + 6/12 = 5,5 ft. Alternativ wählen Sie in und geben 66 ein. Alle Felder nutzen dieselbe Einheit; 5,6 ft ist nicht gleich 5 Fuß 6 Zoll."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Kann ich Quadratmeter oder Quadratfuß in Volumen umrechnen?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Dazu benötigen Sie zusätzlich Höhe, Tiefe oder Dicke. Bei einer gleichmäßigen Schicht gilt Volumen = Fläche × Dicke. Eine Fläche von 12 ft² mit 0,5 ft Dicke ergibt 6 ft³. Die Fläche allein reicht nicht aus."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie messe ich das Volumen eines unregelmäßigen Körpers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Zerlegen Sie ihn in messbare Teilkörper, addieren Sie deren Volumen und ziehen Sie Überlappungen oder Hohlräume ab. Bei geeigneten kleinen Gegenständen ist Wasserverdrängung möglich. Beliebige Rundungen oder teilgefüllte liegende Tanks werden durch die vier Grundformen nicht direkt abgebildet."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Sind Volumen, Fassungsvermögen und Gewicht gleich?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Volumen beschreibt Raum; Fassungsvermögen meist den nutzbaren Innenraum eines Behälters. Gewicht ist eine andere Größe: Für die Umrechnung von Litern in Masse ist die Materialdichte nötig. Nutzvolumen hängt von Füllhöhe und verdrängenden Einbauten ab."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      /* Apple Design System Tokens from design.md */
+      --color-primary-ink: #1d1d1f;
+      --color-mid-gray: #707070;
+      --color-deep-gray: #474747;
+      --color-hairline: #d6d6d6;
+      --color-canvas: #f5f5f7;
+      --color-paper: #ffffff;
+      --color-cool-wash: #e8e8ed;
+      --color-faded-surface: #fafafc;
+      --color-quiet-dot: #777779;
+      --color-electric-blue: #0071e3;
+      --color-electric-blue-hover: #0077ed;
+      --color-electric-blue-soft: rgba(0, 113, 227, 0.08);
+      --color-link-blue: #0066cc;
+      --color-ember: #b64400;
+      --color-success: #248a3d;
+
+      /* Typography — Fonts */
+      --font-sf-pro-display: 'SF Pro Display', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      --font-sf-pro-text: 'SF Pro Text', ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Inter", sans-serif;
+      --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+      /* Spacing */
+      --spacing-4: 4px;
+      --spacing-8: 8px;
+      --spacing-12: 12px;
+      --spacing-16: 16px;
+      --spacing-20: 20px;
+      --spacing-24: 24px;
+      --spacing-28: 28px;
+      --spacing-32: 32px;
+      --spacing-40: 40px;
+      --spacing-48: 48px;
+      --spacing-80: 80px;
+      --spacing-120: 120px;
+      --page-max-width: 1140px;
+
+      /* Border Radii */
+      --radius-cards: 28px;
+      --radius-links: 10px;
+      --radius-badges: 36px;
+      --radius-buttons: 980px;
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      font-size: 16px;
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    body {
+      background-color: var(--color-paper);
+      color: var(--color-primary-ink);
+      font-family: var(--font-sf-pro-text);
+      font-size: 17px;
+      line-height: 1.5;
+      letter-spacing: -0.022em;
+      min-height: 100vh;
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    /* Utility Bar */
+    .utility-bar {
+      background-color: var(--color-canvas);
+      border-bottom: 1px solid var(--color-hairline);
+      font-size: 12px;
+      color: var(--color-mid-gray);
+      padding: 6px 0;
+    }
+
+    .utility-bar__inner {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-24);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .utility-bar__status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-weight: 500;
+      color: var(--color-deep-gray);
+    }
+
+    .utility-dot {
+      width: 6px;
+      height: 6px;
+      background-color: var(--color-success);
+      border-radius: 50%;
+    }
+
+    /* Global Sticky Nav */
+    .global-nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: 62px;
+      background-color: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-container {
+      max-width: var(--page-max-width);
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 var(--spacing-24);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .nav-brand {
+      font-family: var(--font-sf-pro-display);
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: -0.03em;
+      color: var(--color-primary-ink);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .brand-accent {
+      color: var(--color-electric-blue);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-24);
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 400;
+      color: var(--color-deep-gray);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--color-primary-ink);
+    }
+
+    .nav-btn {
+      background-color: var(--color-canvas);
+      color: var(--color-primary-ink);
+      font-size: 13px;
+      font-weight: 500;
+      padding: 6px 14px;
+      border-radius: var(--radius-buttons);
+      text-decoration: none;
+      transition: background 0.15s;
+    }
+
+    .nav-btn:hover {
+      background-color: var(--color-cool-wash);
+    }
+
+    /* Sections & Alternating Bands */
+    .section-band {
+      width: 100%;
+      padding: var(--spacing-80) 0;
+    }
+
+    .section-band.white {
+      background-color: var(--color-paper);
+    }
+
+    .section-band.canvas-gray {
+      background-color: var(--color-canvas);
+    }
+
+    .container {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 0 var(--spacing-24);
+    }
+
+    /* Hero / Intro */
+    .hero-wrap {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: var(--spacing-40);
+      align-items: center;
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-ember);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: var(--spacing-8);
+    }
+
+    .hero-title {
+      font-family: var(--font-sf-pro-display);
+      font-size: clamp(34px, 5vw, 56px);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--color-primary-ink);
+      margin-bottom: var(--spacing-16);
+    }
+
+    .hero-lead {
+      font-size: 19px;
+      font-weight: 400;
+      color: var(--color-mid-gray);
+      line-height: 1.5;
+      letter-spacing: -0.015em;
+      margin-bottom: var(--spacing-24);
+    }
+
+    .hero-illustration-card {
+      background: linear-gradient(145deg, #ffffff 0%, #f0f4f9 100%);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-28);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-illustration-svg {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+
+    /* Quick Presets */
+    .presets-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      margin-top: var(--spacing-16);
+    }
+
+    .preset-label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-deep-gray);
+      margin-right: 4px;
+    }
+
+    .preset-btn {
+      background-color: var(--color-canvas);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-badges);
+      padding: 6px 14px;
+      font-family: var(--font-sf-pro-text);
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-deep-gray);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .preset-btn:hover {
+      background-color: var(--color-cool-wash);
+      color: var(--color-primary-ink);
+      border-color: #b0b0b5;
+    }
+
+    /* Workspace Calculator Layout */
+    .calc-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-28);
+      align-items: start;
+    }
+
+    /* Cards */
+    .apple-card {
+      background-color: var(--color-paper);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-32);
+      border: 1px solid rgba(0, 0, 0, 0.06);
+      transition: border-color 0.2s ease;
+    }
+
+    .card-canvas {
+      background-color: var(--color-canvas);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-32);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .card-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-20);
+    }
+
+    .card-title {
+      font-family: var(--font-sf-pro-display);
+      font-size: 22px;
+      font-weight: 600;
+      letter-spacing: 0.005em;
+      color: var(--color-primary-ink);
+    }
+
+    .badge-pill {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: var(--radius-badges);
+      background-color: var(--color-cool-wash);
+      color: var(--color-deep-gray);
+    }
+
+    /* Shape Selector Tabs */
+    .shape-grid-select {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+      margin-bottom: var(--spacing-24);
+    }
+
+    .shape-tab {
+      background-color: var(--color-canvas);
+      border: 1.5px solid transparent;
+      border-radius: 16px;
+      padding: 12px 6px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+
+    .shape-tab svg {
+      width: 28px;
+      height: 28px;
+      stroke: var(--color-deep-gray);
+      fill: none;
+      stroke-width: 1.75;
+      transition: stroke 0.15s;
+    }
+
+    .shape-tab span {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-deep-gray);
+      line-height: 1.2;
+    }
+
+    .shape-tab:hover {
+      background-color: var(--color-cool-wash);
+      color: var(--color-primary-ink);
+    }
+
+    .shape-tab.active {
+      background-color: var(--color-paper);
+      border-color: var(--color-electric-blue);
+      box-shadow: 0 0 0 2px var(--color-electric-blue-soft);
+    }
+
+    .shape-tab.active svg {
+      stroke: var(--color-electric-blue);
+    }
+
+    .shape-tab.active span {
+      color: var(--color-primary-ink);
+    }
+
+    /* Control Groups */
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--spacing-16);
+      margin-bottom: var(--spacing-20);
+    }
+
+    .form-group {
+      margin-bottom: var(--spacing-16);
+    }
+
+    .form-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-deep-gray);
+      margin-bottom: var(--spacing-8);
+    }
+
+    .apple-select, .apple-input {
+      width: 100%;
+      height: 48px;
+      padding: 0 var(--spacing-16);
+      font-family: var(--font-sf-pro-text);
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--color-primary-ink);
+      background-color: var(--color-canvas);
+      border: 1px solid transparent;
+      border-radius: 14px;
+      outline: none;
+      transition: all 0.2s ease;
+      font-feature-settings: "numr";
+    }
+
+    .apple-select {
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%23707070' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 16px;
+      cursor: pointer;
+    }
+
+    .apple-select:focus, .apple-input:focus {
+      background-color: var(--color-paper);
+      border-color: var(--color-electric-blue);
+      box-shadow: 0 0 0 4px var(--color-electric-blue-soft);
+    }
+
+    .input-with-unit {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-unit-badge {
+      position: absolute;
+      right: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-mid-gray);
+      pointer-events: none;
+    }
+
+    /* Circle Measure Toggle */
+    .measure-toggle-group {
+      background-color: var(--color-canvas);
+      padding: 4px;
+      border-radius: 14px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px;
+      margin-bottom: var(--spacing-20);
+    }
+
+    .toggle-btn {
+      padding: 8px 12px;
+      font-family: var(--font-sf-pro-text);
+      font-size: 13px;
+      font-weight: 600;
+      border: none;
+      background: transparent;
+      border-radius: 10px;
+      color: var(--color-deep-gray);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      text-align: center;
+    }
+
+    .toggle-btn.active {
+      background-color: var(--color-paper);
+      color: var(--color-primary-ink);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+    }
+
+    /* Action Buttons */
+    .button-row {
+      display: flex;
+      gap: var(--spacing-12);
+      margin-top: var(--spacing-24);
+    }
+
+    .btn-primary {
+      flex: 1;
+      height: 48px;
+      background-color: var(--color-electric-blue);
+      color: #ffffff;
+      font-family: var(--font-sf-pro-text);
+      font-size: 16px;
+      font-weight: 500;
+      border: none;
+      border-radius: var(--radius-buttons);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.15s ease, transform 0.05s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-electric-blue-hover);
+    }
+
+    .btn-primary:active {
+      transform: scale(0.99);
+    }
+
+    .btn-ghost {
+      height: 48px;
+      padding: 0 var(--spacing-20);
+      background-color: transparent;
+      color: var(--color-primary-ink);
+      border: 1px solid var(--color-hairline);
+      border-radius: var(--radius-buttons);
+      font-family: var(--font-sf-pro-text);
+      font-size: 15px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-ghost:hover {
+      background-color: var(--color-cool-wash);
+      border-color: #b0b0b5;
+    }
+
+    /* Result Card Styles */
+    .result-primary-box {
+      background-color: var(--color-paper);
+      border-radius: 20px;
+      padding: var(--spacing-24);
+      margin-bottom: var(--spacing-20);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .result-primary-number {
+      font-family: var(--font-sf-pro-display);
+      font-size: clamp(38px, 4.5vw, 54px);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--color-primary-ink);
+      font-feature-settings: "numr";
+      letter-spacing: -0.03em;
+    }
+
+    .result-primary-unit {
+      font-size: 17px;
+      font-weight: 500;
+      color: var(--color-mid-gray);
+      margin-top: 4px;
+    }
+
+    /* Secondary Result Grid */
+    .result-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin-bottom: var(--spacing-20);
+    }
+
+    .result-mini-card {
+      background-color: var(--color-paper);
+      border-radius: 16px;
+      padding: 14px 10px;
+      text-align: center;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+    }
+
+    .mini-number {
+      font-family: var(--font-sf-pro-display);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--color-primary-ink);
+      line-height: 1.2;
+      font-feature-settings: "numr";
+      word-break: break-all;
+    }
+
+    .mini-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--color-mid-gray);
+      margin-top: 4px;
+    }
+
+    /* Formula & Breakdown */
+    .info-strip {
+      background-color: var(--color-paper);
+      border-radius: 14px;
+      padding: 12px 16px;
+      margin-bottom: var(--spacing-12);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .info-strip span {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-deep-gray);
+    }
+
+    .info-strip code {
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-electric-blue);
+      background-color: var(--color-electric-blue-soft);
+      padding: 2px 8px;
+      border-radius: 6px;
+    }
+
+    /* Interactive Shape Canvas Preview */
+    .shape-preview-wrapper {
+      background-color: var(--color-paper);
+      border-radius: 20px;
+      padding: var(--spacing-16);
+      margin-bottom: var(--spacing-20);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 160px;
+    }
+
+    .shape-preview-svg {
+      width: 100%;
+      max-height: 140px;
+    }
+
+    /* Result Action Buttons */
+    .result-actions-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      margin-top: var(--spacing-20);
+    }
+
+    .btn-action-tool {
+      padding: 10px 14px;
+      background-color: var(--color-paper);
+      border: 1px solid var(--color-hairline);
+      border-radius: 12px;
+      font-family: var(--font-sf-pro-text);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-deep-gray);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-action-tool:hover {
+      background-color: var(--color-cool-wash);
+      color: var(--color-primary-ink);
+      border-color: #b0b0b5;
+    }
+
+    .btn-action-tool.full-width {
+      grid-column: span 2;
+      background-color: var(--color-electric-blue-soft);
+      border-color: transparent;
+      color: var(--color-electric-blue);
+    }
+
+    .btn-action-tool.full-width:hover {
+      background-color: rgba(0, 113, 227, 0.15);
+    }
+
+    /* Multi-Container Accumulator */
+    .accumulator-section {
+      margin-top: var(--spacing-40);
+    }
+
+    .accumulator-card {
+      background-color: var(--color-canvas);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-32);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .container-list {
+      list-style: none;
+      margin: var(--spacing-20) 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .container-item {
+      background-color: var(--color-paper);
+      border-radius: 16px;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(4px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .item-meta {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .item-badge {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      background-color: var(--color-canvas);
+      border-radius: var(--radius-badges);
+      color: var(--color-deep-gray);
+    }
+
+    .item-dims {
+      font-size: 14px;
+      color: var(--color-deep-gray);
+    }
+
+    .item-volume {
+      font-weight: 700;
+      font-size: 16px;
+      color: var(--color-primary-ink);
+      font-feature-settings: "numr";
+    }
+
+    .btn-item-remove {
+      background: none;
+      border: none;
+      color: var(--color-mid-gray);
+      cursor: pointer;
+      padding: 4px 8px;
+      font-size: 14px;
+      border-radius: 8px;
+      transition: all 0.15s;
+    }
+
+    .btn-item-remove:hover {
+      background-color: #ffebe8;
+      color: #d32f2f;
+    }
+
+    .accumulator-total-bar {
+      background-color: var(--color-paper);
+      border-radius: 20px;
+      padding: 20px var(--spacing-24);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: var(--spacing-20);
+      border: 2px solid var(--color-electric-blue);
+    }
+
+    .total-label {
+      font-family: var(--font-sf-pro-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+    }
+
+    .total-value-stack {
+      text-align: right;
+    }
+
+    .total-liters {
+      font-family: var(--font-sf-pro-display);
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--color-electric-blue);
+      font-feature-settings: "numr";
+    }
+
+    .total-sub {
+      font-size: 13px;
+      color: var(--color-mid-gray);
+    }
+
+    /* Content & Educational Grid */
+    .section-header-block {
+      max-width: 760px;
+      margin-bottom: var(--spacing-40);
+    }
+
+    .section-kicker {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-ember);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: var(--spacing-8);
+      display: block;
+    }
+
+    .section-heading {
+      font-family: var(--font-sf-pro-display);
+      font-size: clamp(28px, 3.8vw, 40px);
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      line-height: 1.15;
+      color: var(--color-primary-ink);
+      margin-bottom: var(--spacing-16);
+    }
+
+    .section-desc {
+      font-size: 17px;
+      color: var(--color-mid-gray);
+      line-height: 1.55;
+    }
+
+    /* Shape Cards 4-Col Grid */
+    .shape-cards-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-20);
+    }
+
+    .shape-card-item {
+      background-color: var(--color-canvas);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-24);
+      display: flex;
+      flex-direction: column;
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      transition: transform 0.2s ease;
+    }
+
+    .shape-card-item:hover {
+      transform: translateY(-2px);
+    }
+
+    .shape-card-icon-wrap {
+      width: 48px;
+      height: 48px;
+      background-color: var(--color-paper);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--spacing-16);
+      border: 1px solid rgba(0,0,0,0.05);
+    }
+
+    .shape-card-title {
+      font-family: var(--font-sf-pro-display);
+      font-size: 19px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+      margin-bottom: var(--spacing-8);
+    }
+
+    .shape-card-text {
+      font-size: 14px;
+      color: var(--color-mid-gray);
+      line-height: 1.45;
+      margin-bottom: var(--spacing-16);
+      flex-grow: 1;
+    }
+
+    .shape-card-formula {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--color-link-blue);
+      background-color: var(--color-paper);
+      padding: 6px 10px;
+      border-radius: 8px;
+      display: inline-block;
+      align-self: flex-start;
+    }
+
+    /* Method Step List */
+    .method-grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--spacing-20);
+      margin-bottom: var(--spacing-32);
+    }
+
+    .method-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing-20);
+    }
+
+    .method-step {
+      background-color: var(--color-paper);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-28);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      position: relative;
+    }
+
+    .step-number {
+      font-family: var(--font-sf-pro-display);
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--color-electric-blue);
+      margin-bottom: var(--spacing-12);
+      line-height: 1;
+    }
+
+    .step-title {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+      margin-bottom: var(--spacing-8);
+    }
+
+    .step-desc {
+      font-size: 14px;
+      color: var(--color-mid-gray);
+      line-height: 1.45;
+    }
+
+    /* Tables */
+    .apple-table-wrap {
+      background-color: var(--color-paper);
+      border-radius: var(--radius-cards);
+      padding: var(--spacing-24);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      margin-bottom: var(--spacing-32);
+      width: 100%;
+    }
+
+    .apple-table {
+      width: 100%;
+      min-width: 540px;
+      border-collapse: collapse;
+      text-align: left;
+    }
+
+    .apple-table th {
+      padding: 12px 16px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-mid-gray);
+      border-bottom: 1px solid var(--color-hairline);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
+    .apple-table td {
+      padding: 16px;
+      font-size: 15px;
+      color: var(--color-deep-gray);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+      vertical-align: middle;
+    }
+
+    .apple-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .table-shape-name {
+      font-weight: 600;
+      color: var(--color-primary-ink);
+    }
+
+    .table-code {
+      font-family: var(--font-mono);
+      font-weight: 600;
+      color: var(--color-electric-blue);
+      background-color: var(--color-electric-blue-soft);
+      padding: 3px 8px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* FAQ Accordion */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background-color: var(--color-paper);
+      border-radius: 20px;
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+      transition: all 0.2s ease;
+    }
+
+    .faq-item[open] {
+      border-color: rgba(0, 113, 227, 0.3);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.02);
+    }
+
+    .faq-question {
+      padding: 20px var(--spacing-24);
+      font-family: var(--font-sf-pro-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      list-style: none;
+      user-select: none;
+    }
+
+    .faq-question::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-icon {
+      width: 20px;
+      height: 20px;
+      color: var(--color-mid-gray);
+      transition: transform 0.2s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] .faq-icon {
+      transform: rotate(180deg);
+      color: var(--color-electric-blue);
+    }
+
+    .faq-answer {
+      padding: 0 var(--spacing-24) 20px;
+      font-size: 15px;
+      color: var(--color-deep-gray);
+      line-height: 1.6;
+    }
+
+    /* Toast Notification */
+    .toast-feedback {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(100px);
+      background-color: var(--color-primary-ink);
+      color: #ffffff;
+      padding: 12px 24px;
+      border-radius: var(--radius-buttons);
+      font-size: 14px;
+      font-weight: 500;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .toast-feedback.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--color-canvas);
+      padding: var(--spacing-80) 0 var(--spacing-40);
+      border-top: 1px solid var(--color-hairline);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: var(--spacing-40);
+      margin-bottom: var(--spacing-48);
+    }
+
+    .footer-title {
+      font-family: var(--font-sf-pro-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+      margin-bottom: var(--spacing-16);
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: var(--color-mid-gray);
+      text-decoration: none;
+      transition: color 0.15s;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-primary-ink);
+    }
+
+    .footer-bottom {
+      padding-top: var(--spacing-24);
+      border-top: 1px solid var(--color-hairline);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: var(--color-mid-gray);
+    }
+
+    /* Responsive Multi-Device System */
+    @media (max-width: 1024px) {
+      .hero-wrap {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-32);
+      }
+      .calc-layout {
+        grid-template-columns: 1fr;
+      }
+      .shape-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .method-grid-3 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .method-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .section-band {
+        padding: 48px 0;
+      }
+      .container {
+        padding: 0 18px;
+      }
+      .apple-card, .card-canvas {
+        padding: 24px 18px;
+        border-radius: 20px;
+      }
+      .hero-title {
+        font-size: clamp(28px, 6vw, 42px);
+      }
+      .hero-lead {
+        font-size: 16px;
+      }
+      .hero-illustration-card {
+        padding: 16px;
+        border-radius: 20px;
+      }
+      .method-grid-3 {
+        grid-template-columns: 1fr;
+      }
+      .shape-cards-grid {
+        grid-template-columns: 1fr;
+      }
+      .method-grid {
+        grid-template-columns: 1fr;
+      }
+      .form-row-2 {
+        grid-template-columns: 1fr;
+      }
+      .button-row {
+        flex-direction: column;
+      }
+      .btn-primary, .btn-ghost {
+        width: 100%;
+        justify-content: center;
+      }
+      .result-grid-3 {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+      .result-primary-number {
+        font-size: clamp(32px, 8vw, 46px);
+      }
+      .result-actions-list {
+        grid-template-columns: 1fr;
+      }
+      .btn-action-tool.full-width {
+        grid-column: span 1;
+      }
+      .accumulator-total-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 18px;
+        border-radius: 16px;
+      }
+      .total-value-stack {
+        text-align: left;
+      }
+      .container-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+      .container-item > div:last-child {
+        width: 100%;
+        justify-content: space-between;
+      }
+      .apple-table-wrap {
+        padding: 14px;
+        border-radius: 18px;
+      }
+      .apple-table th, .apple-table td {
+        padding: 10px 12px;
+        font-size: 13px;
+      }
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+      .site-footer {
+        padding: 48px 0 32px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 0 14px;
+      }
+      .shape-grid-select {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+      }
+      .shape-tab {
+        padding: 10px 6px;
+        font-size: 13px;
+        border-radius: 12px;
+      }
+      .shape-tab svg {
+        width: 22px;
+        height: 22px;
+      }
+      .presets-bar {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .preset-btn {
+        width: 100%;
+        text-align: center;
+        padding: 8px 12px;
+      }
+      .preset-label {
+        width: 100%;
+        margin-bottom: 2px;
+      }
+      .measure-toggle-group {
+        width: 100%;
+      }
+      .toggle-btn {
+        flex: 1;
+        text-align: center;
+        padding: 10px 8px;
+        font-size: 13px;
+      }
+      .nav-container {
+        padding: 0 14px;
+      }
+      .faq-question {
+        padding: 16px;
+        font-size: 16px;
+      }
+      .faq-answer {
+        padding: 0 16px 16px;
+      }
+      .card-header-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+    }
+
+    /* Print Optimization */
+    @media print {
+      .global-nav, .utility-bar, .shape-grid-select, .button-row, .result-actions-list, .presets-bar, .site-footer {
+        display: none !important;
+      }
+      .apple-card, .card-canvas {
+        box-shadow: none !important;
+        border: 1px solid #000 !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Global Sticky Nav -->
+  <header class="global-nav">
+    <div class="nav-container">
+      <a class="nav-brand" href="#top" aria-label="Calculee Startseite" style="display: inline-flex; align-items: center; gap: 12px; color: #1d1d1f; font-family: var(--font-sf-pro-display); font-weight: 700; font-size: 26px; letter-spacing: -0.03em; text-decoration: none;">
+        <img src="logo.png" alt="Calculee Logo" style="height: 42px; width: auto; max-height: 42px; object-fit: contain; display: block;">
+        <span>Calculee</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="section-band white" id="top">
+    <div class="container">
+      <div class="hero-wrap">
+        <div>
+          <span class="eyebrow-badge">Kostenloser Online-Rechner</span>
+          <h1 class="hero-title">Volumenrechner für Behälter in Litern</h1>
+          <p class="hero-lead">Berechnen Sie das Fassungsvermögen von Behältern sofort in Litern (L). Wählen Sie die Körperform, tragen Sie die Innenmaße ein und rechnen Sie das Volumen präzise in Kubikmeter, Gallonen und cm³ mit vollständigen Formeln um.</p>
+          
+          <!-- Preset Chips -->
+          <div class="presets-bar">
+            <span class="preset-label">Schnellbeispiele:</span>
+            <button class="preset-btn" type="button" onclick="loadPreset('box')">Kasten · 50 × 30 × 20 cm</button>
+            <button class="preset-btn" type="button" onclick="loadPreset('aquarium')">Aquarium · 30 × 30 × 30 cm</button>
+            <button class="preset-btn" type="button" onclick="loadPreset('cylinder')">Zylinder · Ø 20 cm, H 30 cm</button>
+            <button class="preset-btn" type="button" onclick="loadPreset('cone')">Kegel · r 18 cm, H 35 cm</button>
+          </div>
+        </div>
+
+        <!-- Visual Showcase Card -->
+        <div class="hero-illustration-card">
+          <svg class="hero-illustration-svg" viewBox="0 0 340 220" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="waterGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#0071e3" stop-opacity="0.25"/>
+                <stop offset="100%" stop-color="#0071e3" stop-opacity="0.6"/>
+              </linearGradient>
+              <linearGradient id="cubeGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stop-color="#0071e3" stop-opacity="0.1"/>
+                <stop offset="100%" stop-color="#0071e3" stop-opacity="0.02"/>
+              </linearGradient>
+            </defs>
+            <!-- 3D Box Illustration -->
+            <polygon points="60,90 170,40 280,90 170,140" fill="url(#cubeGrad)" stroke="#0071e3" stroke-width="2"/>
+            <polygon points="60,90 170,140 170,195 60,145" fill="url(#cubeGrad)" stroke="#0071e3" stroke-width="2"/>
+            <polygon points="170,140 280,90 280,145 170,195" fill="url(#cubeGrad)" stroke="#0071e3" stroke-width="2"/>
+            <!-- Liquid Fill inside -->
+            <polygon points="60,115 170,165 170,195 60,145" fill="url(#waterGrad)"/>
+            <polygon points="170,165 280,115 280,145 170,195" fill="url(#waterGrad)"/>
+            <polygon points="60,115 170,75 280,115 170,165" fill="#0071e3" fill-opacity="0.35"/>
+            <!-- Measure lines -->
+            <line x1="50" y1="95" x2="50" y2="140" stroke="#707070" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <text x="35" y="122" font-family="sans-serif" font-size="11" font-weight="600" fill="#707070">H</text>
+            <line x1="175" y1="202" x2="275" y2="152" stroke="#707070" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <text x="235" y="190" font-family="sans-serif" font-size="11" font-weight="600" fill="#707070">L</text>
+            <line x1="65" y1="152" x2="165" y2="202" stroke="#707070" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <text x="105" y="190" font-family="sans-serif" font-size="11" font-weight="600" fill="#707070">B</text>
+          </svg>
+          <div style="font-size:13px; font-weight:600; color:var(--color-primary-ink); margin-top:8px;">
+            1 Liter (L) = 1.000 cm³ = 0,001 m³
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Calculator Workspace -->
+  <section class="section-band canvas-gray" id="volume-calculator">
+    <div class="container">
+      <div class="calc-layout">
+        
+        <!-- Input Form Card -->
+        <div class="apple-card">
+          <div class="card-header-row">
+            <h2 class="card-title">1. Form & Maße wählen</h2>
+            <span class="badge-pill">Eingabe</span>
+          </div>
+
+          <!-- Shape Selection Tabs -->
+          <div class="shape-grid-select" role="tablist" aria-label="Geometrische Form">
+            <button class="shape-tab active" id="tab-rectangular" type="button" onclick="selectShape('rectangular')" role="tab" aria-selected="true">
+              <svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+              <span>Quader</span>
+            </button>
+            <button class="shape-tab" id="tab-cylinder" type="button" onclick="selectShape('cylinder')" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+              <span>Zylinder</span>
+            </button>
+            <button class="shape-tab" id="tab-sphere" type="button" onclick="selectShape('sphere')" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><ellipse cx="12" cy="12" rx="10" ry="4"></ellipse></svg>
+              <span>Kugel</span>
+            </button>
+            <button class="shape-tab" id="tab-cone" type="button" onclick="selectShape('cone')" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="19" rx="8" ry="3"></ellipse><path d="M4 19L12 2l8 17"></path></svg>
+              <span>Kegel</span>
+            </button>
+          </div>
+
+          <!-- Unit Selector & Circle Dimension Toggle -->
+          <div class="form-row-2">
+            <div class="form-group">
+              <label class="form-label" for="unit-select">
+                <span>Maßeinheit</span>
+              </label>
+              <select class="apple-select" id="unit-select" onchange="calculateVolume()">
+                <option value="mm">Millimeter (mm)</option>
+                <option value="cm" selected>Zentimeter (cm)</option>
+                <option value="m">Meter (m)</option>
+                <option value="in">Zoll (in)</option>
+                <option value="ft">Fuß (ft)</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="circle-measure-group" style="display:none;">
+              <label class="form-label">
+                <span>Kreismaß</span>
+              </label>
+              <div class="measure-toggle-group">
+                <button class="toggle-btn active" id="toggle-radius" type="button" onclick="setCircleMode('radius')">Radius (r)</button>
+                <button class="toggle-btn" id="toggle-diameter" type="button" onclick="setCircleMode('diameter')">Durchm. (Ø)</button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Dynamic Input Fields -->
+          <div id="dynamic-fields-container">
+            <!-- Rendered by JS -->
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="button-row">
+            <button class="btn-primary" type="button" onclick="calculateVolume()">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              Volumen berechnen
+            </button>
+            <button class="btn-ghost" type="button" onclick="resetCalculator()">Werte löschen</button>
+          </div>
+
+          <div id="error-message" style="display:none; color:#d32f2f; font-size:13px; font-weight:600; margin-top:14px; background:#fff2f0; padding:10px 14px; border-radius:10px;"></div>
+        </div>
+
+        <!-- Result Display Card -->
+        <div class="card-canvas">
+          <div class="card-header-row">
+            <h2 class="card-title">2. Berechnetes Ergebnis</h2>
+            <span class="badge-pill" id="result-status-badge">Live-Berechnung</span>
+          </div>
+
+          <!-- Primary Volume Output -->
+          <div class="result-primary-box">
+            <div class="result-primary-number" id="primary-liters">63,000</div>
+            <div class="result-primary-unit">Liter (L)</div>
+          </div>
+
+          <!-- Secondary Conversion Matrix -->
+          <div class="result-grid-3">
+            <div class="result-mini-card">
+              <div class="mini-number" id="sec-unit-cubed">63.000</div>
+              <div class="mini-label" id="sec-unit-label">cm³</div>
+            </div>
+            <div class="result-mini-card">
+              <div class="mini-number" id="sec-m3">0,063</div>
+              <div class="mini-label">Kubikmeter (m³)</div>
+            </div>
+            <div class="result-mini-card">
+              <div class="mini-number" id="sec-gallons">16,643</div>
+              <div class="mini-label">US-Gallonen (gal)</div>
+            </div>
+          </div>
+
+          <!-- Used Formula -->
+          <div class="info-strip">
+            <span>Verwendete Formel:</span>
+            <code id="formula-badge">V = Länge × Breite × Höhe</code>
+          </div>
+
+          <!-- Interactive Shape Canvas Visualization -->
+          <div class="shape-preview-wrapper" id="shape-preview-box">
+            <!-- Dynamic 3D SVG rendered by JS -->
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="result-actions-list">
+            <button class="btn-action-tool full-width" type="button" onclick="addContainerToSum()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>
+              Zur Behälter-Summe hinzufügen
+            </button>
+            <button class="btn-action-tool" type="button" onclick="copyResultText()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+              Ergebnis kopieren
+            </button>
+            <button class="btn-action-tool" type="button" onclick="copyShareableLink()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+              Link mit Maßen
+            </button>
+            <button class="btn-action-tool" type="button" onclick="downloadResultPNG()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+              PNG herunterladen
+            </button>
+            <button class="btn-action-tool" type="button" onclick="window.print()">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"></polyline><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path><rect x="6" y="14" width="12" height="8"></rect></svg>
+              Drucken
+            </button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Multi-Container Accumulator Section -->
+      <div class="accumulator-section">
+        <div class="accumulator-card">
+          <div class="card-header-row">
+            <div>
+              <h3 class="card-title" style="margin-bottom:4px;">Volumen mehrerer Behälter addieren</h3>
+              <p style="font-size:14px; color:var(--color-mid-gray);">Berechnen und addieren Sie jeden Behälter, auch mit unterschiedlichen Körperformen oder Einheiten.</p>
+            </div>
+            <div style="display:flex; gap:8px;">
+              <button class="btn-ghost" style="height:36px; padding:0 14px; font-size:13px;" type="button" onclick="copyAccumulatorList()" id="btn-copy-acc" disabled>Liste kopieren</button>
+              <button class="btn-ghost" style="height:36px; padding:0 14px; font-size:13px;" type="button" onclick="clearAccumulatorList()" id="btn-clear-acc" disabled>Liste leeren</button>
+            </div>
+          </div>
+
+          <div id="accumulator-empty-msg" style="text-align:center; padding:30px 0; color:var(--color-mid-gray); font-size:15px;">
+            Noch keine Behälter hinzugefügt. Klicken Sie oben auf „Zur Behälter-Summe hinzufügen“.
+          </div>
+
+          <ul class="container-list" id="accumulator-items-list">
+            <!-- Items injected via JS -->
+          </ul>
+
+          <div class="accumulator-total-bar" id="accumulator-total-bar" style="display:none;">
+            <div>
+              <div class="total-label">Gesamtvolumen aller Behälter</div>
+              <div class="total-sub" id="acc-count-label">0 Behälter in der Summe</div>
+            </div>
+            <div class="total-value-stack">
+              <div class="total-liters" id="acc-total-liters">0,000 L</div>
+              <div class="total-sub" id="acc-total-sub">0 m³ · 0 US gal</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Shape Overview & Guidance Section -->
+  <section class="section-band white" id="shapes-overview">
+    <div class="container">
+      <div class="section-header-block">
+        <span class="section-kicker">Geometrie</span>
+        <h2 class="section-heading">Welche Körperform hat Ihr Behälter?</h2>
+        <p class="section-desc">Verschiedene Behälterformen benötigen unterschiedliche geometrische Formeln. Wählen Sie die passende Kategorie für Ihre Messungen.</p>
+      </div>
+
+      <div class="shape-cards-grid">
+        <div class="shape-card-item">
+          <div class="shape-card-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+          </div>
+          <h3 class="shape-card-title">Rechteckiger Behälter (Quader)</h3>
+          <p class="shape-card-text">Ideal für Kisten, Kartons, Aquarien, rechteckige Pools und quaderförmige Wassertanks.</p>
+          <span class="shape-card-formula">V = l × w × h</span>
+        </div>
+
+        <div class="shape-card-item">
+          <div class="shape-card-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"></path><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"></path></svg>
+          </div>
+          <h3 class="shape-card-title">Zylinder</h3>
+          <p class="shape-card-text">Für Fässer, Regentonnen, Rohre, Dosen, Becher und runde stehende Wasserspeicher.</p>
+          <span class="shape-card-formula">V = π × r² × h</span>
+        </div>
+
+        <div class="shape-card-item">
+          <div class="shape-card-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><ellipse cx="12" cy="12" rx="10" ry="4"></ellipse></svg>
+          </div>
+          <h3 class="shape-card-title">Kugel</h3>
+          <p class="shape-card-text">Für kugelförmige Drucktanks, Schwimmkugeln, Ballons und rundum symmetrische Gefäße.</p>
+          <span class="shape-card-formula">V = 4/3 × π × r³</span>
+        </div>
+
+        <div class="shape-card-item">
+          <div class="shape-card-icon-wrap">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0071e3" stroke-width="2"><ellipse cx="12" cy="19" rx="8" ry="3"></ellipse><path d="M4 19L12 2l8 17"></path></svg>
+          </div>
+          <h3 class="shape-card-title">Kegel</h3>
+          <p class="shape-card-text">Für Trichter, Schüttgutsilos, spitze Messbehälter und konische Sammelbecken.</p>
+          <span class="shape-card-formula">V = 1/3 × π × r² × h</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Method & Step-by-Step Guidance -->
+  <section class="section-band canvas-gray" id="measurement-guide">
+    <div class="container">
+      <div class="section-header-block">
+        <span class="section-kicker">Praxis-Messanleitung</span>
+        <h2 class="section-heading">So messen Sie Ihren Behälter für ein präzises Volumen in Litern</h2>
+        <p class="section-desc">Um ein exaktes Ergebnis aus einem Behälter-Volumenrechner in Litern zu erhalten, ist die Messgenauigkeit an der Quelle entscheidend. Bereits eine kleine Abweichung von 1–2 Zentimetern bei den Außenmaßen führt zu mehreren Litern Rechenfehler. Befolgen Sie diese standardisierten Messmethoden, um das exakte Flüssigkeitsvolumen und das gesamte Fassungsvermögen zuverlässig zu bestimmen.</p>
+      </div>
+
+      <!-- 3 Core Best Practice Cards -->
+      <div class="method-grid-3">
+        <div class="method-step">
+          <div class="step-number">01</div>
+          <h3 class="step-title">1. Innenmaße messen, niemals Außenmaße</h3>
+          <p class="step-desc" style="margin-bottom:10px;">Das Fassungsvermögen für Flüssigkeiten oder Schüttgüter wird ausschließlich durch den Innenraum des Behälters bestimmt.</p>
+          <ul style="font-size:13px; color:var(--color-mid-gray); line-height:1.5; padding-left:18px;">
+            <li style="margin-bottom:6px;"><strong>Wandstärke abziehen:</strong> Wenn Sie von außen messen, ziehen Sie die doppelte Materialwandstärke von jedem Maß ab (<code style="font-family:var(--font-mono); font-size:12px; color:var(--color-link-blue);">L_innen = L_außen - 2 × Wandstärke</code>).</li>
+            <li><strong>Verstärkungsrippen & Schwallwände:</strong> Bei IBC-Containern, Formbehältern und Kunststofftanks verringern innere Versteifungsrippen die tatsächliche Verdrängung.</li>
+          </ul>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number">02</div>
+          <h3 class="step-title">2. Einheiten vor der Berechnung vereinheitlichen</h3>
+          <p class="step-desc" style="margin-bottom:10px;">Um mathematische Umrechnungs- und Rundungsfehler zu vermeiden, erfassen Sie alle Maße vorab in einer einheitlichen Längeneinheit:</p>
+          <ul style="font-size:13px; color:var(--color-mid-gray); line-height:1.5; padding-left:18px;">
+            <li style="margin-bottom:6px;"><strong>Metrisch (Empfohlen):</strong> Messen Sie in Zentimetern (cm) oder Metern (m). Da <code style="font-family:var(--font-mono); font-size:12px; color:var(--color-link-blue);">1 L = 1.000 cm³</code> und <code style="font-family:var(--font-mono); font-size:12px; color:var(--color-link-blue);">1 m³ = 1.000 L</code>, erfolgt die Umrechnung verlustfrei.</li>
+            <li><strong>Imperiales System:</strong> Bei Messungen in Zoll (in) berechnen Sie das Gesamtvolumen in Kubikzoll (in³) und teilen durch <code style="font-family:var(--font-mono); font-size:12px; color:var(--color-link-blue);">61,024</code> für Liter.</li>
+          </ul>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number">03</div>
+          <h3 class="step-title">3. Nutzinhalt vs. Brutto-Raumvolumen</h3>
+          <p class="step-desc" style="margin-bottom:10px;">Ein bis zum Rand gefüllter Behälter ist im Alltag selten nutzbar. Für eine sichere Handhabung und Lagerung:</p>
+          <ul style="font-size:13px; color:var(--color-mid-gray); line-height:1.5; padding-left:18px;">
+            <li style="margin-bottom:6px;"><strong>Maximaler Füllstand (Füllreserve):</strong> Planen Sie oben 5 % bis 10 % Freiraum ein für thermische Flüssigkeitsausdehnung, Schaumbildung oder Schwappbewegungen beim Transport.</li>
+            <li><strong>Eintauchende Einbauten:</strong> Ziehen Sie das Volumen von Tauchpumpen, Heizelementen oder Filterrohren ab.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Step-by-Step Measurement Guide by Shape Table -->
+      <div class="section-header-block" style="margin-bottom: var(--spacing-20); margin-top: var(--spacing-40);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 6px;">Schritt-für-Schritt-Messanleitung nach Körperform</h3>
+        <p style="font-size: 14px; color: var(--color-mid-gray);">Wichtige Abmessungen und praxiserprobte Messtechniken für verschiedene Behältertypen.</p>
+      </div>
+
+      <div class="apple-table-wrap">
+        <table class="apple-table">
+          <thead>
+            <tr>
+              <th style="width:26%;">Behältertyp</th>
+              <th style="width:28%;">Wichtigste Maße</th>
+              <th>Messtechnik & Praxis-Tipp</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-shape-name">Quader / Rechteckiger Tank</td>
+              <td><span class="table-code">Innenlänge, Innenbreite, Innenhöhe</span></td>
+              <td>Messen Sie zwischen den ebenen Innenflächen an der engsten Stelle, um Messfehler durch ausbauchende Wände zu vermeiden.</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Zylinder / Fass / Regentonne</td>
+              <td><span class="table-code">Innendurchmesser, nutzbare Tiefe</span></td>
+              <td>Messen Sie den Innendurchmesser exakt über die Mittellinie; messen Sie keinesfalls den Außenumfang über äußere Verstärkungsrippen.</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Kegel / Silo / Trichter</td>
+              <td><span class="table-code">Oberer Innendurchmesser, senkrechte Tiefe</span></td>
+              <td>Messen Sie das rein senkrechte Lot vom oberen Rand bis zur unteren Auslassöffnung; verwenden Sie niemals die schräge Mantellinie.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 4: Standard Container Sizes & Industrial Capacities -->
+  <section class="section-band white" id="standard-containers">
+    <div class="container">
+      <div class="section-header-block">
+        <span class="section-kicker">Industrie- &amp; Handelsstandards</span>
+        <h2 class="section-heading">Standard-Behältergrößen und ihr typisches Fassungsvermögen in Litern</h2>
+        <p class="section-desc">In Industrie, Logistik, Chemie und Haushalt besitzen Behälter feste genormte Abmessungen nach internationalen Standards (ISO, DIN, UN/ADR). Diese Richtwerte ermöglichen den schnellen Abgleich von gemessenen Werten mit offiziellen Herstellerangaben und klären den Unterschied zwischen Nenn- und Bruttovolumen.</p>
+      </div>
+
+      <!-- Subsection 1: Industrial Liquid Containers Table -->
+      <div class="section-header-block" style="margin-bottom: var(--spacing-16);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 4px;">1. Industrie- &amp; Gewerbebehälter</h3>
+        <p style="font-size: 14px; color: var(--color-mid-gray);">Gewerbliche Lagerbehälter besitzen ein nutzbares Nennvolumen sowie ein größeres Bruttovolumen (inklusive vorgeschriebenem Gaspolster für thermische Ausdehnung).</p>
+      </div>
+
+      <div class="apple-table-wrap">
+        <table class="apple-table">
+          <thead>
+            <tr>
+              <th>Behältertyp</th>
+              <th>Standardmaße (Außen ca.)</th>
+              <th>Nennvolumen</th>
+              <th>Randvoll- / Bruttovolumen</th>
+              <th>Geometrisches Profil</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-shape-name">Standard-IBC-Container (IBC Tote)</td>
+              <td>1200 × 1000 × 1160 mm</td>
+              <td><span class="table-code">1.000 Liter</span></td>
+              <td>≈ 1.060 Liter</td>
+              <td>Abgerundeter Quader mit Paletteneinzug</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">55-Gallonen-Stahlfass (Spundfass)</td>
+              <td>Ø 585 mm × 880 mm Höhe</td>
+              <td><span class="table-code">208,2 Liter</span></td>
+              <td>≈ 216,5 Liter</td>
+              <td>Stehender Zylinder mit Rollsicken</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Kunststoff-Spundfass (HDPE)</td>
+              <td>Ø 581 mm × 935 mm Höhe</td>
+              <td><span class="table-code">200–220 Liter</span></td>
+              <td>≈ 225 Liter</td>
+              <td>Geformter Hohlzylinder</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Standard-Kanister (Jerrycan)</td>
+              <td>290 × 245 × 380 mm</td>
+              <td><span class="table-code">20 Liter</span></td>
+              <td>≈ 22,5 Liter</td>
+              <td>Rechteckiges Prisma mit Tragegriff</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Bau- &amp; Mörtelkübel (Rund)</td>
+              <td>Ø 600 mm × 350 mm Tiefe</td>
+              <td><span class="table-code">65–90 Liter</span></td>
+              <td>≈ 72–98 Liter</td>
+              <td>Kegelstumpf (oben breiter als unten)</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Subsection 2: Logistics & Freight Shipping Standards -->
+      <div class="section-header-block" style="margin-top: var(--spacing-40); margin-bottom: var(--spacing-20);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 4px;">2. Logistik- &amp; Seefracht-Standards</h3>
+        <p style="font-size: 14px; color: var(--color-mid-gray);">Genormte Ladungsträger und Frachtcontainer im intermodalen Transportwesen:</p>
+      </div>
+
+      <div class="method-grid-3">
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px;">20'</div>
+          <h4 class="step-title">20-Fuß-ISO-Frachtcontainer</h4>
+          <p class="step-desc" style="margin-bottom:8px;"><strong>Innenmaße:</strong> 5,90 m × 2,35 m × 2,39 m</p>
+          <p class="step-desc"><strong>Nutzbares Volumen:</strong> <span style="font-weight:700; color:var(--color-primary-ink);">≈ 33.100–33.200 Liter</span> (33,1–33,2 m³ Ladekapazität).</p>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px;">40'</div>
+          <h4 class="step-title">40-Fuß-ISO-Frachtcontainer</h4>
+          <p class="step-desc" style="margin-bottom:8px;"><strong>Innenmaße:</strong> 12,03 m × 2,35 m × 2,39 m</p>
+          <p class="step-desc"><strong>Nutzbares Volumen:</strong> <span style="font-weight:700; color:var(--color-primary-ink);">≈ 67.500–67.700 Liter</span> (67,5–67,7 m³ Ladekapazität).</p>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px;">EPAL</div>
+          <h4 class="step-title">Europalette Aufsatzrahmen</h4>
+          <p class="step-desc" style="margin-bottom:8px;"><strong>Innenmaße:</strong> 1150 × 750 × 200 mm je Rahmen</p>
+          <p class="step-desc"><strong>Volumen:</strong> <span style="font-weight:700; color:var(--color-primary-ink);">172,5 Liter</span> pro Rahmenstufe (≈ 690 L bei 4er-Stapel).</p>
+        </div>
+      </div>
+
+      <!-- Subsection 3: Domestic & Rainwater Harvesting Standards -->
+      <div class="section-header-block" style="margin-top: var(--spacing-32); margin-bottom: var(--spacing-20);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 4px;">3. Haushalts- &amp; Gartenbehälter</h3>
+        <p style="font-size: 14px; color: var(--color-mid-gray);">Typische Abweichungen durch Formverjüngungen und Griffelemente im Alltag:</p>
+      </div>
+
+      <div class="form-row-2" style="margin-bottom: var(--spacing-32);">
+        <div class="shape-card-item" style="background-color:var(--color-canvas); padding:var(--spacing-24);">
+          <h4 class="shape-card-title">Zylindrische Regentonne</h4>
+          <p class="shape-card-text">Klassisch für <strong>200–300 Liter</strong> dimensioniert. Durch Bodenverjüngungen, Einlaufzonen und Abzapfventile liegt das tatsächliche Fassungsvermögen meist <strong>3–5 %</strong> unter der rein rechnerischen Zylinderformel.</p>
+        </div>
+        <div class="shape-card-item" style="background-color:var(--color-canvas); padding:var(--spacing-24);">
+          <h4 class="shape-card-title">10-Liter-Baueimer / Haushaltseimer</h4>
+          <p class="shape-card-text">Konstruiert als umgekehrter Kegelstumpf (Bodendurchmesser kleiner als Randdurchmesser). Liefert exakt <strong>10–12 Liter</strong> nutzbares Fassungsvermögen bis zur innen geprägten Skalierungslinie.</p>
+        </div>
+      </div>
+
+      <!-- Subsection 4: Nominal vs. Brimful Capacity Explanation -->
+      <div class="section-header-block" style="margin-top: var(--spacing-32); margin-bottom: var(--spacing-20);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 4px;">4. Nennvolumen vs. Randvollvolumen: Warum Messungen abweichen</h3>
+        <p style="font-size: 14px; color: var(--color-mid-gray);">Drei wesentliche Faktoren erklären, warum rechnerische Werte von Hersteller-Nennangaben abweichen können:</p>
+      </div>
+
+      <div class="method-grid-3">
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px; color:var(--color-ember);">01</div>
+          <h4 class="step-title">Freibord &amp; Gaspolster (Ullage)</h4>
+          <p class="step-desc">Gefahrgut- und Verpackungsrichtlinien (UN/DOT) schreiben <strong>3 % bis 5 %</strong> Freiraum an der Oberkante vor, um Flüssigkeitsausdehnungen bei Temperaturanstieg sicher aufzufangen.</p>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px; color:var(--color-ember);">02</div>
+          <h4 class="step-title">Strukturelle Verdrängung</h4>
+          <p class="step-desc">Innenliegende Ansaugrohre, Vertiefungen für Restentleerung, Palettenaussparungen und Eckprofile reduzieren das reale Netto-Füllvolumen gegenüber den Außenkanten.</p>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px; color:var(--color-ember);">03</div>
+          <h4 class="step-title">Materialwandstärke</h4>
+          <p class="step-desc">Formteile aus Polyethylen (HDPE) besitzen Wandstärken von <strong>4 mm bis 12 mm</strong>. Außenmessungen ohne Wandabzug überschätzen das tatsächliche Volumen um bis zu <strong>10 %</strong>.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 5: Container Fill Weight & Liquid Density -->
+  <section class="section-band canvas-gray" id="fill-weight">
+    <div class="container">
+      <div class="section-header-block">
+        <span class="section-kicker">Masse &amp; Statik</span>
+        <h2 class="section-heading">Behälter-Füllgewicht: Wie viel wiegen die berechneten Liter?</h2>
+        <p class="section-desc">Das berechnete Innenvolumen in Litern liefert nur eine Dimension der technischen Planung. Für statische Traglasten von Böden und Regalen, Hebezeuge und die Transportsicherheit im Straßenverkehr müssen Sie die tatsächliche Masse (Gewichtskraft) der Flüssigkeitsladung bestimmen.</p>
+      </div>
+
+      <!-- Core Formula Callout Card -->
+      <div class="apple-card" style="margin-bottom: var(--spacing-32); background: linear-gradient(135deg, #ffffff 0%, #f0f4f9 100%); border: 1px solid rgba(0, 113, 227, 0.12); display: flex; flex-direction: column; align-items: center; text-align: center; padding: var(--spacing-28);">
+        <span style="font-size: 13px; font-weight: 600; color: var(--color-electric-blue); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 8px;">Physikalische Grundformel</span>
+        <div style="font-family: var(--font-sf-pro-display); font-size: clamp(22px, 3.2vw, 32px); font-weight: 700; color: var(--color-primary-ink); letter-spacing: -0.02em;">
+          Masse (kg) = Volumen (L) × Dichte (kg/L)
+        </div>
+        <p style="font-size: 14px; color: var(--color-mid-gray); margin-top: 8px; max-width: 680px;">
+          Das Volumen misst die räumliche Verdrängung, das Gewicht die Gravitationskraft. Das Gesamtgewicht hängt direkt von der spezifischen Dichte (ρ) der gelagerten Flüssigkeit bei der jeweiligen Arbeitstemperatur ab.
+        </p>
+      </div>
+
+      <!-- Subsection: Liquid Density Reference Standards -->
+      <div class="section-header-block" style="margin-bottom: var(--spacing-16);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 4px;">1. Dichte- und Gewichtstabelle gängiger Flüssigkeiten</h3>
+        <p style="font-size: 14px; color: var(--color-mid-gray);">Standard-Richtwerte bei 15 °C bis 20 °C für schnelle statische Lastabschätzungen:</p>
+      </div>
+
+      <div class="apple-table-wrap">
+        <table class="apple-table">
+          <thead>
+            <tr>
+              <th>Medium / Gelagerte Flüssigkeit</th>
+              <th>Spezifische Dichte (ρ)</th>
+              <th>Gewicht je 100 Liter</th>
+              <th>Gewicht je 1.000 Liter (1 m³)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-shape-name">Reines Wasser (4 °C bis 20 °C)</td>
+              <td><span class="table-code">1,000 kg/L</span></td>
+              <td>100 kg</td>
+              <td><strong>1.000 kg (1,00 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Dieselkraftstoff / Leichtes Heizöl (DIN EN 590)</td>
+              <td><span class="table-code">0,840 kg/L</span></td>
+              <td>84 kg</td>
+              <td><strong>840 kg (0,84 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Autobenzin / Super 95</td>
+              <td><span class="table-code">0,750 kg/L</span></td>
+              <td>75 kg</td>
+              <td><strong>750 kg (0,75 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Motorenöl (SAE 10W-40)</td>
+              <td><span class="table-code">0,880 kg/L</span></td>
+              <td>88 kg</td>
+              <td><strong>880 kg (0,88 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Pflanzen- &amp; Rapsöl (Speiseöl)</td>
+              <td><span class="table-code">0,920 kg/L</span></td>
+              <td>92 kg</td>
+              <td><strong>920 kg (0,92 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Kuh-Vollmilch</td>
+              <td><span class="table-code">1,030 kg/L</span></td>
+              <td>103 kg</td>
+              <td><strong>1.030 kg (1,03 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Flüssigdünger (AHL 28-0-0)</td>
+              <td><span class="table-code">1,300 kg/L</span></td>
+              <td>130 kg</td>
+              <td><strong>1.300 kg (1,30 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Industrie-Honig / Dickflüssiger Sirup</td>
+              <td><span class="table-code">1,420 kg/L</span></td>
+              <td>142 kg</td>
+              <td><strong>1.420 kg (1,42 t)</strong></td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Flüssiger Stickstoff (Kryogen)</td>
+              <td><span class="table-code">0,808 kg/L</span></td>
+              <td>80,8 kg</td>
+              <td><strong>808 kg (0,81 t)</strong></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Subsection: Critical Engineering Factors for Gross Weight -->
+      <div class="section-header-block" style="margin-top: var(--spacing-40); margin-bottom: var(--spacing-20);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 4px;">2. Drei entscheidende Faktoren für das Brutto-Gesamtgewicht</h3>
+        <p style="font-size: 14px; color: var(--color-mid-gray);">Für Hebelasten, Regalböden und Straßentransport reicht die reine Flüssigkeitsmasse nicht aus:</p>
+      </div>
+
+      <div class="method-grid-3">
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px;">Tara</div>
+          <h4 class="step-title">Behälter-Leergewicht (Tara)</h4>
+          <p class="step-desc" style="margin-bottom:8px;">Das errechnete Flüssigkeitsgewicht ist reine Netto-Nutzlast. Addieren Sie für die Gesamttraglast das Eigengewicht des Behälters:</p>
+          <ul style="font-size:13px; color:var(--color-mid-gray); line-height:1.45; padding-left:16px;">
+            <li>Standard-IBC (Blase + Käfig + Palette): <strong>55–65 kg</strong></li>
+            <li>55-Gallonen-Stahl-Spundfass: <strong>18–22 kg</strong></li>
+            <li>200-L-HDPE-Kunststofffass: <strong>8,5–10,5 kg</strong></li>
+          </ul>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px;">ΔV</div>
+          <h4 class="step-title">Thermische Ausdehnung</h4>
+          <p class="step-desc" style="margin-bottom:8px;">Flüssigkeiten dehnen sich bei steigender Temperatur aus: 1.000 L Kraftstoff bei 15 °C dehnen sich bei 35 °C auf ca. 1.018 L aus – ohne schwerer zu werden.</p>
+          <p class="step-desc">Belassen Sie stets <strong>3 % bis 5 %</strong> Freiraum (Ullage), um ein Bersten starrer Behälter durch hydraulischen Druck zu verhindern.</p>
+        </div>
+
+        <div class="method-step">
+          <div class="step-number" style="font-size:24px;">Dyn</div>
+          <h4 class="step-title">Schwappdynamik &amp; Schwerpunkt</h4>
+          <p class="step-desc" style="margin-bottom:8px;">Teilbefüllte Großbehälter erzeugen bei Kurven- und Bremsmanövern erhebliche kinetische Trägheitskräfte.</p>
+          <p class="step-desc">Für den sicheren Straßentransport Füllstände entweder <strong>über 80 %</strong> oder <strong>unter 20 %</strong> halten bzw. Schwallwände (Baffles) einsetzen.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 6: Reference Formulas & Mathematical Equivalence -->
+  <section class="section-band white" id="reference-formulas">
+    <div class="container">
+      <div class="section-header-block">
+        <span class="section-kicker">Formelsammlung</span>
+        <h2 class="section-heading">Volumenformeln &amp; Einheitenumrechnung</h2>
+        <p class="section-desc">Die mathematischen Grundlagen zur Volumenberechnung und die exakten Umrechnungsfaktoren in Liter.</p>
+      </div>
+
+      <!-- Formulas Table -->
+      <div class="apple-table-wrap">
+        <table class="apple-table">
+          <thead>
+            <tr>
+              <th>Körperform</th>
+              <th>Volumenformel</th>
+              <th>Erforderliche Messwerte</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-shape-name">Quader / Rechteckiger Behälter</td>
+              <td><span class="table-code">V = l × w × h</span></td>
+              <td>Innenlänge, Innenbreite und senkrechte Innenhöhe</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Würfel</td>
+              <td><span class="table-code">V = a³</span></td>
+              <td>Kantenlänge a (Länge = Breite = Höhe)</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Zylinder</td>
+              <td><span class="table-code">V = π × r² × h</span></td>
+              <td>Radius (bzw. halber Durchmesser) und Behälterhöhe</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Kugel</td>
+              <td><span class="table-code">V = 4/3 × π × r³</span></td>
+              <td>Kugelradius (bzw. halber Kugeldurchmesser)</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">Kegel</td>
+              <td><span class="table-code">V = 1/3 × π × r² × h</span></td>
+              <td>Grundkreisradius r und senkrechte Höhe h bis zur Spitze</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Conversion Factors Table -->
+      <div class="apple-table-wrap">
+        <table class="apple-table">
+          <thead>
+            <tr>
+              <th>Volumeneinheit</th>
+              <th>Exakter Wert in Litern</th>
+              <th>Beispiel-Umrechnung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="table-shape-name">1 Kubikzentimeter (cm³)</td>
+              <td><span class="table-code">0,001 L</span></td>
+              <td>1.000 cm³ = genau 1 Liter</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">1 Kubikmeter (m³)</td>
+              <td><span class="table-code">1.000 L</span></td>
+              <td>1 m³ = 1.000 Liter = 1.000.000 cm³</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">1 Kubikzoll (in³)</td>
+              <td><span class="table-code">0,016387064 L</span></td>
+              <td>61,024 in³ ≈ 1 Liter</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">1 Kubikfuß (ft³)</td>
+              <td><span class="table-code">28,316846592 L</span></td>
+              <td>1 ft³ = 1.728 in³ ≈ 28,32 Liter</td>
+            </tr>
+            <tr>
+              <td class="table-shape-name">1 US-Gallone (gal)</td>
+              <td><span class="table-code">3,785411784 L</span></td>
+              <td>1 US Liquid Gallon ≈ 3,785 Liter</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SECTION 7: FAQ Accordion Section -->
+  <section class="section-band canvas-gray" id="faq">
+    <div class="container">
+      <div class="section-header-block">
+        <span class="section-kicker">Häufige Fragen</span>
+        <h2 class="section-heading">Fragen zur Volumenberechnung</h2>
+        <p class="section-desc">Antworten auf die wichtigsten Fragen rund um die Berechnung von Behältern, Umrechnungen und Messmethoden.</p>
+      </div>
+
+      <div class="faq-list">
+        <details class="faq-item" open>
+          <summary class="faq-question">
+            <span>Wie berechne ich das Volumen aus den Maßen?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            Bestimmen Sie zuerst die Körperform. Beim Quader gilt Länge × Breite × Höhe, beim Zylinder π × Radius² × Höhe. Maße in Zentimetern ergeben cm³, Maße in Fuß ergeben ft³. Das Ergebnis in cm³ geteilt durch 1.000 ergibt das Volumen in Litern.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Kann dieser Rechner einen Würfel berechnen?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            Ja. Wählen Sie die Form „Quader“ und geben Sie dieselbe Kantenlänge für Länge, Breite und Höhe ein. Ein Würfel mit 10 cm Kantenlänge hat 10³ = 1.000 cm³, was genau 1 Liter entspricht.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Wie gebe ich Fuß und Zoll ein?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            Wählen Sie als Einheit „ft“ und verwenden Sie Dezimalfuß: 5 Fuß 6 Zoll sind 5 + 6/12 = 5,5 ft. Alternativ wählen Sie „in“ und tragen die Gesamtzollzahl (z. B. 66 in) ein.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Kann ich Quadratmeter in Liter umrechnen?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            Quadratmeter sind ein Flächenmaß (2D), Liter hingegen ein Raummaß (3D). Sie benötigen zwingend die Höhe oder Schichtdicke: Volumen = Grundfläche × Höhe. Eine Fläche von 1 m² mit 1 mm Wasserhöhe entspricht genau 1 Liter.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Wie messe ich das Volumen eines unregelmäßigen Körpers?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            Zerlegen Sie den Körper in messbare Teilkörper (z. B. Quader + Zylinder), addieren Sie deren Volumen mit unserem Rechner und ziehen Sie Hohlräume ab. Für kleine Gegenstände eignet sich das Wasserverdrängungsprinzip im Messbecher.
+          </div>
+        </details>
+
+        <details class="faq-item">
+          <summary class="faq-question">
+            <span>Sind Volumen, Fassungsvermögen und Gewicht gleich?</span>
+            <svg class="faq-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+          </summary>
+          <div class="faq-answer">
+            Volumen beschreibt den gesamten geometrischen Raum; Fassungsvermögen meist den nutzbaren Innenraum. Gewicht ist abhängig von der Dichte der Flüssigkeit: 1 Liter reines Wasser wiegt genau 1 Kilogramm, 1 Liter Speiseöl wiegt ca. 0,92 kg.
+          </div>
+        </details>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Minimaler Footer -->
+  <footer class="site-footer" style="background-color: var(--color-canvas); padding: var(--spacing-40) 0; border-top: 1px solid var(--color-hairline);">
+    <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px;">
+      <a href="#top" style="display: inline-flex; align-items: center; gap: 12px; text-decoration: none; color: #1d1d1f; font-family: var(--font-sf-pro-display); font-weight: 700; font-size: 24px; letter-spacing: -0.03em;">
+        <img src="logo.png" alt="Calculee Logo" style="height: 38px; width: auto; max-height: 38px; object-fit: contain; display: block;">
+        <span>Calculee</span>
+      </a>
+      <p style="font-size: 13px; color: var(--color-mid-gray);">&copy; Calculee – Kostenlose Online-Rechner &amp; mathematische Werkzeuge.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification element -->
+  <div class="toast-feedback" id="toast-msg">Ergebnis in die Zwischenablage kopiert!</div>
+
+  <!-- JavaScript Logic -->
+  <script>
+    // State management
+    const state = {
+      shape: 'rectangular',
+      unit: 'cm',
+      circleMode: 'radius', // 'radius' | 'diameter'
+      values: {
+        rectangular: { length: 60, width: 30, height: 35 },
+        cylinder: { radius: 20, height: 60 },
+        sphere: { radius: 20 },
+        cone: { radius: 18, height: 35 }
+      },
+      accumulator: []
+    };
+
+    // Shape Field Config
+    const shapeConfig = {
+      rectangular: {
+        title: 'Rechteckiger Behälter (Quader)',
+        formula: 'V = Länge × Breite × Höhe',
+        hasCircleMode: false,
+        fields: [
+          { id: 'length', label: 'Innenlänge', default: 60 },
+          { id: 'width', label: 'Innenbreite', default: 30 },
+          { id: 'height', label: 'Innenhöhe', default: 35 }
+        ]
+      },
+      cylinder: {
+        title: 'Zylinder',
+        formula: 'V = π × Radius² × Höhe',
+        hasCircleMode: true,
+        fields: [
+          { id: 'radius', label: 'Innenradius', diameterLabel: 'Innendurchmesser', default: 20 },
+          { id: 'height', label: 'Innenhöhe', default: 60 }
+        ]
+      },
+      sphere: {
+        title: 'Kugel',
+        formula: 'V = 4/3 × π × Radius³',
+        hasCircleMode: true,
+        fields: [
+          { id: 'radius', label: 'Innenradius', diameterLabel: 'Innendurchmesser', default: 20 }
+        ]
+      },
+      cone: {
+        title: 'Kegel',
+        formula: 'V = 1/3 × π × Radius² × Höhe',
+        hasCircleMode: true,
+        fields: [
+          { id: 'radius', label: 'Grundkreisradius', diameterLabel: 'Grundkreisdurchmesser', default: 18 },
+          { id: 'height', label: 'Senkrechte Höhe', default: 35 }
+        ]
+      }
+    };
+
+    // Unit Conversion Factors to Meters
+    const toMeterFactor = {
+      mm: 0.001,
+      cm: 0.01,
+      m: 1.0,
+      in: 0.0254,
+      ft: 0.3048
+    };
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      parseUrlParams();
+      renderFields();
+      calculateVolume();
+    });
+
+    // Parse URL Parameters
+    function parseUrlParams() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const urlShape = urlParams.get('shape');
+      const urlUnit = urlParams.get('unit');
+
+      if (urlShape && shapeConfig[urlShape]) {
+        state.shape = urlShape;
+      }
+      if (urlUnit && toMeterFactor[urlUnit]) {
+        state.unit = urlUnit;
+        document.getElementById('unit-select').value = urlUnit;
+      }
+
+      // Check specific dimension query params
+      const s = state.shape;
+      shapeConfig[s].fields.forEach(f => {
+        const val = urlParams.get(f.id);
+        if (val && !isNaN(parseFloat(val)) && parseFloat(val) > 0) {
+          state.values[s][f.id] = parseFloat(val);
+        }
+      });
+
+      updateShapeTabs();
+    }
+
+    // Switch Geometric Shape
+    function selectShape(shapeKey) {
+      if (!shapeConfig[shapeKey]) return;
+      state.shape = shapeKey;
+      updateShapeTabs();
+      renderFields();
+      calculateVolume();
+    }
+
+    function updateShapeTabs() {
+      document.querySelectorAll('.shape-tab').forEach(tab => {
+        tab.classList.remove('active');
+        tab.setAttribute('aria-selected', 'false');
+      });
+      const activeTab = document.getElementById('tab-' + state.shape);
+      if (activeTab) {
+        activeTab.classList.add('active');
+        activeTab.setAttribute('aria-selected', 'true');
+      }
+    }
+
+    // Toggle Circle Mode (Radius vs Diameter)
+    function setCircleMode(mode) {
+      state.circleMode = mode;
+      document.getElementById('toggle-radius').classList.toggle('active', mode === 'radius');
+      document.getElementById('toggle-diameter').classList.toggle('active', mode === 'diameter');
+      renderFields();
+      calculateVolume();
+    }
+
+    // Render Input Fields for Current Shape
+    function renderFields() {
+      const s = state.shape;
+      const conf = shapeConfig[s];
+      const container = document.getElementById('dynamic-fields-container');
+      const circleGroup = document.getElementById('circle-measure-group');
+      const unit = document.getElementById('unit-select').value;
+      state.unit = unit;
+
+      circleGroup.style.display = conf.hasCircleMode ? 'block' : 'none';
+
+      let html = '';
+      conf.fields.forEach(f => {
+        let label = f.label;
+        if (f.id === 'radius' && state.circleMode === 'diameter' && f.diameterLabel) {
+          label = f.diameterLabel;
+        }
+
+        let curVal = state.values[s][f.id] ?? f.default;
+        // If diameter mode is active, display value as 2 * radius
+        if (f.id === 'radius' && state.circleMode === 'diameter') {
+          curVal = curVal * 2;
+        }
+
+        html += `
+          <div class="form-group">
+            <label class="form-label" for="input-${f.id}">
+              <span>${label}</span>
+            </label>
+            <div class="input-with-unit">
+              <input class="apple-input" id="input-${f.id}" type="number" step="any" min="0.001" value="${curVal}" oninput="handleInputChange('${f.id}')">
+              <span class="input-unit-badge">${unit}</span>
+            </div>
+          </div>
+        `;
+      });
+
+      container.innerHTML = html;
+    }
+
+    // Handle Input Changes
+    function handleInputChange(fieldId) {
+      const input = document.getElementById(`input-${fieldId}`);
+      let val = parseFloat(input.value);
+      if (!isNaN(val) && val > 0) {
+        if (fieldId === 'radius' && state.circleMode === 'diameter') {
+          state.values[state.shape]['radius'] = val / 2;
+        } else {
+          state.values[state.shape][fieldId] = val;
+        }
+      }
+      calculateVolume();
+    }
+
+    // Perform Volume Calculation
+    function calculateVolume() {
+      const s = state.shape;
+      const conf = shapeConfig[s];
+      const unit = document.getElementById('unit-select').value;
+      state.unit = unit;
+      const factor = toMeterFactor[unit];
+      const errMsg = document.getElementById('error-message');
+
+      let isValid = true;
+      let rawValues = {};
+
+      conf.fields.forEach(f => {
+        const input = document.getElementById(`input-${f.id}`);
+        let val = parseFloat(input ? input.value : state.values[s][f.id]);
+        if (isNaN(val) || val <= 0) {
+          isValid = false;
+        }
+        if (f.id === 'radius' && state.circleMode === 'diameter') {
+          rawValues['radius'] = val / 2;
+        } else {
+          rawValues[f.id] = val;
+        }
+      });
+
+      if (!isValid) {
+        errMsg.textContent = 'Bitte prüfen: Jedes Maß muss eine positive Zahl größer als 0 sein.';
+        errMsg.style.display = 'block';
+        return;
+      } else {
+        errMsg.style.display = 'none';
+      }
+
+      // Convert all input dimensions to meters (m)
+      let volCubicMeters = 0;
+      let volInUnitCubed = 0;
+
+      if (s === 'rectangular') {
+        const l_m = rawValues.length * factor;
+        const w_m = rawValues.width * factor;
+        const h_m = rawValues.height * factor;
+        volCubicMeters = l_m * w_m * h_m;
+        volInUnitCubed = rawValues.length * rawValues.width * rawValues.height;
+      } else if (s === 'cylinder') {
+        const r_m = rawValues.radius * factor;
+        const h_m = rawValues.height * factor;
+        volCubicMeters = Math.PI * Math.pow(r_m, 2) * h_m;
+        volInUnitCubed = Math.PI * Math.pow(rawValues.radius, 2) * rawValues.height;
+      } else if (s === 'sphere') {
+        const r_m = rawValues.radius * factor;
+        volCubicMeters = (4 / 3) * Math.PI * Math.pow(r_m, 3);
+        volInUnitCubed = (4 / 3) * Math.PI * Math.pow(rawValues.radius, 3);
+      } else if (s === 'cone') {
+        const r_m = rawValues.radius * factor;
+        const h_m = rawValues.height * factor;
+        volCubicMeters = (1 / 3) * Math.PI * Math.pow(r_m, 2) * h_m;
+        volInUnitCubed = (1 / 3) * Math.PI * Math.pow(rawValues.radius, 2) * rawValues.height;
+      }
+
+      // 1 m³ = 1000 Liters
+      const liters = volCubicMeters * 1000;
+      // 1 US Gallon = 3.785411784 Liters
+      const usGallons = liters / 3.785411784;
+
+      // Update UI Output Values
+      document.getElementById('primary-liters').textContent = formatGerman(liters, 3);
+      document.getElementById('sec-m3').textContent = formatGerman(volCubicMeters, 4);
+      document.getElementById('sec-gallons').textContent = formatGerman(usGallons, 3);
+      document.getElementById('sec-unit-cubed').textContent = formatGerman(volInUnitCubed, 2);
+      document.getElementById('sec-unit-label').textContent = `${unit}³`;
+      document.getElementById('formula-badge').textContent = conf.formula;
+
+      // Store current calculation in state
+      state.currentCalc = {
+        shape: s,
+        shapeTitle: conf.title,
+        unit: unit,
+        rawValues: rawValues,
+        liters: liters,
+        m3: volCubicMeters,
+        gallons: usGallons
+      };
+
+      // Update dynamic preview
+      renderDynamicPreview(s, rawValues, unit);
+    }
+
+    // Format numbers according to German locale
+    function formatGerman(num, maxDecimals = 3) {
+      if (isNaN(num)) return '—';
+      return new Intl.NumberFormat('de-DE', {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: maxDecimals
+      }).format(num);
+    }
+
+    // Render Dynamic Isometric Preview SVG
+    function renderDynamicPreview(shape, dims, unit) {
+      const box = document.getElementById('shape-preview-box');
+      let svgContent = '';
+
+      if (shape === 'rectangular') {
+        svgContent = `
+          <svg class="shape-preview-svg" viewBox="0 0 260 140" fill="none">
+            <polygon points="40,55 130,20 220,55 130,90" fill="#0071e3" fill-opacity="0.12" stroke="#0071e3" stroke-width="2"/>
+            <polygon points="40,55 130,90 130,125 40,90" fill="#0071e3" fill-opacity="0.25" stroke="#0071e3" stroke-width="2"/>
+            <polygon points="130,90 220,55 220,90 130,125" fill="#0071e3" fill-opacity="0.38" stroke="#0071e3" stroke-width="2"/>
+            <text x="75" y="118" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">B: ${dims.width} ${unit}</text>
+            <text x="175" y="118" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">L: ${dims.length} ${unit}</text>
+            <text x="22" y="75" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">H: ${dims.height} ${unit}</text>
+          </svg>
+        `;
+      } else if (shape === 'cylinder') {
+        svgContent = `
+          <svg class="shape-preview-svg" viewBox="0 0 260 140" fill="none">
+            <path d="M70 40v60c0 15 54 15 54 15s54 0 54-15V40" fill="#0071e3" fill-opacity="0.2" stroke="#0071e3" stroke-width="2"/>
+            <ellipse cx="124" cy="40" rx="54" ry="16" fill="#0071e3" fill-opacity="0.12" stroke="#0071e3" stroke-width="2"/>
+            <line x1="124" y1="40" x2="178" y2="40" stroke="#1d1d1f" stroke-width="1.5" stroke-dasharray="2 2"/>
+            <text x="135" y="34" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">r: ${formatGerman(dims.radius, 1)} ${unit}</text>
+            <text x="186" y="80" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">H: ${dims.height} ${unit}</text>
+          </svg>
+        `;
+      } else if (shape === 'sphere') {
+        svgContent = `
+          <svg class="shape-preview-svg" viewBox="0 0 260 140" fill="none">
+            <circle cx="130" cy="70" r="50" fill="#0071e3" fill-opacity="0.18" stroke="#0071e3" stroke-width="2"/>
+            <ellipse cx="130" cy="70" rx="50" ry="18" stroke="#0071e3" stroke-width="1.5" stroke-dasharray="3 3"/>
+            <line x1="130" y1="70" x2="180" y2="70" stroke="#1d1d1f" stroke-width="2"/>
+            <circle cx="130" cy="70" r="3" fill="#1d1d1f"/>
+            <text x="140" y="64" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">r: ${formatGerman(dims.radius, 1)} ${unit}</text>
+          </svg>
+        `;
+      } else if (shape === 'cone') {
+        svgContent = `
+          <svg class="shape-preview-svg" viewBox="0 0 260 140" fill="none">
+            <polygon points="130,20 76,105 184,105" fill="#0071e3" fill-opacity="0.2" stroke="#0071e3" stroke-width="2"/>
+            <ellipse cx="130" cy="105" rx="54" ry="15" fill="#0071e3" fill-opacity="0.12" stroke="#0071e3" stroke-width="2"/>
+            <line x1="130" y1="20" x2="130" y2="105" stroke="#1d1d1f" stroke-width="1.5" stroke-dasharray="2 2"/>
+            <text x="135" y="65" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">H: ${dims.height} ${unit}</text>
+            <text x="140" y="125" font-family="sans-serif" font-size="11" font-weight="600" fill="#1d1d1f">r: ${formatGerman(dims.radius, 1)} ${unit}</text>
+          </svg>
+        `;
+      }
+
+      box.innerHTML = svgContent;
+    }
+
+    // Load Quick Preset
+    function loadPreset(presetKey) {
+      if (presetKey === 'box') {
+        state.shape = 'rectangular';
+        state.unit = 'cm';
+        state.values.rectangular = { length: 50, width: 30, height: 20 };
+      } else if (presetKey === 'aquarium') {
+        state.shape = 'rectangular';
+        state.unit = 'cm';
+        state.values.rectangular = { length: 30, width: 30, height: 30 };
+      } else if (presetKey === 'cylinder') {
+        state.shape = 'cylinder';
+        state.unit = 'cm';
+        state.circleMode = 'diameter';
+        state.values.cylinder = { radius: 10, height: 30 };
+      } else if (presetKey === 'cone') {
+        state.shape = 'cone';
+        state.unit = 'cm';
+        state.circleMode = 'radius';
+        state.values.cone = { radius: 18, height: 35 };
+      }
+
+      document.getElementById('unit-select').value = state.unit;
+      updateShapeTabs();
+      renderFields();
+      calculateVolume();
+      showToast('Beispiel geladen: ' + shapeConfig[state.shape].title);
+    }
+
+    // Reset Calculator Values
+    function resetCalculator() {
+      const s = state.shape;
+      shapeConfig[s].fields.forEach(f => {
+        state.values[s][f.id] = f.default;
+      });
+      renderFields();
+      calculateVolume();
+      showToast('Werte auf Standard zurückgesetzt.');
+    }
+
+    // Multi-Container Accumulator
+    function addContainerToSum() {
+      if (!state.currentCalc) calculateVolume();
+      const calc = state.currentCalc;
+      if (!calc) return;
+
+      let dimStr = '';
+      if (calc.shape === 'rectangular') {
+        dimStr = `${calc.rawValues.length} × ${calc.rawValues.width} × ${calc.rawValues.height} ${calc.unit}`;
+      } else if (calc.shape === 'cylinder') {
+        dimStr = `r = ${formatGerman(calc.rawValues.radius, 1)}, H = ${calc.rawValues.height} ${calc.unit}`;
+      } else if (calc.shape === 'sphere') {
+        dimStr = `r = ${formatGerman(calc.rawValues.radius, 1)} ${calc.unit}`;
+      } else if (calc.shape === 'cone') {
+        dimStr = `r = ${formatGerman(calc.rawValues.radius, 1)}, H = ${calc.rawValues.height} ${calc.unit}`;
+      }
+
+      const item = {
+        id: Date.now() + Math.random(),
+        shape: calc.shape,
+        shapeTitle: calc.shapeTitle,
+        dimensions: dimStr,
+        liters: calc.liters,
+        m3: calc.m3,
+        gallons: calc.gallons
+      };
+
+      state.accumulator.push(item);
+      renderAccumulatorList();
+      showToast('Behälter zur Summe hinzugefügt!');
+    }
+
+    function removeAccumulatorItem(id) {
+      state.accumulator = state.accumulator.filter(item => item.id !== id);
+      renderAccumulatorList();
+      showToast('Behälter entfernt.');
+    }
+
+    function clearAccumulatorList() {
+      state.accumulator = [];
+      renderAccumulatorList();
+      showToast('Behälterliste geleert.');
+    }
+
+    function renderAccumulatorList() {
+      const listEl = document.getElementById('accumulator-items-list');
+      const emptyEl = document.getElementById('accumulator-empty-msg');
+      const totalBar = document.getElementById('accumulator-total-bar');
+      const btnCopy = document.getElementById('btn-copy-acc');
+      const btnClear = document.getElementById('btn-clear-acc');
+
+      if (state.accumulator.length === 0) {
+        listEl.innerHTML = '';
+        emptyEl.style.display = 'block';
+        totalBar.style.display = 'none';
+        btnCopy.disabled = true;
+        btnClear.disabled = true;
+        return;
+      }
+
+      emptyEl.style.display = 'none';
+      totalBar.style.display = 'flex';
+      btnCopy.disabled = false;
+      btnClear.disabled = false;
+
+      let totalLiters = 0;
+      let totalM3 = 0;
+      let totalGal = 0;
+      let html = '';
+
+      state.accumulator.forEach((item, index) => {
+        totalLiters += item.liters;
+        totalM3 += item.m3;
+        totalGal += item.gallons;
+
+        html += `
+          <li class="container-item">
+            <div class="item-meta">
+              <span class="item-badge">#${index + 1} ${item.shapeTitle}</span>
+              <span class="item-dims">${item.dimensions}</span>
+            </div>
+            <div style="display:flex; align-items:center; gap:16px;">
+              <span class="item-volume">${formatGerman(item.liters, 3)} Liter</span>
+              <button class="btn-item-remove" type="button" onclick="removeAccumulatorItem(${item.id})" aria-label="Entfernen">✕</button>
+            </div>
+          </li>
+        `;
+      });
+
+      listEl.innerHTML = html;
+      document.getElementById('acc-count-label').textContent = `${state.accumulator.length} Behälter in der Summe`;
+      document.getElementById('acc-total-liters').textContent = `${formatGerman(totalLiters, 3)} L`;
+      document.getElementById('acc-total-sub').textContent = `${formatGerman(totalM3, 4)} m³ · ${formatGerman(totalGal, 2)} US gal`;
+    }
+
+    // Copy formatted result summary
+    function copyResultText() {
+      if (!state.currentCalc) return;
+      const c = state.currentCalc;
+      const text = `Volumenberechnung (${c.shapeTitle}):\n` +
+                   `• Ergebnis: ${formatGerman(c.liters, 3)} Liter\n` +
+                   `• Kubikmeter: ${formatGerman(c.m3, 4)} m³\n` +
+                   `• US-Gallonen: ${formatGerman(c.gallons, 3)} gal\n` +
+                   `• Einheit: ${c.unit}\n` +
+                   `• Berechnet auf: https://calculee.io/de/volumenrechner.html`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Ergebnis in die Zwischenablage kopiert!');
+      });
+    }
+
+    // Copy shareable link with parameters
+    function copyShareableLink() {
+      const s = state.shape;
+      const u = state.unit;
+      const params = new URLSearchParams();
+      params.set('shape', s);
+      params.set('unit', u);
+
+      shapeConfig[s].fields.forEach(f => {
+        const val = state.values[s][f.id];
+        if (val) params.set(f.id, val);
+      });
+
+      const url = `${window.location.origin}${window.location.pathname}?${params.toString()}#volume-calculator`;
+      navigator.clipboard.writeText(url).then(() => {
+        showToast('Link mit Maßen kopiert!');
+      });
+    }
+
+    // Copy accumulator list
+    function copyAccumulatorList() {
+      if (state.accumulator.length === 0) return;
+      let text = `Behälterliste & Summe (Volumenrechner):\n`;
+      let totalL = 0;
+      state.accumulator.forEach((item, i) => {
+        totalL += item.liters;
+        text += `${i + 1}. ${item.shapeTitle} (${item.dimensions}) = ${formatGerman(item.liters, 3)} L\n`;
+      });
+      text += `\nGesamtvolumen: ${formatGerman(totalL, 3)} Liter\nQuelle: https://calculee.io/de/volumenrechner.html`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        showToast('Behälterliste & Summe kopiert!');
+      });
+    }
+
+    // Download High-Resolution Result Summary as PNG
+    function downloadResultPNG() {
+      if (!state.currentCalc) return;
+      const c = state.currentCalc;
+
+      const canvas = document.createElement('canvas');
+      canvas.width = 800;
+      canvas.height = 450;
+      const ctx = canvas.getContext('2d');
+
+      // Background
+      ctx.fillStyle = '#f5f5f7';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Card Box
+      ctx.fillStyle = '#ffffff';
+      ctx.roundRect(40, 40, 720, 370, 24);
+      ctx.fill();
+
+      // Header
+      ctx.fillStyle = '#0071e3';
+      ctx.font = 'bold 16px "Inter", sans-serif';
+      ctx.fillText('CALCULEE · VOLUMENRECHNER', 70, 80);
+
+      ctx.fillStyle = '#1d1d1f';
+      ctx.font = 'bold 28px "Inter", sans-serif';
+      ctx.fillText(c.shapeTitle, 70, 120);
+
+      // Divider
+      ctx.strokeStyle = '#e8e8ed';
+      ctx.lineWidth = 1;
+      ctx.beginPath();
+      ctx.moveTo(70, 140);
+      ctx.lineTo(730, 140);
+      ctx.stroke();
+
+      // Main Number
+      ctx.fillStyle = '#0071e3';
+      ctx.font = 'bold 54px "Inter", sans-serif';
+      ctx.fillText(`${formatGerman(c.liters, 3)} Liter`, 70, 210);
+
+      // Secondary Grid
+      ctx.fillStyle = '#707070';
+      ctx.font = '500 16px "Inter", sans-serif';
+      ctx.fillText(`Kubikmeter: ${formatGerman(c.m3, 4)} m³`, 70, 260);
+      ctx.fillText(`US-Gallonen: ${formatGerman(c.gallons, 3)} gal`, 70, 290);
+      ctx.fillText(`Einheit: ${c.unit}`, 70, 320);
+
+      // Footer
+      ctx.font = '400 13px "Inter", sans-serif';
+      ctx.fillStyle = '#707070';
+      ctx.fillText('Berechnet auf https://calculee.io/de/volumenrechner.html', 70, 380);
+
+      // Trigger download
+      const link = document.createElement('a');
+      link.download = `volumen-${c.shape}-${Date.now()}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      showToast('PNG-Zusammenfassung heruntergeladen!');
+    }
+
+    // Toast Feedback
+    function showToast(msg) {
+      const toast = document.getElementById('toast-msg');
+      toast.textContent = msg;
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2600);
+    }
+  </script>
+</body>
+</html>
