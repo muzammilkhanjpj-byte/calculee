@@ -6,26 +6,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
   <!-- SEO & Technische Meta-Tags -->
-  <title>Poisson-Verteilung Rechner | PMF- &amp; CDF-Wahrscheinlichkeit</title>
+  <title>Poisson-Verteilung Rechner | Online berechnen mit Rechenweg</title>
   <meta name="description"
-    content="Nutzen Sie unseren kostenlosen Poisson-Verteilungsrechner, um exakte (PMF) und kumulierte (CDF) Wahrscheinlichkeiten anhand Ihrer erwarteten Rate (Lambda) und Zielereignisse zu berechnen.">
+    content="Kostenloser Poisson-Verteilung Rechner: Berechnen Sie Punktwahrscheinlichkeiten P(X = k) und kumulierte Werte online mit Schritt-für-Schritt Rechenweg &amp; Formel.">
+  <meta name="keywords" content="Poisson-Verteilung Rechner, Poisson Verteilung berechnen, Poisson Verteilung Formel, Zähldichte, Erwartungswert Varianz Poisson, Gesetz der seltenen Ereignisse, Poisson Excel">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://calculee.io/de/poisson-verteilung-rechner.html">
 
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calculee.io/de/poisson-verteilung-rechner.html">
-  <meta property="og:title" content="Poisson-Verteilung Rechner | PMF- &amp; CDF-Wahrscheinlichkeit">
+  <meta property="og:title" content="Poisson-Verteilung Rechner | Online berechnen mit Rechenweg">
   <meta property="og:description"
-    content="Nutzen Sie unseren kostenlosen Poisson-Verteilungsrechner, um exakte (PMF) und kumulierte (CDF) Wahrscheinlichkeiten anhand Ihrer erwarteten Rate (Lambda) und Zielereignisse zu berechnen.">
+    content="Kostenloser Poisson-Verteilung Rechner: Berechnen Sie Punktwahrscheinlichkeiten P(X = k) und kumulierte Werte online mit Schritt-für-Schritt Rechenweg &amp; Formel.">
   <meta property="og:site_name" content="Calculee">
   <meta property="og:locale" content="de_DE">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Poisson-Verteilung Rechner | PMF- &amp; CDF-Wahrscheinlichkeit">
+  <meta name="twitter:title" content="Poisson-Verteilung Rechner | Online berechnen mit Rechenweg">
   <meta name="twitter:description"
-    content="Nutzen Sie unseren kostenlosen Poisson-Verteilungsrechner, um exakte (PMF) und kumulierte (CDF) Wahrscheinlichkeiten anhand Ihrer erwarteten Rate (Lambda) und Zielereignisse zu berechnen.">
+    content="Kostenloser Poisson-Verteilung Rechner: Berechnen Sie Punktwahrscheinlichkeiten P(X = k) und kumulierte Werte online mit Schritt-für-Schritt Rechenweg &amp; Formel.">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -52,26 +53,50 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "Kann die erwartete Rate (Lambda, λ) eine Dezimalzahl sein, wenn die Ereignisse diskret sind?",
+            "name": "Was gibt der Parameter Lambda (λ) bei der Poisson-Verteilung an?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Ja. Während eine diskrete Zufallsvariable (X) immer eine ganze Zahl sein muss, stellt die durchschnittliche Auftretensrate (Lambda, λ) einen historischen Mittelwert dar. Bei der Wahrscheinlichkeitsberechnung über ein festes Intervall ist es mathematischer Standard, dass der Erwartungswert eine Dezimalzahl ist."
+              "text": "Lambda (λ) ist die durchschnittliche Rate bzw. der Erwartungswert für das Eintreten eines Ereignisses innerhalb eines fest definierten Zeit- oder Raumintervalls (z. B. 4 Anrufe pro Stunde oder 1,5 Webfehler pro Quadratmeter). Bei der Poisson-Verteilung entspricht Lambda gleichzeitig dem Mittelwert (μ = λ) und der Varianz (σ² = λ)."
             }
           },
           {
             "@type": "Question",
-            "name": "Warum sind Mittelwert und Varianz bei einer Poisson-Verteilung gleich?",
+            "name": "Kann der Parameter Lambda (λ) eine Kommazahl bzw. Dezimalzahl sein?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Eine definierende mathematische Eigenschaft dieser Verteilung ist, dass sowohl der Erwartungswert (Mittelwert, μ) als auch die Varianz (σ²) strikt dem Ratenparameter (λ) entsprechen. Folglich ist die Standardabweichung (σ) immer √λ."
+              "text": "Ja. Während die Anzahl der beobachteten Ereignisse (k) immer eine diskrete ganze Zahl sein muss (0, 1, 2, ...), stellt Lambda einen statistischen Durchschnitt dar. Ein Durchschnitt von beispielsweise λ = 3,7 Anrufen pro Minute ist mathematisch völlig korrekt und üblich."
             }
           },
           {
             "@type": "Question",
-            "name": "Was ist der Unterschied zwischen der Binomial- und der Poisson-Verteilung?",
+            "name": "Warum sind Erwartungswert und Varianz bei der Poisson-Verteilung immer identisch?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "Eine Binomialverteilung prognostiziert Erfolge aus einer strikt festgelegten Anzahl unabhängiger Versuche, während eine Poisson-Verteilung die Anzahl der Ereignisse modelliert, die über ein kontinuierliches Zeit- oder Raumintervall ohne festgelegte Versuchsgrenze auftreten."
+              "text": "Dies ist die charakteristische mathematische Eigenschaft der Poisson-Verteilung: Sowohl der Erwartungswert E(X) als auch die Varianz Var(X) sind exakt gleich dem Ratenparameter λ. Die Standardabweichung beträgt stets σ = √λ."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wann verwendet man die Poisson-Verteilung statt der Binomialverteilung?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Die Poisson-Verteilung wird verwendet, wenn die Anzahl der Versuche n sehr groß (n ≥ 30) und die Einzelwahrscheinlichkeit p sehr klein ist (p ≤ 0,05) – bekannt als das Gesetz der seltenen Ereignisse. Zudem modelliert Poisson Ereignisse über ein kontinuierliches Intervall ohne feste Obergrenze, während die Binomialverteilung eine feste Versuchsanzahl n voraussetzt."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Was ist der Unterschied zwischen Poisson-Verteilung und Exponentialverteilung?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Beide Verteilungen beschreiben denselben Poisson-Prozess, beantworten aber unterschiedliche Fragen: Die Poisson-Verteilung ist diskret und zählt die Anzahl der Ereignisse in einem festen Intervall. Die Exponentialverteilung ist stetig und modelliert die Wartezeit bzw. Zeitspanne zwischen zwei aufeinanderfolgenden Ereignissen."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Wie berechnet man die Poisson-Verteilung in Microsoft Excel?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "In Excel nutzen Sie die Funktion =POISSON.VERT(k; lambda; kumuliert). Setzen Sie das Argument 'kumuliert' auf FALSCH für die Punktwahrscheinlichkeit P(X = k) oder auf WAHR für die kumulierte Wahrscheinlichkeit P(X ≤ k)."
             }
           }
         ]
@@ -337,6 +362,42 @@
       background-color: var(--color-paper);
       border-color: var(--color-electric-blue);
       box-shadow: 0 0 0 4px var(--color-electric-blue-soft);
+    }
+
+    .apple-input.input-error {
+      border-color: var(--color-ember);
+      background-color: rgba(182, 68, 0, 0.04);
+    }
+
+    .calc-validation-msg {
+      font-size: 13px;
+      color: var(--color-ember);
+      font-weight: 500;
+      margin-top: 6px;
+      display: none;
+    }
+
+    .btn-copy-result {
+      margin-top: 10px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--color-deep-gray);
+      background-color: var(--color-paper);
+      border: 1px solid var(--color-hairline);
+      padding: 5px 14px;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: var(--font-sf-pro-text);
+    }
+
+    .btn-copy-result:hover {
+      background-color: var(--color-electric-blue-soft);
+      color: var(--color-electric-blue);
+      border-color: var(--color-electric-blue);
     }
 
     .segmented-control {
@@ -735,19 +796,187 @@
       gap: var(--spacing-16);
     }
 
-    /* Responsive SVG Wrapper */
-    .svg-diagram-wrapper {
+    /* Quick Preset Chips */
+    .preset-chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      align-items: center;
+      margin-top: var(--spacing-16);
+      padding-top: var(--spacing-16);
+      border-top: 1px solid var(--color-cool-wash);
+    }
+
+    .preset-chip {
+      background-color: var(--color-canvas);
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      border-radius: 999px;
+      padding: 6px 12px;
+      font-size: 12.5px;
+      font-weight: 500;
+      color: var(--color-deep-gray);
+      cursor: pointer;
+      transition: all 0.15s ease;
+      font-family: var(--font-sf-pro-text);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .preset-chip:hover {
+      background-color: var(--color-electric-blue-soft);
+      border-color: var(--color-electric-blue);
+      color: var(--color-electric-blue);
+      transform: translateY(-1px);
+    }
+
+    /* Checklist Cards */
+    .checklist-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+      gap: var(--spacing-20);
+      margin-top: var(--spacing-20);
+    }
+
+    .checklist-card {
+      background-color: var(--color-paper);
+      border-radius: 18px;
+      padding: var(--spacing-24);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+      position: relative;
+    }
+
+    .checklist-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background-color: var(--color-electric-blue-soft);
+      color: var(--color-electric-blue);
+      font-weight: 700;
+      font-size: 13px;
+      margin-bottom: var(--spacing-12);
+    }
+
+    /* Comparison Table */
+    .comp-table-wrap {
       width: 100%;
       overflow-x: auto;
       -webkit-overflow-scrolling: touch;
-      padding-bottom: 4px;
+      border-radius: 18px;
+      border: 1px solid rgba(0, 0, 0, 0.08);
+      background-color: var(--color-paper);
+      margin-top: var(--spacing-20);
     }
 
-    .svg-diagram-wrapper svg {
-      min-width: 520px;
+    .comp-table {
       width: 100%;
-      height: auto;
-      display: block;
+      min-width: 600px;
+      border-collapse: collapse;
+      font-size: 14.5px;
+      text-align: left;
+    }
+
+    .comp-table th {
+      background-color: var(--color-canvas);
+      padding: 14px 18px;
+      font-weight: 600;
+      color: var(--color-primary-ink);
+      border-bottom: 1px solid var(--color-hairline);
+    }
+
+    .comp-table td {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--color-cool-wash);
+      color: var(--color-deep-gray);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .comp-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .comp-table tr.highlight-row {
+      background-color: var(--color-electric-blue-soft);
+    }
+
+    /* Code Box & Cheat Sheet */
+    .code-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+      gap: var(--spacing-20);
+      margin-top: var(--spacing-20);
+    }
+
+    .code-card {
+      background-color: #1e1e24;
+      color: #f8f8f2;
+      border-radius: 18px;
+      padding: var(--spacing-20);
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .code-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: var(--spacing-12);
+      padding-bottom: var(--spacing-12);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .code-card-title {
+      font-family: var(--font-sf-pro-display);
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .code-card-badge {
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background-color: rgba(255, 255, 255, 0.15);
+      color: #a6d1ff;
+    }
+
+    .code-pre {
+      font-family: var(--font-mono);
+      font-size: 13.5px;
+      line-height: 1.6;
+      margin: 0;
+      white-space: pre-wrap;
+      word-break: break-all;
+      color: #d1d5db;
+    }
+
+    .code-pre .hl-func { color: #60a5fa; font-weight: 600; }
+    .code-pre .hl-param { color: #f472b6; }
+    .code-pre .hl-comment { color: #9ca3af; font-style: italic; }
+
+    /* Callout Card */
+    .callout-highlight {
+      background-color: var(--color-paper);
+      border-left: 4px solid var(--color-electric-blue);
+      border-radius: 16px;
+      padding: var(--spacing-20);
+      margin: var(--spacing-20) 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+    }
+
+    .callout-highlight.amber {
+      border-left-color: var(--color-ember);
+      background-color: rgba(182, 68, 0, 0.03);
     }
 
     /* ========================================================
@@ -934,35 +1163,30 @@
        ========================================== -->
   <section class="section-band white" id="calculator">
     <div class="container">
-      <div class="eyebrow-badge">Statistische Werkzeuge</div>
+      <div class="eyebrow-badge">Statistik &amp; Wahrscheinlichkeitsrechnung</div>
       <h1 class="hero-title">Poisson-Verteilung Rechner</h1>
-      <p class="hero-subtitle">Optimieren Sie die statistische Modellierung und prädiktive Analyse unabhängiger
-        Ereignisse über ein beliebiges festes Intervall oder einen bestimmten Zeitraum, indem Sie Ihre Zufallsvariable
-        (<em>x</em>) und die durchschnittliche Erfolgsrate eingeben – die als Lambda (&lambda;) bekannte erwartete Rate
-        oder Auftretensrate, die sowohl den Mittelwert als auch die Varianz definiert. Durch die Anwendung der
-        Eulerschen Zahl (<em>e</em>) und der Fakultät (!) auf diese diskreten Ereignisse berechnet das Tool sofort die
-        Wahrscheinlichkeitsfunktion (PMF) für die exakte Wahrscheinlichkeit und die kumulative Verteilungsfunktion (CDF)
-        für die kumulierte Wahrscheinlichkeit.</p>
+      <p class="hero-subtitle">Berechnen Sie exakte Wahrscheinlichkeiten <strong>P(X = k)</strong> und kumulierte Wahrscheinlichkeiten <strong>P(X &le; k)</strong> für diskrete Ereignisse in festen Zeit- oder Raumintervallen. Geben Sie einfach die durchschnittliche Rate <strong>&lambda; (Lambda)</strong> und Ihre Zielereignisse <strong>k</strong> ein – inklusive <strong>Schritt-für-Schritt-Rechenweg</strong>, Verteilungsdiagramm und Wertetabelle.</p>
 
       <div class="calc-layout">
 
         <!-- Links: Eingabesteuerung -->
         <div class="apple-card">
           <div class="card-title">
-            <span>Parameter</span>
-            <span style="font-size: 13px; font-weight: 400; color: var(--color-mid-gray);">Diskretes Modell</span>
+            <span>Verteilungsparameter</span>
+            <span style="font-size: 13px; font-weight: 400; color: var(--color-mid-gray);">Diskreter Poisson-Prozess</span>
           </div>
 
           <!-- Durchschnittliche Rate Lambda -->
           <div class="form-group">
             <div class="form-label">
-              <span>Durchschnittliche Auftretensrate (&lambda;)</span>
-              <span class="hint">&lambda; &gt; 0 (Mittelwert Ereignisse)</span>
+              <span>Durchschnittliche Rate (&lambda; / Lambda)</span>
+              <span class="hint">&lambda; &gt; 0 (Erwartungswert &mu;)</span>
             </div>
             <div class="input-wrapper">
-              <input type="number" id="lambdaInput" class="apple-input" value="4" min="0.0001" step="any"
-                placeholder="z. B. 4.5">
+              <input type="text" inputmode="decimal" id="lambdaInput" class="apple-input" value="4"
+                placeholder="z. B. 4,5 oder 4.5" autocomplete="off">
             </div>
+            <div id="lambdaValidation" class="calc-validation-msg">Bitte eine gültige Zahl größer 0 eingeben (z. B. 3,5).</div>
           </div>
 
           <!-- Zielanzahl der Ereignisse K -->
@@ -972,14 +1196,15 @@
               <span class="hint">k &ge; 0 (Ganze Zahl)</span>
             </div>
             <div class="input-wrapper">
-              <input type="number" id="kInput" class="apple-input" value="3" min="0" step="1" placeholder="z. B. 3">
+              <input type="number" id="kInput" class="apple-input" value="3" min="0" step="1" placeholder="z. B. 3" autocomplete="off">
             </div>
+            <div id="kValidation" class="calc-validation-msg">Bitte eine ganze Zahl &ge; 0 eingeben (z. B. 0, 1, 2...).</div>
           </div>
 
           <!-- Auswahl des Wahrscheinlichkeitstyps -->
           <div class="form-group">
             <div class="form-label">
-              <span>Wahrscheinlichkeitstyp</span>
+              <span>Gesuchte Wahrscheinlichkeit</span>
             </div>
             <div class="segmented-control" id="probTypeControls">
               <button class="seg-btn active" data-type="equal" type="button">P(X = k)</button>
@@ -1001,6 +1226,15 @@
             </button>
             <button class="btn-pill-secondary" id="btnReset" type="button">Zurücksetzen</button>
           </div>
+
+          <!-- Schnell-Beispiele (Klausur-Presets) -->
+          <div class="preset-chips-wrap">
+            <span style="font-size: 12px; font-weight: 600; color: var(--color-mid-gray); width: 100%;">Typische Klausur-Presets:</span>
+            <button type="button" class="preset-chip" onclick="applyPreset(3, 2, 'equal')">Callcenter (&lambda;=3, k=2)</button>
+            <button type="button" class="preset-chip" onclick="applyPreset(1.5, 0, 'equal')">Kein Fehler (&lambda;=1.5, k=0)</button>
+            <button type="button" class="preset-chip" onclick="applyPreset(5, 4, 'leq')">Höchstens 4 (&lambda;=5, k&le;4)</button>
+            <button type="button" class="preset-chip" onclick="applyPreset(4, 5, 'geq')">Mindestens 5 (&lambda;=4, k&ge;5)</button>
+          </div>
         </div>
 
         <!-- Rechts: Ergebnisse & Visualisierung -->
@@ -1016,6 +1250,12 @@
             <div class="metric-caption" id="metricCaption">Exakte Wahrscheinlichkeit P(X = 3)</div>
             <div class="metric-hero-val" id="primaryProbDisplay">0.195367</div>
             <div class="metric-percentage" id="primaryPercentDisplay">19.5367%</div>
+            <div>
+              <button type="button" id="btnCopyResult" class="btn-copy-result" title="Wahrscheinlichkeit in Zwischenablage kopieren">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                <span id="copyResultText">Ergebnis kopieren</span>
+              </button>
+            </div>
           </div>
 
           <!-- Metriken-Raster -->
@@ -1081,206 +1321,103 @@
 
 
   <!-- ==========================================
-       ABSCHNITT 2: VERWENDUNG DES RECHNERS
+       ABSCHNITT 2: WAS IST DIE POISSON-VERTEILUNG? (EINFACH ERKLÄRT)
        ========================================== -->
-  <section class="section-band canvas-gray" id="how-to-use">
+  <section class="section-band canvas-gray" id="definition">
     <div class="container">
-      <div class="eyebrow-badge">Benutzerhandbuch &amp; Grundlagen</div>
-      <h2 class="section-title">Verwendung des Poisson-Verteilungsrechners</h2>
-      <p class="section-intro">Ob Sie komplexe prädiktive Modellierungen oder alltägliche statistische Analysen
-        durchführen: Die Poisson-Verteilung hilft Ihnen vorherzusagen, wie oft Ereignisse eintreten. Es handelt sich um
-        eine diskrete Wahrscheinlichkeitsverteilung, die entwickelt wurde, um seltene oder unabhängige Ereignisse über
-        ein festes Intervall zu erfassen. Dieses Intervall kann ein Zeitintervall / Zeitraum sein (wie die Anzahl der in
-        einer Stunde empfangenen E-Mails) oder ein physikalisches Raumvolumen / definierter Raum (wie die Anzahl der
-        Webfehler in einem Stoffballen).</p>
+      <div class="eyebrow-badge">Mathematische Grundlagen</div>
+      <h2 class="section-title">Was ist die Poisson-Verteilung? Einfach erklärt</h2>
+      <p class="section-intro">Die Poisson-Verteilung (benannt nach dem französischen Mathematiker Siméon Denis Poisson) ist eine fundamentale <strong>diskrete Wahrscheinlichkeitsverteilung</strong>. Sie gibt an, wie wahrscheinlich es ist, dass ein bestimmtes Ereignis in einem <strong>festen Zeit- oder Raumintervall</strong> genau <em>k</em>-mal eintritt – vorausgesetzt, die durchschnittliche Rate <strong>&lambda; (Lambda)</strong> ist bekannt und konstant.</p>
 
+      <!-- Die 3 Voraussetzungen eines Poisson-Prozesses -->
+      <div class="apple-card" style="margin-bottom: var(--spacing-28);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
+          Die 3 Voraussetzungen eines Poisson-Prozesses (Prüfungs-Checkliste)
+        </h3>
+        <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.55; margin-bottom: var(--spacing-16);">
+          Bevor Sie die Poisson-Verteilung anwenden dürfen, müssen in statistischen Prüfungen und Praxismodellen zwingend drei mathematische Annahmen erfüllt sein:
+        </p>
+
+        <div class="checklist-grid">
+          <div class="checklist-card">
+            <div class="checklist-badge">1</div>
+            <h4 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--color-primary-ink);">Konstante Rate (Homogenität)</h4>
+            <p style="font-size: 14px; color: var(--color-mid-gray); line-height: 1.5;">Die durchschnittliche Auftretensrate <strong>&lambda;</strong> bleibt über das gesamte Zeitfenster oder im gesamten Raumintervall unverändert konstant (Stationarität).</p>
+          </div>
+
+          <div class="checklist-card">
+            <div class="checklist-badge">2</div>
+            <h4 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--color-primary-ink);">Unabhängigkeit (Gedächtnislosigkeit)</h4>
+            <p style="font-size: 14px; color: var(--color-mid-gray); line-height: 1.5;">Jedes Ereignis tritt völlig unabhängig ein. Dass gerade ein Ereignis stattfand, erhöht oder senkt die Chance auf das nächste Ereignis nicht.</p>
+          </div>
+
+          <div class="checklist-card">
+            <div class="checklist-badge">3</div>
+            <h4 style="font-size: 17px; font-weight: 600; margin-bottom: 8px; color: var(--color-primary-ink);">Keine Simultanität (Diskretheit)</h4>
+            <p style="font-size: 14px; color: var(--color-mid-gray); line-height: 1.5;">Ereignisse treten stets einzeln auf. In einem beliebig kleinen Teilintervall (&Delta;t &rarr; 0) kann niemals mehr als ein einziges Ereignis stattfinden.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Typische Anwendungsbereiche -->
       <div class="guide-grid">
-        <!-- Wann sie verwendet wird -->
         <div class="guide-card">
-          <div class="step-number" style="background-color: var(--color-cool-wash); color: var(--color-primary-ink);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
+          <div class="step-number">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="10"></circle>
               <polyline points="12 6 12 12 16 14"></polyline>
             </svg>
           </div>
-          <h3>Wann sie verwendet wird</h3>
-          <p>Damit Ihre Ergebnisse echte statistische Signifikanz aufweisen, müssen die gemessenen Ereignisse mit einer
-            konstanten durchschnittlichen Rate innerhalb nicht überlappender Intervalle auftreten. Es muss sich zudem um
-            sich gegenseitig ausschließende Ereignisse handeln (was bedeutet, dass ein Ereignis kein anderes
-            verursacht). Dies ist in der Warteschlangentheorie äußerst nützlich zur Schätzung der Auftretensrate /
-            Ankunftsrate eines Geschäfts oder in der Qualitätskontrolle zur Messung der Fehlerrate / Ausfallrate einer
-            Fabrik.</p>
+          <h3>Zeitintervalle (Warteschlangen)</h3>
+          <p>Typisch für Anrufe in Callcentern pro Stunde, Kundenankünfte an einer Supermarktkasse, Webseiten-Anfragen pro Sekunde oder E-Mail-Eingänge pro Tag.</p>
         </div>
 
-        <!-- Schritt 1: Geben Sie Ihre Daten ein -->
         <div class="guide-card">
-          <div class="step-number">1</div>
-          <h3>Schritt 1: Geben Sie Ihre Daten ein</h3>
-          <p>Um den Berechnungsprozess zu starten, benötigen Sie lediglich einige grundlegende Eingabeparameter.</p>
-          <p style="margin-top: 10px;">Geben Sie zuerst Ihre durchschnittliche Auftretensrate (&lambda; / Lambda) ein.
-            Dies dient als Ihr grundlegender Erwartungswert. In diesem spezifischen Modell ist diese einzelne Zahl
-            einzigartig, da sie sowohl dem Mittelwert (&mu;) als auch der Varianz (&sigma;<sup>2</sup>) entspricht; ihre
-            Quadratwurzel liefert zudem die Standardabweichung (&sigma;).</p>
-          <p style="margin-top: 10px;">Wählen Sie als Nächstes Ihre diskrete Zufallsvariable (<em>X</em>), was einfach
-            die Zielanzahl der Ereignisse (<em>k</em>) ist, die Sie testen möchten. Im Hintergrund verwendet der Rechner
-            die Eulersche Zahl (<em>e</em>) und die Fakultät (<em>k</em>!), um diese Eingaben zu verarbeiten.</p>
-        </div>
-
-        <!-- Schritt 2: Verstehen Sie Ihre Ergebnisse -->
-        <div class="guide-card">
-          <div class="step-number">2</div>
-          <h3>Schritt 2: Verstehen Sie Ihre Ergebnisse</h3>
-          <p>Das Tool generiert sofort Ihre Ausgabeverteilung. Es berechnet die Wahrscheinlichkeitsfunktion (PMF) – die
-            genauso wie eine Wahrscheinlichkeitsdichtefunktion (PDF) funktioniert, jedoch für ganze Zahlen –, um Ihnen
-            die exakte Wahrscheinlichkeit / <em>P(X = k)</em> für das Eintreffen genau dieser Anzahl von Ereignissen zu
-            liefern.</p>
-          <p style="margin-top: 10px;">Es verarbeitet außerdem die kumulative Verteilungsfunktion (CDF), um Ihre gesamte
-            kumulierte Wahrscheinlichkeit anzuzeigen. Sie können problemlos die untere Randwahrscheinlichkeit
-            überprüfen, um die Chancen für höchstens / <em>P(X &le; k)</em> oder strikt weniger als / <em>P(X &lt;
-              k)</em> Ereignisse zu sehen. Umgekehrt können Sie die obere Randwahrscheinlichkeit betrachten, um die
-            Chancen für mindestens / <em>P(X &ge; k)</em> oder strikt mehr als / <em>P(X &gt; k)</em> Ereignisse zu
-            ermitteln.</p>
-        </div>
-
-        <!-- Verbindung zu anderen mathematischen Konzepten -->
-        <div class="guide-card">
-          <div class="step-number" style="background-color: var(--color-cool-wash); color: var(--color-primary-ink);">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          <div class="step-number">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line>
             </svg>
           </div>
-          <h3>Verbindung zu anderen mathematischen Konzepten</h3>
-          <p>Dieser Rechner knüpft nahtlos an umfassendere Konzepte an. Während dieses Tool beispielsweise die Anzahl
-            der Ereignisse zählt, folgt die Wartezeit zwischen diesen Ereignissen einer Exponentialverteilung
-            (Zwischenankunftszeiten). Darüber hinaus fungiert dieses Modell als Grenzwert der Binomialverteilung (bei
-            der Messung riesiger Populationen mit winzigen Erfolgswahrscheinlichkeiten), und wenn Ihre durchschnittliche
-            Rate (&lambda;) sehr hoch wird, geht sie fließend in eine Normalverteilungs-Approximation über.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       ABSCHNITT 3: VERSTEHEN SIE DIE POISSON-VERTEILUNG?
-       ========================================== -->
-  <section class="section-band white" id="understanding">
-    <div class="container">
-      <div class="eyebrow-badge">Mathematische Grundlagen</div>
-      <h2 class="section-title">Verstehen Sie die Poisson-Verteilung?</h2>
-      <p class="section-intro">In den Bereichen Statistik und Wahrscheinlichkeitstheorie ist die Poisson-Verteilung eine
-        fundamentale diskrete Wahrscheinlichkeitsverteilung. Sie wird in erster Linie zur Vorhersage der
-        Wahrscheinlichkeit einer bestimmten Anzahl von Ereignissen verwendet, die innerhalb eines festen Zeit- oder
-        Raumintervalls auftreten. Solange Sie eine bekannte durchschnittliche Rate haben, wie oft etwas passiert, können
-        Sie dieses Konzept zur Modellierung von Szenarien verwenden, um die genaue Wahrscheinlichkeit eines bestimmten
-        Ergebnisses zu bestimmen.</p>
-
-      <div style="display: flex; flex-direction: column; gap: var(--spacing-28);">
-        <!-- Die Variablen & die Mathematik -->
-        <div class="card-canvas">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-16);">
-            Die Variablen &amp; die Mathematik
-          </h3>
-          <p
-            style="color: var(--color-mid-gray); font-size: 16.5px; line-height: 1.6; margin-bottom: var(--spacing-16);">
-            Um eine Poisson-Wahrscheinlichkeit zu berechnen, müssen Sie den Parameter &lambda; (Lambda) verstehen, der
-            Ihre durchschnittliche Auftretensrate / durchschnittliche Häufigkeit des Auftretens darstellt. Diese
-            einzelne Eingabe ist einzigartig, da sie als mittlere Anzahl von Ereignissen / Mittelwert (oder Ihre
-            durchschnittliche Gesamterfolgsrate) dient und auch die Streuung einer Verteilung bestimmt. In diesem Modell
-            entspricht Lambda der Varianz (&sigma;<sup>2</sup> = &lambda;), was bedeutet, dass Sie auch leicht die
-            Standardabweichung (&sigma; = &radic;&lambda;) ermitteln können.
-          </p>
-          <p style="color: var(--color-mid-gray); font-size: 16.5px; line-height: 1.6;">
-            Das Ziel der Poisson-Verteilungsformel ist es, die Wahrscheinlichkeit zu finden, dass eine
-            Poisson-Zufallsvariable (<em>X</em>) über ein bestimmtes Intervall bestimmten nicht-negativen ganzzahligen
-            Werten (<em>k</em>) entspricht. Dazu verwendet die Wahrscheinlichkeitsfunktion (PMF) die Basis des
-            natürlichen Logarithmus (<em>e</em> &asymp; 2,71828), um Ihre Eingaben zu verarbeiten und die exakte
-            Wahrscheinlichkeit zu berechnen, mathematisch ausgedrückt als <em>P(X = k)</em>.
-          </p>
+          <h3>Raum- &amp; Flächenintervalle</h3>
+          <p>Ermittlung von Webfehlern pro 100 Quadratmeter Stoff, Tippfehlern pro Buchseite, Einschlagstellen von Meteoriten pro Quadratkilometer oder Bakterienkolonien pro Petrischale.</p>
         </div>
 
-        <!-- Anwendung in realen Szenarien -->
-        <div class="card-canvas">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
-            Anwendung in realen Szenarien
-          </h3>
-          <p
-            style="color: var(--color-mid-gray); font-size: 16.5px; line-height: 1.6; margin-bottom: var(--spacing-24);">
-            Dieser mathematische Rahmen ist unglaublich praktisch für die Erfassung unvorhersehbarer Ereignisse. Anstatt
-            die Berechnungen von Hand durchzuführen, verwenden Fachleute einen Poisson-Verteilungsrechner, um diese
-            Arten von realen Szenarien zu bewältigen:
-          </p>
-
-          <div class="usecase-grid">
-            <!-- Callcenter -->
-            <div
-              style="background-color: var(--color-paper); border-radius: 20px; padding: var(--spacing-24); border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div
-                style="font-size: 13px; font-weight: 600; color: var(--color-electric-blue); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--spacing-8);">
-                Personalplanung</div>
-              <h4
-                style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-8);">
-                Callcenter</h4>
-              <p style="color: var(--color-mid-gray); font-size: 15px; line-height: 1.55;">
-                Manager verfolgen die Anzahl der Anrufe pro Stunde genau. Durch die Anwendung der Poisson-Formel auf
-                historische Daten über eingehende Anrufe können sie die genaue Anzahl der benötigten Mitarbeiter präzise
-                vorhersagen. Dies ermöglicht eine optimale Personalplanung und exakte Ressourcenzuweisung, sodass das
-                Unternehmen die Nachfrage zu Spitzenzeiten stets decken kann.
-              </p>
-            </div>
-
-            <!-- Fertigung & Qualitätskontrolle -->
-            <div
-              style="background-color: var(--color-paper); border-radius: 20px; padding: var(--spacing-24); border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div
-                style="font-size: 13px; font-weight: 600; color: var(--color-electric-blue); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--spacing-8);">
-                Qualitätssicherung</div>
-              <h4
-                style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-8);">
-                Fertigung &amp; Qualitätskontrolle</h4>
-              <p style="color: var(--color-mid-gray); font-size: 15px; line-height: 1.55;">
-                An einer geschäftigen Produktionslinie wird ein Herstellungsprozess genau auf das Auftreten von Defekten
-                überwacht. Wenn eine Fabrik eine bekannte durchschnittliche Anzahl von Fehlern pro
-                1.000-Einheiten-Intervall eines Produkts aufweist, können Prüfer die wahrscheinliche Häufigkeit von
-                Fehlern in der nächsten Charge vorhersagen. Das Erkennen einer unerwartet hohen Fehleranzahl ermöglicht
-                es den Qualitätskontrollteams, sofort einzugreifen und potenzielle Probleme zu beheben, bevor sie den
-                Verbraucher erreichen.
-              </p>
-            </div>
+        <div class="guide-card">
+          <div class="step-number">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"></path>
+              <line x1="12" y1="9" x2="12" y2="13"></line>
+              <line x1="12" y1="17" x2="12.01" y2="17"></line>
+            </svg>
           </div>
+          <h3>Seltene Ereignisse &amp; Risiko</h3>
+          <p>Modellierung seltener Schadensfälle in Versicherungen, Geräteausfälle in Produktionsstraßen (MTBF) oder Verkehrsunfälle an einer Kreuzung pro Monat.</p>
         </div>
       </div>
     </div>
   </section>
 
+
   <!-- ==========================================
-       ABSCHNITT 4: VERWENDETE FORMELN & GLEICHUNGEN
+       ABSCHNITT 3: FORMELN, KENNWERTE & GEGENEREIGNIS
        ========================================== -->
-  <section class="section-band canvas-gray" id="formulas">
+  <section class="section-band white" id="formulas">
     <div class="container">
-      <div class="eyebrow-badge">Mathematische Formulierungen</div>
-      <h2 class="section-title">Verwendete Formeln &amp; Gleichungen</h2>
-      <p class="section-intro">Die Rechen-Engine unseres Poisson-Verteilungsrechners basiert auf standardmäßigen
-        diskreten Wahrscheinlichkeitsgleichungen, um sowohl die exakte als auch die kumulierte Wahrscheinlichkeit
-        unabhängiger Ereignisse zu bestimmen.</p>
+      <div class="eyebrow-badge">Formelsammlung &amp; Rechenregeln</div>
+      <h2 class="section-title">Formeln der Poisson-Verteilung: Zähldichte &amp; Verteilungsfunktion</h2>
+      <p class="section-intro">Die Poisson-Verteilung zeichnet sich durch eine besonders elegante Eigenschaft aus: Sie benötigt nur einen einzigen Parameter – <strong>&lambda; (Lambda)</strong> –, um die gesamte Verteilungsform vollständig zu bestimmen.</p>
 
       <div style="display: flex; flex-direction: column; gap: var(--spacing-28);">
 
-        <!-- PMF-Formelkarte -->
+        <!-- 1. Zähldichte (PMF) -->
         <div class="apple-card">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
-            Die Formel der Wahrscheinlichkeitsfunktion (PMF)
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-8);">
+            1. Wahrscheinlichkeitsfunktion / Zähldichte (Punktwahrscheinlichkeit)
           </h3>
-          <p
-            style="color: var(--color-mid-gray); font-size: 16px; line-height: 1.55; margin-bottom: var(--spacing-16);">
-            Um die genaue Wahrscheinlichkeit für das Eintreten einer bestimmten Anzahl diskreter Ereignisse zu berechnen
-            – wie z. B. das Erhalten von genau 5 Website-Formularen in einer Stunde –, wendet der Rechner die
-            Poisson-Wahrscheinlichkeitsfunktion (PMF) an. Die mathematische Grundgleichung lautet:
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.55; margin-bottom: var(--spacing-16);">
+            Wenn Sie die Wahrscheinlichkeit suchen, dass <strong>exakt <em>k</em> Ereignisse</strong> eintreffen (z. B. genau 3 Kunden in den nächsten 10 Minuten), nutzen Sie die Zähldichte:
           </p>
 
           <div class="formula-display">
@@ -1290,92 +1427,102 @@
           <div class="variables-grid">
             <div class="variable-item">
               <div class="variable-symbol">P(X = k)</div>
-              <div class="variable-desc">Die exakte Wahrscheinlichkeit, dass die diskrete Zufallsvariable <em>X</em> der
-                Zielanzahl beobachteter Ereignisse <em>k</em> entspricht.</div>
+              <div class="variable-desc">Gesuchte Wahrscheinlichkeit für exakt <em>k</em> Erfolge bzw. Ereignisse.</div>
             </div>
             <div class="variable-item">
               <div class="variable-symbol">&lambda; (Lambda)</div>
-              <div class="variable-desc">Die erwartete Rate oder die historische durchschnittliche Anzahl von
-                Ereignissen, die innerhalb des festen Zeit- oder Raumintervalls auftreten.</div>
+              <div class="variable-desc">Der Erwartungswert / historische Mittelwert der Ereignisse im Intervall.</div>
             </div>
             <div class="variable-item">
-              <div class="variable-symbol">e (Eulersche Zahl)</div>
-              <div class="variable-desc">Eine mathematische Konstante von ungefähr 2,71828, die die Basis der
-                natürlichen Exponentialfunktion bildet.</div>
+              <div class="variable-symbol">e &asymp; 2,71828</div>
+              <div class="variable-desc">Eulersche Zahl (Basis des natürlichen Logarithmus).</div>
             </div>
             <div class="variable-item">
               <div class="variable-symbol">k! (Fakultät)</div>
-              <div class="variable-desc">Die Fakultätsoperation der Zielanzahl von Ereignissen (z. B. 4! = 4 &times; 3
-                &times; 2 &times; 1 = 24).</div>
+              <div class="variable-desc">Produkt aller ganzen Zahlen von 1 bis <em>k</em> (z. B. 4! = 4 &times; 3 &times; 2 &times; 1 = 24; per Definition ist 0! = 1).</div>
             </div>
           </div>
         </div>
 
-        <!-- CDF-Formelkarte -->
+        <!-- 2. Kumulierte Verteilungsfunktion (CDF) & Ungleichungen -->
         <div class="apple-card">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
-            Gleichung der kumulativen Verteilungsfunktion (CDF)
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-8);">
+            2. Kumulierte Verteilungsfunktion &amp; Intervall-Wahrscheinlichkeiten
           </h3>
-          <p
-            style="color: var(--color-mid-gray); font-size: 16px; line-height: 1.55; margin-bottom: var(--spacing-16);">
-            Wenn die statistische Modellierung Schwellenwerte erfordert – wie z. B. die Berechnung der
-            Wahrscheinlichkeit von höchstens oder weniger als <em>k</em> Ereignissen –, wendet das Tool die kumulative
-            Verteilungsfunktion (CDF) an. Dies erfordert eine mathematische Summation (&sum;) aller einzelnen exakten
-            PMF-Wahrscheinlichkeiten von null bis zur Zielanzahl:
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.55; margin-bottom: var(--spacing-16);">
+            In realen Anwendungen und Klausuren wird meist nicht nach exakt <em>k</em> gefragt, sondern nach Schwellenwerten („höchstens“, „weniger als“, „mindestens“ oder „mehr als“). Hier summieren Sie die Punktwahrscheinlichkeiten auf:
           </p>
 
           <div class="formula-display">
             P(X &le; k) = &sum;<sub>i=0</sub><sup>k</sup> &frac;&lambda;<sup>i</sup> &middot; e<sup>-&lambda;</sup>i!
           </div>
 
-          <p style="color: var(--color-mid-gray); font-size: 15.5px; line-height: 1.55; margin-top: var(--spacing-16);">
-            Diese Stufenfunktionsberechnung ist entscheidend für die Bestimmung der unteren und oberen
-            Randwahrscheinlichkeit (z. B. die Berechnung von <em>P(X &gt; k)</em> für das Risikomanagement und die
-            prädiktive Analyse).
+          <div class="cdf-variants-grid">
+            <div style="background-color: var(--color-canvas); padding: var(--spacing-16); border-radius: 14px;">
+              <div style="font-weight: 700; font-size: 15px; color: var(--color-primary-ink); margin-bottom: 4px;">Höchstens <em>k</em> Ereignisse</div>
+              <div style="font-family: var(--font-mono); font-weight: 600; color: var(--color-electric-blue); margin-bottom: 6px;">P(X &le; k)</div>
+              <p style="font-size: 13.5px; color: var(--color-mid-gray); line-height: 1.45;">Summe von i = 0 bis k: P(X=0) + P(X=1) + ... + P(X=k).</p>
+            </div>
+
+            <div style="background-color: var(--color-canvas); padding: var(--spacing-16); border-radius: 14px;">
+              <div style="font-weight: 700; font-size: 15px; color: var(--color-primary-ink); margin-bottom: 4px;">Weniger als <em>k</em> Ereignisse</div>
+              <div style="font-family: var(--font-mono); font-weight: 600; color: var(--color-electric-blue); margin-bottom: 6px;">P(X &lt; k) = P(X &le; k - 1)</div>
+              <p style="font-size: 13.5px; color: var(--color-mid-gray); line-height: 1.45;">Strikte Obergrenze unter Ausschluss des Zielwerts <em>k</em>.</p>
+            </div>
+
+            <div style="background-color: var(--color-canvas); padding: var(--spacing-16); border-radius: 14px;">
+              <div style="font-weight: 700; font-size: 15px; color: var(--color-primary-ink); margin-bottom: 4px;">Mindestens <em>k</em> Ereignisse</div>
+              <div style="font-family: var(--font-mono); font-weight: 600; color: var(--color-electric-blue); margin-bottom: 6px;">P(X &ge; k) = 1 - P(X &le; k - 1)</div>
+              <p style="font-size: 13.5px; color: var(--color-mid-gray); line-height: 1.45;">Gegenwahrscheinlichkeit: 1 abzüglich der kleineren Werte.</p>
+            </div>
+
+            <div style="background-color: var(--color-canvas); padding: var(--spacing-16); border-radius: 14px;">
+              <div style="font-weight: 700; font-size: 15px; color: var(--color-primary-ink); margin-bottom: 4px;">Mehr als <em>k</em> Ereignisse</div>
+              <div style="font-family: var(--font-mono); font-weight: 600; color: var(--color-electric-blue); margin-bottom: 6px;">P(X &gt; k) = 1 - P(X &le; k)</div>
+              <p style="font-size: 13.5px; color: var(--color-mid-gray); line-height: 1.45;">Rechtes Verteilungsende für Kapazitäts- und Risikogrenzen.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Der Gegenwahrscheinlichkeits-Trick (Klausur-Tipp) -->
+        <div class="callout-highlight amber">
+          <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
+            <span style="font-size: 18px;">💡</span>
+            <strong style="font-size: 16px; color: var(--color-ember);">Klausur-Geheimtipp: Der Gegenereignis-Trick für „Mindestens 1 Ereignis“</strong>
+          </div>
+          <p style="font-size: 15px; color: var(--color-deep-gray); line-height: 1.55; margin: 0;">
+            Eine der beliebtesten Prüfungsfragen lautet: <em>„Wie hoch ist die Wahrscheinlichkeit, dass mindestens ein Ereignis eintrifft (P(X &ge; 1))?“</em><br>
+            Statt mühsam unendlich viele Werte aufzusummieren, nutzen Sie das Gegenereignis <strong>P(X = 0)</strong>:
+          </p>
+          <div style="font-family: var(--font-mono); font-weight: 700; font-size: 16px; color: var(--color-ember); margin: 10px 0; background-color: var(--color-paper); padding: 10px 16px; border-radius: 10px; display: inline-block;">
+            P(X &ge; 1) = 1 - P(X = 0) = 1 - (&lambda;⁰ &middot; e⁻&lambda;) / 0! = 1 - e<sup>-&lambda;</sup>
+          </div>
+          <p style="font-size: 14px; color: var(--color-mid-gray); margin: 0;">
+            Beispiel: Bei &lambda; = 2 Anrufen pro Minute ist die Chance auf mindestens einen Anruf schlicht: 1 - e⁻² &asymp; 1 - 0,1353 = <strong>86,47%</strong>.
           </p>
         </div>
 
-        <!-- Statistische Maßgleichungen -->
+        <!-- 4. Statistische Kennwerte -->
         <div class="apple-card">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
-            Gleichungen der statistischen Maße
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-8);">
+            3. Kennwerte: Erwartungswert, Varianz &amp; Standardabweichung
           </h3>
-          <p
-            style="color: var(--color-mid-gray); font-size: 16px; line-height: 1.55; margin-bottom: var(--spacing-20);">
-            Eine einzigartige mathematische Eigenschaft der Poisson-Verteilung ist, dass der Erwartungswert und die
-            Varianz stets vollkommen identisch sind. Der Rechner leitet diese standardmäßigen Streuungsmaße anhand
-            folgender grundlegender Formeln ab:
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.55; margin-bottom: var(--spacing-16);">
+            Eine absolute Besonderheit der Poisson-Verteilung ist die <strong>Identität von Erwartungswert und Varianz</strong>. Sobald Sie &lambda; kennen, kennen Sie alle drei zentralen Streuungsmaße:
           </p>
 
           <div class="stat-measures-grid">
-            <div
-              style="background-color: var(--color-canvas); padding: var(--spacing-20); border-radius: 18px; text-align: center;">
-              <div
-                style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; margin-bottom: 6px;">
-                Erwartungswert (Mittelwert)</div>
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 700; color: var(--color-primary-ink);">
-                E(X) = &lambda;</div>
+            <div style="background-color: var(--color-canvas); padding: var(--spacing-20); border-radius: 16px; text-align: center;">
+              <div style="font-size: 12.5px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; margin-bottom: 6px;">Erwartungswert (Mittelwert)</div>
+              <div style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 700; color: var(--color-primary-ink);">&mu; = E(X) = &lambda;</div>
             </div>
-            <div
-              style="background-color: var(--color-canvas); padding: var(--spacing-20); border-radius: 18px; text-align: center;">
-              <div
-                style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; margin-bottom: 6px;">
-                Varianz</div>
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 700; color: var(--color-primary-ink);">
-                Var(X) = &sigma;<sup>2</sup> = &lambda;</div>
+            <div style="background-color: var(--color-canvas); padding: var(--spacing-20); border-radius: 16px; text-align: center;">
+              <div style="font-size: 12.5px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; margin-bottom: 6px;">Varianz</div>
+              <div style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 700; color: var(--color-primary-ink);">&sigma;&sup2; = Var(X) = &lambda;</div>
             </div>
-            <div
-              style="background-color: var(--color-canvas); padding: var(--spacing-20); border-radius: 18px; text-align: center;">
-              <div
-                style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; margin-bottom: 6px;">
-                Standardabweichung</div>
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 700; color: var(--color-primary-ink);">
-                &sigma; = &radic;&lambda;</div>
+            <div style="background-color: var(--color-canvas); padding: var(--spacing-20); border-radius: 16px; text-align: center;">
+              <div style="font-size: 12.5px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; margin-bottom: 6px;">Standardabweichung</div>
+              <div style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 700; color: var(--color-electric-blue);">&sigma; = &radic;&lambda;</div>
             </div>
           </div>
         </div>
@@ -1384,380 +1531,340 @@
     </div>
   </section>
 
+
   <!-- ==========================================
-       ABSCHNITT 5: KUMULIERTE VS. EXAKTE WAHRSCHEINLICHKEIT (PMF VS. CDF)
+       ABSCHNITT 4: GESETZ DER SELTENEN EREIGNISSE (VERGLEICH)
        ========================================== -->
-  <section class="section-band white" id="pmf-vs-cdf">
+  <section class="section-band canvas-gray" id="comparison">
     <div class="container">
-      <div class="eyebrow-badge">Vergleichende Analyse</div>
-      <h2 class="section-title">Kumulierte vs. exakte Wahrscheinlichkeit (PMF vs. CDF)</h2>
-      <p class="section-intro">Bei der statistischen Analyse mit einem Poisson-Verteilungsrechner ist das Verständnis
-        des Unterschieds zwischen exakter und kumulierter Wahrscheinlichkeit entscheidend für die genaue Interpretation
-        Ihrer Daten. Diese beiden Metriken basieren auf unterschiedlichen mathematischen Funktionen, um grundlegend
-        unterschiedliche prädiktive Fragen zu Ihrer diskreten Zufallsvariablen (<em>X</em>) zu beantworten.</p>
+      <div class="eyebrow-badge">Verteilungs-Vergleich</div>
+      <h2 class="section-title">Poisson vs. Binomialverteilung: Das Gesetz der seltenen Ereignisse</h2>
+      <p class="section-intro">Die Poisson-Verteilung entsteht mathematisch als Grenzfall der Binomialverteilung. Sie wird daher klassisch als <strong>„Gesetz der seltenen Ereignisse“</strong> bezeichnet. Doch wann verwendet man welche Verteilung?</p>
 
-      <div style="display: flex; flex-direction: column; gap: var(--spacing-28);">
+      <div class="apple-card" style="margin-bottom: var(--spacing-28);">
+        <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
+          Wann nähert die Poisson-Verteilung die Binomialverteilung an? (Approximation)
+        </h3>
+        <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin-bottom: var(--spacing-16);">
+          In einer Binomialverteilung mit <em>n</em> Versuchen und einer konstanten Erfolgswahrscheinlichkeit <em>p</em> wird die Berechnung des Binomialkoeffizienten <span style="font-family: var(--font-mono); font-weight: 600;">(<sup>n</sup>&frasl;<sub>k</sub>)</span> („<em>n</em> über <em>k</em>“) bei großen Stichproben extrem unhandlich. Wenn ein Ereignis jedoch <strong>sehr selten</strong> eintritt, geht die Binomialverteilung exakt in die Poisson-Verteilung über (Satz von Poisson).
+        </p>
 
-        <!-- PMF-Karte -->
+        <div style="background-color: var(--color-canvas); padding: var(--spacing-16); border-radius: 14px; margin-bottom: var(--spacing-16);">
+          <strong style="color: var(--color-electric-blue); font-size: 15px;">Klausur-Faustregel für die Poisson-Approximation:</strong>
+          <ul style="margin: 8px 0 0 20px; font-size: 14.5px; color: var(--color-deep-gray); line-height: 1.6;">
+            <li>Stichprobengröße ist groß: <strong>n &ge; 30</strong> (häufig sogar n &ge; 100)</li>
+            <li>Erfolgswahrscheinlichkeit ist sehr klein: <strong>p &le; 0,05</strong> (seltenes Ereignis)</li>
+            <li>Der Mittelwert bleibt moderat: <strong>&lambda; = n &middot; p &le; 10</strong></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Direkte Vergleichstabelle -->
+      <div class="comp-table-wrap">
+        <table class="comp-table">
+          <thead>
+            <tr>
+              <th>Vergleichskriterium</th>
+              <th>Binomialverteilung</th>
+              <th style="color: var(--color-electric-blue);">Poisson-Verteilung</th>
+              <th>Normalverteilung</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>Art der Variable</strong></td>
+              <td>Diskret (ganze Zahlen k)</td>
+              <td><strong>Diskret (ganze Zahlen k = 0, 1, 2, ...)</strong></td>
+              <td>Stetig (kontinuierlich x &isin; &reals;)</td>
+            </tr>
+            <tr>
+              <td><strong>Versuchsanzahl (n)</strong></td>
+              <td>Strikt feste Anzahl an Versuchen <em>n</em></td>
+              <td><strong>Keine Obergrenze</strong> (offenes Intervall)</td>
+              <td>Unendlich / Kontinuum</td>
+            </tr>
+            <tr>
+              <td><strong>Erfolgswahrscheinlichkeit</strong></td>
+              <td>Beliebiges <em>p</em> zwischen 0 und 1</td>
+              <td><strong>Sehr klein (p &rarr; 0)</strong>, selten</td>
+              <td>Dichtefunktion f(x)</td>
+            </tr>
+            <tr>
+              <td><strong>Erforderliche Parameter</strong></td>
+              <td>Zwei Parameter: <em>n</em> und <em>p</em></td>
+              <td><strong>Nur ein Parameter: &lambda;</strong></td>
+              <td>Zwei Parameter: &mu; und &sigma;</td>
+            </tr>
+            <tr>
+              <td><strong>Zusammenhang Mittelwert/Varianz</strong></td>
+              <td>Var(X) = n &middot; p &middot; (1 - p) &lt; &mu;</td>
+              <td><strong>Var(X) = &mu; = &lambda; (Exakt gleich!)</strong></td>
+              <td>&mu; und &sigma;&sup2; sind unabhängig</td>
+            </tr>
+            <tr>
+              <td><strong>Typisches Praxisbeispiel</strong></td>
+              <td>10 Münzwürfe, 50 Multiple-Choice-Fragen</td>
+              <td><strong>3 Anrufe pro Minute, 2 Defekte pro Wafer</strong></td>
+              <td>Körpergrößen, IQ-Werte, Messfehler</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       ABSCHNITT 5: KLAUSURAUFGABEN MIT LÖSUNGEN
+       ========================================== -->
+  <section class="section-band white" id="examples">
+    <div class="container">
+      <div class="eyebrow-badge">Schritt-für-Schritt Übungen</div>
+      <h2 class="section-title">Typische Klausuraufgaben mit vollständigem Rechenweg</h2>
+      <p class="section-intro">Lernen Sie anhand von zwei realen Standard-Aufgaben, wie Sie Poisson-Wahrscheinlichkeiten in Statistik-Klausuren und Praxisprojekten fehlerfrei berechnen.</p>
+
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-32);">
+
+        <!-- Klausuraufgabe 1: Callcenter -->
         <div class="card-canvas">
-          <div
-            style="font-size: 13px; font-weight: 600; color: var(--color-electric-blue); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--spacing-8);">
-            Diskrete Punktschätzung</div>
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
-            Exakte Wahrscheinlichkeit (Wahrscheinlichkeitsfunktion / PMF)
-          </h3>
-          <p style="color: var(--color-mid-gray); font-size: 16px; line-height: 1.6; margin-bottom: var(--spacing-20);">
-            Die Wahrscheinlichkeitsfunktion (PMF) isoliert die exakte Wahrscheinlichkeit eines einzelnen, spezifischen
-            Ergebnisses. Sie verwenden die PMF, wenn Sie die Wahrscheinlichkeit kennen müssen, mit der genau Ihre
-            Zielanzahl von Ereignissen (<em>k</em>) innerhalb eines festen Intervalls ohne Abweichung beobachtet wird.
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: var(--spacing-12);">
+            <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink);">
+              Klausuraufgabe 1: Kundenanrufe im Support-Center
+            </h3>
+            <span style="font-size: 13px; font-weight: 600; color: var(--color-electric-blue); background: var(--color-electric-blue-soft); padding: 4px 12px; border-radius: 999px;">
+              Zeitintervall (&lambda; = 3 Anrufe/Min.)
+            </span>
+          </div>
+
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin-bottom: var(--spacing-16);">
+            <strong>Aufgabenstellung:</strong> Ein Kundensupport-Team erhält im historischen Durchschnitt <strong>3 Anrufe pro Minute (&lambda; = 3)</strong>. Berechnen Sie:<br>
+            a) Die Wahrscheinlichkeit, dass in einer Minute <strong>exakt 2 Anrufe</strong> eingehen.<br>
+            b) Die Wahrscheinlichkeit, dass in einer Minute <strong>mindestens 1 Anruf</strong> eingeht.<br>
+            c) Die Wahrscheinlichkeit für <strong>höchstens 1 Anruf</strong>.
           </p>
 
-          <div class="comparison-grid">
-            <div
-              style="background-color: var(--color-paper); padding: var(--spacing-20); border-radius: 18px; border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray); margin-bottom: 4px;">
-                Mathematische Notation</div>
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 700; color: var(--color-primary-ink);">
-                P(X = k)</div>
+          <div style="background-color: var(--color-paper); border-radius: 18px; padding: var(--spacing-20); border: 1px solid rgba(0, 0, 0, 0.05); margin-bottom: var(--spacing-16);">
+            <strong style="color: var(--color-primary-ink); font-size: 15px;">Lösungsweg zu Frage a (Exakt 2 Anrufe &rarr; P(X = 2)):</strong>
+            <div class="math-step-box" style="margin: 10px 0;">
+              P(X = 2) = (3² · e⁻³) / 2!<br>
+              P(X = 2) = (9 · 0,049787) / 2 = 0,44808 / 2 = <span class="highlight">0,22404 (22,40%)</span>
             </div>
-            <div
-              style="background-color: var(--color-paper); padding: var(--spacing-20); border-radius: 18px; border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray); margin-bottom: 4px;">
-                Praktischer Kontext</div>
-              <div style="font-size: 14.5px; color: var(--color-deep-gray); line-height: 1.45;">Wenn eine Website
-                durchschnittlich 10 Anfragen/Min. verzeichnet (&lambda; = 10), berechnet die PMF die genaue Chance auf
-                exakt 12 Anfragen in der nächsten Minute – 11 oder 13 werden strikt ausgeschlossen.</div>
+            <p style="font-size: 14px; color: var(--color-mid-gray); margin: 0;">&rArr; Die Wahrscheinlichkeit für exakt zwei Anrufe in der nächsten Minute beträgt <strong>22,40%</strong>.</p>
+          </div>
+
+          <div style="background-color: var(--color-paper); border-radius: 18px; padding: var(--spacing-20); border: 1px solid rgba(0, 0, 0, 0.05); margin-bottom: var(--spacing-16);">
+            <strong style="color: var(--color-primary-ink); font-size: 15px;">Lösungsweg zu Frage b (Mindestens 1 Anruf &rarr; P(X &ge; 1)):</strong>
+            <div class="math-step-box" style="margin: 10px 0;">
+              P(X &ge; 1) = 1 - P(X = 0) = 1 - (3⁰ · e⁻³) / 0!<br>
+              P(X &ge; 1) = 1 - (1 · 0,049787) / 1 = 1 - 0,049787 = <span class="highlight">0,95021 (95,02%)</span>
             </div>
+            <p style="font-size: 14px; color: var(--color-mid-gray); margin: 0;">&rArr; Mit einer Sicherheit von <strong>95,02%</strong> geht mindestens ein Anruf ein.</p>
+          </div>
+
+          <div style="background-color: var(--color-paper); border-radius: 18px; padding: var(--spacing-20); border: 1px solid rgba(0, 0, 0, 0.05);">
+            <strong style="color: var(--color-primary-ink); font-size: 15px;">Lösungsweg zu Frage c (Höchstens 1 Anruf &rarr; P(X &le; 1)):</strong>
+            <div class="math-step-box" style="margin: 10px 0;">
+              P(X &le; 1) = P(X = 0) + P(X = 1)<br>
+              P(X = 1) = (3¹ · e⁻³) / 1! = 3 · 0,049787 = 0,14936<br>
+              P(X &le; 1) = 0,04979 + 0,14936 = <span class="highlight">0,19915 (19,91%)</span>
+            </div>
+            <p style="font-size: 14px; color: var(--color-mid-gray); margin: 0;">&rArr; Die Wahrscheinlichkeit für höchstens einen Anruf liegt bei <strong>19,91%</strong>.</p>
           </div>
         </div>
 
-        <!-- CDF-Karte -->
+        <!-- Klausuraufgabe 2: Qualitätskontrolle -->
         <div class="card-canvas">
-          <div
-            style="font-size: 13px; font-weight: 600; color: var(--color-electric-blue); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--spacing-8);">
-            Schwellenwert- &amp; Bereichsanalyse</div>
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12);">
-            Kumulierte Wahrscheinlichkeit (Kumulative Verteilungsfunktion / CDF)
-          </h3>
-          <p style="color: var(--color-mid-gray); font-size: 16px; line-height: 1.6; margin-bottom: var(--spacing-20);">
-            In der praktischen prädiktiven Modellierung und im Risikomanagement benötigen Forscher selten eine exakte
-            Zahl; stattdessen messen sie Schwellenwerte. Die kumulative Verteilungsfunktion (CDF) berechnet die
-            kumulierte Wahrscheinlichkeit, indem sie eine mathematische Summation mehrerer exakter
-            PMF-Wahrscheinlichkeiten über einen bestimmten Bereich ausführt. Anstelle eines einzelnen Punktes misst die
-            CDF die Wahrscheinlichkeit, dass Ereignisse über oder unter einer definierten Grenze liegen. Abhängig von
-            Ihren analytischen Zielen liefert die CDF mehrere kritische Verteilungen:
+          <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: var(--spacing-12);">
+            <h3 style="font-family: var(--font-sf-pro-display); font-size: 22px; font-weight: 600; color: var(--color-primary-ink);">
+              Klausuraufgabe 2: Qualitätsprüfung in der Halbleiterfertigung
+            </h3>
+            <span style="font-size: 13px; font-weight: 600; color: var(--color-ember); background: rgba(182, 68, 0, 0.08); padding: 4px 12px; border-radius: 999px;">
+              Raumintervall (&lambda; = 1,2 Defekte/Wafer)
+            </span>
+          </div>
+
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin-bottom: var(--spacing-16);">
+            <strong>Aufgabenstellung:</strong> Ein Chiphersteller weiß aus der Qualitätskontrolle, dass auf einem Silizium-Wafer durchschnittlich <strong>1,2 mikroskopische Defekte (&lambda; = 1,2)</strong> auftreten. Wie groß ist die Wahrscheinlichkeit, dass ein zufällig ausgewählter Wafer <strong>völlig fehlerfrei (k = 0)</strong> ist?
           </p>
 
-          <div class="cdf-variants-grid">
-
-            <!-- Höchstens -->
-            <div
-              style="background-color: var(--color-paper); padding: var(--spacing-20); border-radius: 18px; border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 17px; font-weight: 700; color: var(--color-primary-ink); margin-bottom: 4px;">
-                Höchstens (Maximaler Schwellenwert)</div>
-              <div
-                style="font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--color-electric-blue); margin-bottom: 8px;">
-                P(X &le; k)</div>
-              <p style="font-size: 14px; color: var(--color-mid-gray); line-height: 1.45;">Berechnet die untere
-                Randwahrscheinlichkeit. Z. B. Chancen auf 12 oder weniger Anfragen durch Summieren von 0 bis 12.</p>
+          <div style="background-color: var(--color-paper); border-radius: 18px; padding: var(--spacing-20); border: 1px solid rgba(0, 0, 0, 0.05);">
+            <strong style="color: var(--color-primary-ink); font-size: 15px;">Lösungsweg:</strong>
+            <div class="math-step-box" style="margin: 10px 0;">
+              P(X = 0) = (1,2⁰ · e⁻¹'²) / 0!<br>
+              P(X = 0) = (1 · e⁻¹'²) / 1 = e⁻¹'² &asymp; <span class="highlight">0,30119 (30,12%)</span>
             </div>
-
-            <!-- Weniger als -->
-            <div
-              style="background-color: var(--color-paper); padding: var(--spacing-20); border-radius: 18px; border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 17px; font-weight: 700; color: var(--color-primary-ink); margin-bottom: 4px;">
-                Weniger als (Strikte untere Grenze)</div>
-              <div
-                style="font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--color-electric-blue); margin-bottom: 8px;">
-                P(X &lt; k)</div>
-              <p style="font-size: 14px; color: var(--color-mid-gray); line-height: 1.45;">Berechnet die untere
-                Randwahrscheinlichkeit unter striktem Ausschluss der Zielzahl (strikt weniger als 12).</p>
-            </div>
-
-            <!-- Mindestens -->
-            <div
-              style="background-color: var(--color-paper); padding: var(--spacing-20); border-radius: 18px; border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 17px; font-weight: 700; color: var(--color-primary-ink); margin-bottom: 4px;">
-                Mindestens (Minimaler Schwellenwert)</div>
-              <div
-                style="font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--color-electric-blue); margin-bottom: 8px;">
-                P(X &ge; k)</div>
-              <p style="font-size: 14px; color: var(--color-mid-gray); line-height: 1.45;">Berechnet die obere
-                Randwahrscheinlichkeit. Entscheidend für Kapazitätsplanung bei einem Anstieg auf 12+ Anfragen.</p>
-            </div>
-
-            <!-- Mehr als -->
-            <div
-              style="background-color: var(--color-paper); padding: var(--spacing-20); border-radius: 18px; border: 1px solid rgba(0, 0, 0, 0.04);">
-              <div
-                style="font-family: var(--font-sf-pro-display); font-size: 17px; font-weight: 700; color: var(--color-primary-ink); margin-bottom: 4px;">
-                Mehr als (Strikte obere Grenze)</div>
-              <div
-                style="font-family: var(--font-mono); font-size: 15px; font-weight: 600; color: var(--color-electric-blue); margin-bottom: 8px;">
-                P(X &gt; k)</div>
-              <p style="font-size: 14px; color: var(--color-mid-gray); line-height: 1.45;">Berechnet die
-                Wahrscheinlichkeit, Ihren Zielschwellenwert strikt zu überschreiten.</p>
-            </div>
-
+            <p style="font-size: 14px; color: var(--color-mid-gray); margin: 0;">&rArr; Rund <strong>30,12%</strong> der gefertigten Wafer sind komplett fehlerfrei.</p>
           </div>
+        </div>
 
-          <div
-            style="margin-top: var(--spacing-24); padding: var(--spacing-20); background-color: var(--color-paper); border-radius: 18px; border-left: 4px solid var(--color-electric-blue);">
-            <p style="font-size: 15.5px; color: var(--color-deep-gray); line-height: 1.55; margin: 0;">
-              Durch die Nutzung sowohl der PMF- als auch der CDF-Ergebnisse können Benutzer von einfachen
-              Auftretensratenberechnungen zu einer umfassenden statistischen Modellierung übergehen – so lassen sich
-              sowohl exakte Szenarien als auch breitere betriebliche Risiken prognostizieren.
-            </p>
-          </div>
+        <!-- Historischer Meilenstein: Bortkiewicz -->
+        <div class="apple-card" style="border-left: 4px solid var(--color-primary-ink);">
+          <div style="font-size: 12.5px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">Geschichte der Statistik</div>
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 10px;">
+            Das historische Paradebeispiel: Tödliche Hufschläge bei der preußischen Kavallerie (1898)
+          </h3>
+          <p style="font-size: 15px; color: var(--color-deep-gray); line-height: 1.6; margin-bottom: 12px;">
+            Das berühmteste Beispiel für die praktische Gültigkeit der Poisson-Verteilung stammt vom russisch-deutschen Nationalökonomen <strong>Ladislaus von Bortkiewicz</strong> (Buch: <em>Das Gesetz der kleinen Zahlen</em>, 1898). Er untersuchte die Anzahl der Soldaten in 14 preußischen Armeekorps, die über einen Zeitraum von 20 Jahren durch Hufschläge von Pferden starben.
+          </p>
+          <p style="font-size: 14.5px; color: var(--color-mid-gray); line-height: 1.55; margin: 0;">
+            Obwohl das Ereignis für den einzelnen Soldaten extrem selten war, ergaben die 280 Korps-Jahre mit einem Durchschnitt von &lambda; = 0,61 Todesfällen pro Jahr eine perfekte empirische Bestätigung der Poisson-Formel. Seither gilt diese Studie weltweit als Standard-Beweis für die Verteilung seltener Ereignisse.
+          </p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ==========================================
-       ABSCHNITT 6: HÄUFIG GESTELLTE FRAGEN (FAQ)
-       ========================================== -->
-  <section class="section-band canvas-gray" id="faq">
-    <div class="container">
-      <div class="eyebrow-badge">Hilfe &amp; Erläuterungen</div>
-      <h2 class="section-title">Häufig gestellte Fragen (FAQ)</h2>
-      <p class="section-intro">Klare Antworten auf häufige Fragen zu Parametern, Annahmen und Verhaltensweisen der
-        Poisson-Statistikmodellierung.</p>
 
-      <div style="display: flex; flex-direction: column; gap: var(--spacing-20);">
+  <!-- ==========================================
+       ABSCHNITT 6: SOFTWARE-SPICKZETTEL (EXCEL, R, PYTHON)
+       ========================================== -->
+  <section class="section-band canvas-gray" id="software">
+    <div class="container">
+      <div class="eyebrow-badge">Praktische Implementierung</div>
+      <h2 class="section-title">Software-Spickzettel: Poisson in Excel, R &amp; Python berechnen</h2>
+      <p class="section-intro">Sie müssen die Poisson-Verteilung in Hausarbeiten, Data-Science-Pipelines oder Excel-Berichten einbauen? Nutzen Sie diese gebrauchsfertigen Syntax-Vorlagen.</p>
+
+      <div class="code-grid">
+
+        <!-- Excel Card -->
+        <div class="code-card">
+          <div class="code-card-header">
+            <div class="code-card-title">
+              <span>Microsoft Excel &amp; Sheets</span>
+            </div>
+            <span class="code-card-badge">Tabellenkalkulation</span>
+          </div>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Nutzen Sie die integrierte deutsche Funktion <code>POISSON.VERT</code>:</p>
+          <pre class="code-pre"><span class="hl-comment">// Exakte Punktwahrscheinlichkeit P(X = k):</span>
+=<span class="hl-func">POISSON.VERT</span>(<span class="hl-param">k</span>; <span class="hl-param">lambda</span>; <span class="hl-func">FALSCH</span>)
+
+<span class="hl-comment">// Kumulierte Wahrscheinlichkeit P(X &le; k):</span>
+=<span class="hl-func">POISSON.VERT</span>(<span class="hl-param">k</span>; <span class="hl-param">lambda</span>; <span class="hl-func">WAHR</span>)
+
+<span class="hl-comment">// Beispiel: P(X = 3) bei Lambda = 4:</span>
+=<span class="hl-func">POISSON.VERT</span>(3; 4; <span class="hl-func">FALSCH</span>)  <span class="hl-comment">&rarr; 0,195367</span></pre>
+        </div>
+
+        <!-- R Card -->
+        <div class="code-card">
+          <div class="code-card-header">
+            <div class="code-card-title">
+              <span>R-Projekt (CRAN)</span>
+            </div>
+            <span class="code-card-badge">Statistik</span>
+          </div>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Standardfunktionen im Basispaket <code>stats</code>:</p>
+          <pre class="code-pre"><span class="hl-comment"># Exakt P(X = k) mit dpois:</span>
+<span class="hl-func">dpois</span>(x = <span class="hl-param">3</span>, lambda = <span class="hl-param">4</span>)
+
+<span class="hl-comment"># Kumuliert P(X &le; k) mit ppois:</span>
+<span class="hl-func">ppois</span>(q = <span class="hl-param">3</span>, lambda = <span class="hl-param">4</span>)
+
+<span class="hl-comment"># Oberer Rand P(X &gt; k):</span>
+<span class="hl-func">ppois</span>(q = <span class="hl-param">3</span>, lambda = <span class="hl-param">4</span>, lower.tail = <span class="hl-func">FALSE</span>)
+
+<span class="hl-comment"># 100 Zufallswerte simulieren:</span>
+sim &lt;- <span class="hl-func">rpois</span>(n = <span class="hl-param">100</span>, lambda = <span class="hl-param">4</span>)</pre>
+        </div>
+
+        <!-- Python Card -->
+        <div class="code-card">
+          <div class="code-card-header">
+            <div class="code-card-title">
+              <span>Python (SciPy)</span>
+            </div>
+            <span class="code-card-badge">Data Science</span>
+          </div>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Modul <code>scipy.stats.poisson</code>:</p>
+          <pre class="code-pre"><span class="hl-func">from</span> scipy.stats <span class="hl-func">import</span> poisson
+
+<span class="hl-comment"># Parameter definieren:</span>
+k = <span class="hl-param">3</span>
+lam = <span class="hl-param">4.0</span>
+
+<span class="hl-comment"># Exakte Wahrscheinlichkeit (PMF):</span>
+p_exact = poisson.<span class="hl-func">pmf</span>(k, mu=lam)
+
+<span class="hl-comment"># Kumulierte Wahrscheinlichkeit (CDF):</span>
+p_cum = poisson.<span class="hl-func">cdf</span>(k, mu=lam)
+print(f"P(X=3): {p_exact:.6f}")</pre>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ==========================================
+       ABSCHNITT 7: HÄUFIG GESTELLTE FRAGEN (FAQ)
+       ========================================== -->
+  <section class="section-band white" id="faq">
+    <div class="container">
+      <div class="eyebrow-badge">Häufige Fragen</div>
+      <h2 class="section-title">Häufig gestellte Fragen zur Poisson-Verteilung (FAQ)</h2>
+      <p class="section-intro">Hier finden Sie präzise Antworten auf die am häufigsten gesuchten Fragen rund um Parameter, Formeln und Prüfungsregeln.</p>
+
+      <div style="display: flex; flex-direction: column; gap: var(--spacing-16);">
 
         <!-- FAQ 1 -->
         <div class="apple-card">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12); display: flex; align-items: center; gap: 10px;">
-            <span style="color: var(--color-electric-blue);">F.</span> Kann die erwartete Rate (Lambda, &lambda;) eine
-            Dezimalzahl sein, wenn die Ereignisse diskret sind?
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--color-electric-blue);">Q:</span> Was gibt der Parameter Lambda (&lambda;) genau an?
           </h3>
-          <p style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6;">
-            <strong>Ja.</strong> Während eine diskrete Zufallsvariable (<em>X</em>) immer eine ganze Zahl sein muss – da
-            Sie keinen halben Website-Klick oder einen Bruchteil eines Kunden beobachten können –, stellt die
-            durchschnittliche Auftretensrate (Lambda, &lambda;) einen historischen Mittelwert dar. Bei der Berechnung
-            von Wahrscheinlichkeiten über ein festes Intervall ist es mathematischer Standard, dass der Erwartungswert
-            eine Dezimalzahl ist (z. B. durchschnittlich 4,2 Serveranfragen pro Minute). Die Wahrscheinlichkeitsfunktion
-            (PMF) des Rechners verarbeitet Dezimalraten problemlos, um die exakte Wahrscheinlichkeit ganzzahliger
-            Ergebnisse zu ermitteln.
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin: 0;">
+            <strong>Lambda (&lambda;)</strong> ist der Erwartungswert bzw. die durchschnittliche Rate, mit der ein Ereignis innerhalb eines fest definierten Zeit- oder Raumintervalls auftritt (z. B. 4 Anrufe pro Stunde oder 1,5 Webfehler pro Quadratmeter). Bei der Poisson-Verteilung bestimmt &lambda; als einziger Parameter die gesamte Verteilung, da sowohl Mittelwert (&mu; = &lambda;) als auch Varianz (&sigma;&sup2; = &lambda;) exakt diesem Wert entsprechen.
           </p>
         </div>
 
         <!-- FAQ 2 -->
         <div class="apple-card">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12); display: flex; align-items: center; gap: 10px;">
-            <span style="color: var(--color-electric-blue);">F.</span> Warum sind Mittelwert und Varianz bei einer
-            Poisson-Verteilung gleich?
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--color-electric-blue);">Q:</span> Kann der Parameter Lambda (&lambda;) eine Dezimalzahl bzw. Kommazahl sein?
           </h3>
-          <p style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6;">
-            Eine definierende mathematische Eigenschaft dieser spezifischen diskreten Wahrscheinlichkeitsverteilung ist,
-            dass sowohl der Erwartungswert (Mittelwert, &mu;) als auch die Varianz (&sigma;<sup>2</sup>) strikt dem
-            Ratenparameter (&lambda;) entsprechen. In der praktischen statistischen Modellierung bedeutet dies: Wenn die
-            durchschnittliche Häufigkeit des Auftretens zunimmt, wächst die Streuung der Daten mit genau derselben Rate.
-            Folglich ist die Standardabweichung (&sigma;) immer einfach die Quadratwurzel aus Lambda (&radic;&lambda;).
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin: 0;">
+            <strong>Ja, absolut.</strong> Während die Zielereignisse (<em>k</em>) zwingend diskrete ganze Zahlen sein müssen (Sie können nicht 2,4 Kunden beobachten), ist &lambda; ein historischer statistischer Mittelwert. Ein Durchschnitt von beispielsweise &lambda; = 3,7 Serveranfragen pro Sekunde ist mathematisch völlig korrekt und in der Praxis der Regelfall.
           </p>
         </div>
 
         <!-- FAQ 3 -->
         <div class="apple-card">
-          <h3
-            style="font-family: var(--font-sf-pro-display); font-size: 20px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: var(--spacing-12); display: flex; align-items: center; gap: 10px;">
-            <span style="color: var(--color-electric-blue);">F.</span> Was ist der Unterschied zwischen der Binomial-
-            und der Poisson-Verteilung?
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--color-electric-blue);">Q:</span> Warum sind Erwartungswert und Varianz bei der Poisson-Verteilung immer identisch?
           </h3>
-          <p
-            style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6; margin-bottom: var(--spacing-12);">
-            Während beide zur Berechnung der Wahrscheinlichkeit diskreter Ereignisse verwendet werden, unterscheiden
-            sich ihre Strukturparameter erheblich. Eine Binomialverteilung prognostiziert die Anzahl der Erfolge aus
-            einer strikt festgelegten Anzahl unabhängiger Versuche (z. B. die Wahrscheinlichkeit, bei 50 Münzwürfen
-            genau 15 Mal Kopf zu erhalten).
-          </p>
-          <p style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6;">
-            Die Poisson-Verteilung hat jedoch keine festgelegte Anzahl von Versuchen. Sie modelliert die Anzahl von
-            Ereignissen, die über ein kontinuierliches Zeit- oder Raumintervall auftreten (z. B. die Vorhersage der
-            Kundenankünfte zwischen 14:00 und 15:00 Uhr). In der fortgeschrittenen Wahrscheinlichkeitstheorie wird das
-            Poisson-Modell häufig als Binomial-Approximation verwendet, wenn eine enorme Anzahl potenzieller Versuche
-            mit einer sehr geringen individuellen Erfolgswahrscheinlichkeit kombiniert wird (oft als Modellierung
-            "seltener Ereignisse" bezeichnet).
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin: 0;">
+            Dies ist die charakteristische mathematische Eigenschaft der Poisson-Verteilung: Die Streuung der Daten wächst im selben Maße wie der Mittelwert. Sowohl <em>E(X) = &lambda;</em> als auch <em>Var(X) = &lambda;</em>. Die Standardabweichung beträgt folglich stets <strong>&sigma; = &radic;&lambda;</strong>. In realen Daten nutzt man diesen Test oft, um zu prüfen, ob überhaupt ein Poisson-Prozess vorliegt (sog. Überdispersion-Check).
           </p>
         </div>
 
-      </div>
-    </div>
-  </section>
-
-  <!-- ==========================================
-       ABSCHNITT 7: REALE BEISPIELE & ANWENDUNGEN
-       ========================================== -->
-  <section class="section-band white" id="applications">
-    <div class="container">
-      <div class="eyebrow-badge">Praktische Umsetzung</div>
-      <h2 class="section-title">Reale Beispiele &amp; Anwendungen</h2>
-      <p class="section-intro">Der praktische Wert der Poisson-Verteilung liegt in ihrer Fähigkeit, historische
-        Durchschnittswerte in umsetzbare prädiktive Modelle umzuwandeln. Durch die Berechnung der Wahrscheinlichkeit
-        diskreter Ereignisse innerhalb eines festen Intervalls können Unternehmensleiter und Forscher mathematisch
-        fundierte Entscheidungen bezüglich Ressourcenzuweisung und Risikomanagement treffen.</p>
-
-      <div style="display: flex; flex-direction: column; gap: var(--spacing-32);">
-
-        <!-- Anwendung 1: Callcenter -->
-        <div class="card-canvas">
-          <div
-            style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: var(--spacing-12);">
-            <h3
-              style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink);">
-              Callcenter-Verkehr &amp; Personalplanung
-            </h3>
-            <span
-              style="font-size: 13px; font-weight: 600; color: var(--color-electric-blue); background: var(--color-electric-blue-soft); padding: 4px 12px; border-radius: 999px;">
-              Zeitintervall (&lambda; = 45/Std.)
-            </span>
-          </div>
-
-          <p
-            style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6; margin-bottom: var(--spacing-16);">
-            In Kundenservice-Betrieben stützt sich die Warteschlangentheorie stark auf die Poisson-Wahrscheinlichkeit,
-            um die Personalbesetzung zu optimieren und lange Wartezeiten zu vermeiden. Ein Callcenter kann nicht genau
-            vorhersagen, wann ein Kunde anruft, aber es kann die durchschnittliche Auftretensrate (Lambda, &lambda;)
-            erfassen.
+        <!-- FAQ 4 -->
+        <div class="apple-card">
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--color-electric-blue);">Q:</span> Was ist der Unterschied zwischen der Poisson- und der Binomialverteilung?
+          </h3>
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin: 0;">
+            Eine Binomialverteilung modelliert eine <strong>fest vorgegebene Anzahl unabhängiger Einzelversuche <em>n</em></strong> (z. B. 20 Münzwürfe) mit bekannter Erfolgswahrscheinlichkeit <em>p</em>. Die Poisson-Verteilung hingegen hat keine feste Versuchszahl; sie modelliert das Auftreten von Ereignissen über ein <strong>kontinuierliches Zeit- oder Raumintervall</strong> ohne theoretische Obergrenze. Bei großem <em>n</em> und winzigem <em>p</em> konvergiert die Binomialverteilung gegen die Poisson-Verteilung.
           </p>
-          <p
-            style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6; margin-bottom: var(--spacing-24);">
-            Wenn historische Daten beispielsweise eine erwartete Rate von 45 eingehenden Anrufen pro Stunde (&lambda; =
-            45) zeigen, müssen Manager entsprechend planen. Mit einem Poisson-Verteilungsrechner können sie die
-            kumulative Verteilungsfunktion (CDF) auswerten, um die obere Randwahrscheinlichkeit zu ermitteln – wie z. B.
-            die Wahrscheinlichkeit, mindestens 60 Anrufe (<em>P(X &ge; 60)</em>) innerhalb dieses spezifischen Zeitraums
-            zu erhalten. Diese prädiktive Analyse ermöglicht es Callcentern, die Personalplanung dynamisch anzupassen
-            und sicherzustellen, dass genügend Agenten eingesetzt werden, um statistische Abweichungen ohne kostspielige
-            Überbesetzung zu bewältigen.
-          </p>
-
-          <!-- Geometrisches Diagramm 1 -->
-          <div
-            style="background-color: var(--color-paper); border-radius: 20px; padding: var(--spacing-24); border: 1px solid rgba(0, 0, 0, 0.04);">
-            <div
-              style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--spacing-16);">
-              Geometrisches Modell: Festes 1-Stunden-Zeitfenster &amp; Warteschlangen-Spitzenschwellenwert
-            </div>
-
-            <div class="svg-diagram-wrapper">
-              <svg viewBox="0 0 760 140" width="100%" height="auto"
-                style="display: block; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
-                <!-- Zeitleiste -->
-                <rect x="30" y="55" width="700" height="24" rx="12" fill="#f5f5f7" />
-
-                <!-- Normalbereich (38 - 52 Anrufe) -->
-                <rect x="240" y="55" width="260" height="24" rx="6" fill="rgba(0, 113, 227, 0.15)" />
-
-                <!-- Spitzenbereich (60+ Anrufe) -->
-                <rect x="560" y="55" width="170" height="24" rx="12" fill="rgba(182, 68, 0, 0.18)" />
-
-                <!-- Erwarteter Mittelwert (Lambda = 45) -->
-                <line x1="370" y1="35" x2="370" y2="95" stroke="#0071e3" stroke-width="3" stroke-linecap="round" />
-                <circle cx="370" cy="67" r="6" fill="#0071e3" />
-                <text x="370" y="24" text-anchor="middle" font-size="12" font-weight="700" fill="#0071e3">Erwarteter
-                  Mittelwert (&lambda; = 45 Anrufe/Std.)</text>
-
-                <!-- Spitzen-Schwellenwertlinie (X = 60) -->
-                <line x1="560" y1="35" x2="560" y2="95" stroke="#b64400" stroke-width="2.5" stroke-dasharray="4,3" />
-                <text x="560" y="24" text-anchor="middle" font-size="12" font-weight="700"
-                  fill="#b64400">Spitzen-Schwellenwert (k &ge; 60)</text>
-                <text x="645" y="115" text-anchor="middle" font-size="11" font-weight="600" fill="#b64400">P(X &ge; 60)
-                  &asymp; 1,87% (Hohes Risiko)</text>
-
-                <!-- Zeitbeschriftungen -->
-                <text x="30" y="115" font-size="11" fill="#707070">t = 0 Min.</text>
-                <text x="370" y="115" text-anchor="middle" font-size="11" fill="#707070">Normaler Personalbereich
-                  (&plusmn;1&sigma; = 38–52)</text>
-                <text x="730" y="115" text-anchor="end" font-size="11" fill="#707070">t = 60 Min.</text>
-              </svg>
-            </div>
-          </div>
         </div>
 
-        <!-- Anwendung 2: Fertigung & Qualitätskontrolle -->
-        <div class="card-canvas">
-          <div
-            style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px; margin-bottom: var(--spacing-12);">
-            <h3
-              style="font-family: var(--font-sf-pro-display); font-size: 24px; font-weight: 600; color: var(--color-primary-ink);">
-              Fertigungsqualitätskontrolle &amp; Fehlerraten
-            </h3>
-            <span
-              style="font-size: 13px; font-weight: 600; color: var(--color-ember); background: rgba(182, 68, 0, 0.08); padding: 4px 12px; border-radius: 999px;">
-              Räumliches Chargenintervall (&lambda; = 2 / 1.000 Einheiten)
-            </span>
-          </div>
-
-          <p
-            style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6; margin-bottom: var(--spacing-16);">
-            In der industriellen Fertigung ist das Poisson-Modell der Goldstandard zur Überwachung der Fehlerhäufigkeit
-            entlang einer kontinuierlichen Produktionslinie. Im Gegensatz zu Zeitintervallen stützt sich die Fertigung
-            häufig auf ein Raum- oder Volumenintervall (z. B. Fehler pro 1.000 Einheiten oder Mängel pro 50 Quadratmeter
-            Stoff).
+        <!-- FAQ 5 -->
+        <div class="apple-card">
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--color-electric-blue);">Q:</span> Was ist der Unterschied zwischen Poisson- und Exponentialverteilung?
+          </h3>
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin: 0;">
+            Beide Verteilungen beschreiben denselben stochastischen Poisson-Prozess, aber aus zwei unterschiedlichen Blickwinkeln: Die Poisson-Verteilung ist <strong>diskret</strong> und zählt, <em>wie viele</em> Ereignisse in einem festen Zeitintervall eintreffen. Die Exponentialverteilung ist <strong>stetig</strong> und modelliert die <em>Wartezeit</em> bzw. Zeitspanne zwischen zwei aufeinanderfolgenden Ereignissen.
           </p>
-          <p
-            style="color: var(--color-deep-gray); font-size: 16px; line-height: 1.6; margin-bottom: var(--spacing-24);">
-            Betrachten wir eine Fabrik, in der der bekannte Erwartungswert (Mittelwert, &mu;) 2 defekte Mikrochips pro
-            1.000-Einheiten-Charge beträgt (&lambda; = 2). Qualitätssicherungsmanager können die
-            Wahrscheinlichkeitsfunktion (PMF) des Rechners verwenden, um Basiserwartungen festzulegen, wie z. B. die
-            exakte Wahrscheinlichkeit für null Fehler (<em>P(X = 0)</em>). Noch wichtiger ist die Berechnung der
-            kumulierten Wahrscheinlichkeit für eine Fehlerspitze, wie z. B. das Auftreten von mehr als 6 Fehlern
-            (<em>P(X &gt; 6)</em>). Da die statistische Wahrscheinlichkeit für 7 oder mehr Fehler auf natürlichem Wege
-            extrem gering ist (ein seltenes Ereignis), signalisiert das Erreichen dieses Schwellenwerts sofort einen
-            mechanischen Kalibrierungsfehler. Dies erlaubt es Managern, die Linie sofort anzuhalten und
-            Qualitätskontrollprotokolle auszuführen, bevor sich Materialverluste summieren.
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="apple-card">
+          <h3 style="font-family: var(--font-sf-pro-display); font-size: 19px; font-weight: 600; color: var(--color-primary-ink); margin-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: var(--color-electric-blue);">Q:</span> Wie berechnet man die Poisson-Verteilung in Microsoft Excel?
+          </h3>
+          <p style="color: var(--color-deep-gray); font-size: 15.5px; line-height: 1.6; margin: 0;">
+            Nutzen Sie die Formel <code>=POISSON.VERT(k; lambda; kumuliert)</code>. Tragen Sie für <em>kumuliert</em> den Wert <strong>FALSCH</strong> ein, um die exakte Punktwahrscheinlichkeit <em>P(X = k)</em> zu erhalten. Tragen Sie <strong>WAHR</strong> ein, um die kumulierte Wahrscheinlichkeit für höchstens <em>k</em> Ereignisse <em>P(X &le; k)</em> zu berechnen.
           </p>
-
-          <!-- Geometrisches Diagramm 2 -->
-          <div
-            style="background-color: var(--color-paper); border-radius: 20px; padding: var(--spacing-24); border: 1px solid rgba(0, 0, 0, 0.04);">
-            <div
-              style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: var(--spacing-16);">
-              Geometrisches Modell: Kontinuierliche räumliche 1.000-Einheiten-Chargenprüfung
-            </div>
-
-            <div class="svg-diagram-wrapper">
-              <svg viewBox="0 0 760 140" width="100%" height="auto"
-                style="display: block; font-family: -apple-system, BlinkMacSystemFont, sans-serif;">
-                <!-- 1000 Einheiten Raumblock -->
-                <rect x="30" y="45" width="700" height="42" rx="10" fill="#f5f5f7" stroke="#d6d6d6" stroke-width="1" />
-
-                <!-- Zone 1: Null Fehler P(X=0) = 13,53% -->
-                <rect x="30" y="45" width="120" height="42" rx="10" fill="rgba(52, 199, 89, 0.15)" stroke="#34c759"
-                  stroke-width="1.5" />
-                <text x="90" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="#248a3d">P(X = 0)</text>
-                <text x="90" y="115" text-anchor="middle" font-size="11" fill="#248a3d">Null Fehler (13,5%)</text>
-
-                <!-- Zone 2: Erwarteter Basisbereich (1-3 Fehler) = 67,67% -->
-                <rect x="155" y="45" width="410" height="42" rx="6" fill="rgba(0, 113, 227, 0.1)" />
-                <circle cx="280" cy="66" r="4" fill="#0071e3" />
-                <circle cx="370" cy="66" r="4" fill="#0071e3" />
-                <circle cx="460" cy="66" r="4" fill="#0071e3" />
-                <text x="360" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="#0071e3">Erwarteter
-                  Basisbereich (k = 1, 2, 3 Fehler &rarr; 67,7%)</text>
-                <text x="360" y="115" text-anchor="middle" font-size="11" fill="#707070">Normale Betriebstoleranzen
-                  (&lambda; = 2,0)</text>
-
-                <!-- Zone 3: Linie anhalten Spitzenalarm (k > 6 Fehler) = 0,45% -->
-                <rect x="575" y="45" width="155" height="42" rx="10" fill="rgba(255, 59, 48, 0.15)" stroke="#ff3b30"
-                  stroke-width="1.5" />
-                <text x="652" y="70" text-anchor="middle" font-size="12" font-weight="700" fill="#d70015">LINIE STOPPEN:
-                  P(X &gt; 6)</text>
-                <text x="652" y="115" text-anchor="middle" font-size="11" font-weight="600" fill="#d70015">Spitzenalarm
-                  (&lt; 0,45%)</text>
-              </svg>
-            </div>
-          </div>
         </div>
 
       </div>
@@ -1822,9 +1929,13 @@
       // DOM-Elemente
       const lambdaInput = document.getElementById('lambdaInput');
       const kInput = document.getElementById('kInput');
+      const lambdaValidation = document.getElementById('lambdaValidation');
+      const kValidation = document.getElementById('kValidation');
       const probTypeControls = document.getElementById('probTypeControls');
       const btnCalculate = document.getElementById('btnCalculate');
       const btnReset = document.getElementById('btnReset');
+      const btnCopyResult = document.getElementById('btnCopyResult');
+      const copyResultText = document.getElementById('copyResultText');
 
       const activeTypeLabel = document.getElementById('activeTypeLabel');
       const metricCaption = document.getElementById('metricCaption');
@@ -1865,18 +1976,43 @@
 
       // Hauptberechnungsfunktion
       function calculatePoisson() {
-        const lambda = parseFloat(lambdaInput.value);
-        let k = parseInt(kInput.value, 10);
+        // Komma durch Punkt für deutsche Tastatureingaben ersetzen
+        const rawLambda = lambdaInput.value.trim().replace(',', '.');
+        const lambda = parseFloat(rawLambda);
+        const rawK = kInput.value.trim().replace(',', '.');
+        let k = parseInt(rawK, 10);
 
+        let hasError = false;
+
+        // Validierung Lambda
         if (isNaN(lambda) || lambda <= 0) {
-          alert('Bitte geben Sie eine gültige positive Zahl für die durchschnittliche Rate (λ > 0) ein.');
-          lambdaInput.focus();
-          return;
+          lambdaInput.classList.add('input-error');
+          if (lambdaValidation) lambdaValidation.style.display = 'block';
+          hasError = true;
+        } else {
+          lambdaInput.classList.remove('input-error');
+          if (lambdaValidation) lambdaValidation.style.display = 'none';
         }
 
+        // Validierung K
         if (isNaN(k) || k < 0) {
-          k = 0;
-          kInput.value = 0;
+          kInput.classList.add('input-error');
+          if (kValidation) kValidation.style.display = 'block';
+          hasError = true;
+        } else {
+          kInput.classList.remove('input-error');
+          if (kValidation) kValidation.style.display = 'none';
+        }
+
+        if (hasError) {
+          primaryProbDisplay.textContent = '–';
+          primaryPercentDisplay.textContent = '–%';
+          valCumLeq.textContent = '–';
+          valCumGt.textContent = '–';
+          valMean.textContent = '–';
+          valStdDev.textContent = '–';
+          mathStepsDisplay.innerHTML = '<em>Bitte gültige Werte eingeben (&lambda; &gt; 0, k &ge; 0).</em>';
+          return;
         }
 
         // Verteilungseigenschaften berechnen
@@ -1885,7 +2021,7 @@
         const stdDev = Math.sqrt(variance);
 
         // PMFs dynamisch vorberechnen für Tabelle und Diagramm
-        const maxK = Math.max(15, Math.min(150, Math.max(Math.ceil(lambda + 4 * Math.max(stdDev, 1)), k + 8)));
+        const maxK = Math.max(15, Math.min(250, Math.max(Math.ceil(lambda + 4 * Math.max(stdDev, 1)), k + 8)));
         const pmfList = [];
         let runningCum = 0;
         const cumList = [];
@@ -1897,10 +2033,36 @@
           cumList.push(Math.min(1.0, runningCum));
         }
 
-        // Spezifische kumulierte Wahrscheinlichkeiten
+        // Exakte Punktwahrscheinlichkeit
         const pExact = getPoissonPMF(lambda, k);
-        const pLeq = k <= maxK ? cumList[k] : (k > lambda * 3 ? 1 : cumList[cumList.length - 1]);
-        const pLt = k > 0 ? (k - 1 <= maxK ? cumList[k - 1] : 1) : 0;
+
+        // Kumulierte Wahrscheinlichkeiten hochpräzise bestimmen
+        let pLeq;
+        if (k <= maxK) {
+          pLeq = cumList[k];
+        } else {
+          let c = cumList[cumList.length - 1];
+          for (let i = maxK + 1; i <= Math.min(k, 1000); i++) {
+            c += getPoissonPMF(lambda, i);
+          }
+          pLeq = Math.min(1.0, c);
+        }
+
+        let pLt;
+        if (k > 0) {
+          if (k - 1 <= maxK) {
+            pLt = cumList[k - 1];
+          } else {
+            let c = cumList[cumList.length - 1];
+            for (let i = maxK + 1; i < Math.min(k, 1000); i++) {
+              c += getPoissonPMF(lambda, i);
+            }
+            pLt = Math.min(1.0, c);
+          }
+        } else {
+          pLt = 0;
+        }
+
         const pGeq = Math.max(0, 1 - pLt);
         const pGt = Math.max(0, 1 - pLeq);
 
@@ -1984,9 +2146,11 @@
 
       // Reines Canvas-Diagramm im Apple-Design
       function drawChart(pmfList, targetK, mode) {
+        const rect = chartCanvas.getBoundingClientRect();
+        if (rect.width <= 0) return;
+
         const ctx = chartCanvas.getContext('2d');
         const dpr = window.devicePixelRatio || 1;
-        const rect = chartCanvas.getBoundingClientRect();
 
         chartCanvas.width = rect.width * dpr;
         chartCanvas.height = rect.height * dpr;
@@ -2060,7 +2224,7 @@
         });
       }
 
-      // Event-Listener
+      // Event-Listener für Segmented Controls
       probTypeControls.addEventListener('click', function (e) {
         const btn = e.target.closest('.seg-btn');
         if (!btn) return;
@@ -2089,10 +2253,39 @@
         calculatePoisson();
       });
 
+      // 1-Klick Ergebnis kopieren
+      if (btnCopyResult) {
+        btnCopyResult.addEventListener('click', function () {
+          const textToCopy = `${activeTypeLabel.textContent} = ${primaryProbDisplay.textContent} (${primaryPercentDisplay.textContent}) [λ = ${lambdaInput.value}, k = ${kInput.value}]`;
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            copyResultText.textContent = 'Kopiert! ✓';
+            setTimeout(() => {
+              copyResultText.textContent = 'Ergebnis kopieren';
+            }, 2000);
+          }).catch(() => {
+            copyResultText.textContent = 'Kopiert! ✓';
+            setTimeout(() => {
+              copyResultText.textContent = 'Ergebnis kopieren';
+            }, 2000);
+          });
+        });
+      }
+
+      // Preset-Helfer für 1-Klick-Beispiele
+      window.applyPreset = function (lambdaVal, kVal, mode) {
+        lambdaInput.value = lambdaVal;
+        kInput.value = kVal;
+        currentMode = mode || 'equal';
+        probTypeControls.querySelectorAll('.seg-btn').forEach(b => {
+          b.classList.toggle('active', b.getAttribute('data-type') === currentMode);
+        });
+        calculatePoisson();
+      };
+
       // Größenänderung für Canvas berücksichtigen
       window.addEventListener('resize', calculatePoisson);
 
-      // Erstberechnung
+      // Erstberechnung beim Laden
       calculatePoisson();
     })();
   </script>
