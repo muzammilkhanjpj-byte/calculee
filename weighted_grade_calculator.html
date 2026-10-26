@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weighted Grade Calculator – Instant Semester Grade &amp; Final</title>
+  <meta name="description" content="Calculate your weighted grade easily. Find your current course standing and the exact score you need on your final exam. Free, fast, and 100% private tool">
+  <meta name="keywords" content="weighted grade calculator, calculate weighted grade, final grade calculator, semester grade planner, weighted average formula">
+  <link rel="canonical" href="https://calculee.io/weighted_grade_calculator.html">
+
+  <!-- Favicon and App Icons -->
+  <link rel="icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="logo.png?v=2">
+  <link rel="shortcut icon" type="image/png" href="logo.png?v=2">
+  <link rel="apple-touch-icon" href="logo.png?v=2">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calculee.io/weighted_grade_calculator.html">
+  <meta property="og:title" content="Weighted Grade Calculator – Instant Semester Grade &amp; Final">
+  <meta property="og:description" content="Calculate your weighted grade easily. Find your current course standing and the exact score you need on your final exam. Free, fast, and 100% private tool">
+  <meta property="og:image" content="https://calculee.io/logo.png">
+  <meta property="og:site_name" content="Calculee">
+
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://calculee.io/weighted_grade_calculator.html">
+  <meta name="twitter:title" content="Weighted Grade Calculator – Instant Semester Grade &amp; Final">
+  <meta name="twitter:description" content="Calculate your weighted grade easily. Find your current course standing and the exact score you need on your final exam. Free, fast, and 100% private tool">
+  <meta name="twitter:image" content="https://calculee.io/logo.png">
+
+  <!-- Inter / System Font for Apple typography fidelity -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Structured Data (JSON-LD): SoftwareApplication & FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "SoftwareApplication",
+        "name": "Weighted Grade Calculator",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript. Requires HTML5.",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "description": "Calculate your current weighted semester score, handle unweighted assignments, and compute the required grade on your final exam."
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "Can a weighted grade exceed 100%?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. If an instructor offers extra credit within a high-weight category or applies bonus percentage points directly to your final grade, your weighted score can surpass 100%."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate raw points inside a weighted category?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Average your scores within the category first. If you scored 45/50 on Quiz 1 and 40/50 on Quiz 2, sum your points (85/100 = 85%). Multiply that 85% average by your syllabus quiz weight."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does this calculator save my personal data?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. The calculator executes all calculations locally inside your web browser. The tool does not store, transmit, or monitor your academic records."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --color-primary-ink: #1d1d1f;
+      --color-mid-gray: #707070;
+      --color-deep-gray: #474747;
+      --color-hairline: #d6d6d6;
+      --color-canvas: #f5f5f7;
+      --color-paper: #ffffff;
+      --color-cool-wash: #e8e8ed;
+      --color-electric-blue: #0071e3;
+      --color-electric-blue-hover: #0077ed;
+      --color-link-blue: #0066cc;
+      --color-ember: #b64400;
+      --radius-cards: 28px;
+      --radius-buttons: 980px;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--color-primary-ink);
+      background-color: var(--color-paper);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Apple Typographic Scale Details */
+    .apple-display {
+      letter-spacing: -0.035em;
+      line-height: 1.04;
+    }
+
+    .apple-headline {
+      letter-spacing: -0.025em;
+      line-height: 1.12;
+    }
+
+    .apple-body {
+      font-size: 17px;
+      line-height: 1.47;
+      letter-spacing: -0.022em;
+    }
+
+    .apple-tabular {
+      font-feature-settings: "tnum" 1, "numr" 1;
+    }
+
+    /* Custom Apple Pill Button */
+    .btn-apple-primary {
+      background-color: var(--color-electric-blue);
+      color: #ffffff;
+      border-radius: var(--radius-buttons);
+      transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .btn-apple-primary:hover {
+      background-color: #0077ed;
+    }
+
+    .btn-apple-ghost {
+      background-color: var(--color-cool-wash);
+      color: var(--color-primary-ink);
+      border-radius: var(--radius-buttons);
+      transition: background-color 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    }
+    .btn-apple-ghost:hover {
+      background-color: #dedee3;
+    }
+
+    /* Flat cards with no drop shadow */
+    .apple-card {
+      border-radius: var(--radius-cards);
+      box-shadow: none !important;
+    }
+
+    /* Remove Spinners from Numeric Inputs */
+    input[type=number]::-webkit-inner-spin-button, 
+    input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+    }
+    input[type=number] {
+      -moz-appearance: textfield;
+    }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: saturate(180%) blur(20px);
+      -webkit-backdrop-filter: saturate(180%) blur(20px);
+      border-bottom: 1px solid var(--color-hairline);
+      padding: 12px 24px;
+      z-index: 1000;
+      transition: all 0.2s ease;
+    }
+
+    .top-nav-container {
+      max-width: 1140px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand-link {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: var(--color-primary-ink);
+    }
+
+    .brand-logo {
+      width: 36px;
+      height: 42px;
+      object-fit: contain;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    .brand-text-title {
+      font-size: 25px;
+      font-weight: 700;
+      letter-spacing: -0.6px;
+      line-height: 1.1;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .nav-pill-btn {
+      background: var(--color-electric-blue);
+      color: #ffffff !important;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: transform 0.15s ease, background 0.15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .nav-pill-btn:hover {
+      background: var(--color-electric-blue-hover);
+      transform: translateY(-1px);
+    }
+
+    @media (max-width: 380px) {
+      .top-nav {
+        padding: 8px 10px;
+      }
+      .brand-text-title {
+        font-size: 19px;
+      }
+      .brand-logo {
+        width: 26px;
+        height: 32px;
+      }
+      .nav-pill-btn {
+        font-size: 11px;
+        padding: 5px 9px;
+      }
+    }
+
+    /* Footer Navigation */
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.8fr 1.15fr 1.15fr 0.9fr 1.1fr;
+      gap: 28px;
+      margin-bottom: 32px;
+    }
+
+    @media (max-width: 1024px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+    }
+
+    .footer-col-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--color-primary-ink);
+      margin-bottom: 14px;
+    }
+
+    .footer-nav-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-nav-link {
+      font-size: 14px;
+      color: var(--color-deep-gray);
+      text-decoration: none;
+      transition: color 0.15s ease, transform 0.15s ease;
+      display: inline-block;
+    }
+
+    .footer-nav-link:hover {
+      color: var(--color-electric-blue);
+      text-decoration: none;
+      transform: translateX(2px);
+    }
+
+    .footer-bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      padding-top: 20px;
+      border-top: 1px solid var(--color-hairline);
+      font-size: 12px;
+      color: var(--color-mid-gray);
+    }
+
+    .footer-social-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .footer-social-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 7px 14px;
+      border-radius: 980px;
+      background-color: var(--color-paper);
+      color: var(--color-primary-ink);
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      border: 1px solid var(--color-hairline);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .footer-social-btn:hover {
+      background-color: #ffffff;
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+
+    .footer-social-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+      flex-shrink: 0;
+    }
+
+    .footer-social-btn.btn-facebook:hover {
+      color: #1877F2;
+      border-color: rgba(24, 119, 242, 0.35);
+      box-shadow: 0 4px 12px rgba(24, 119, 242, 0.15);
+    }
+
+    .footer-social-btn.btn-instagram:hover {
+      color: #E1306C;
+      border-color: rgba(225, 48, 108, 0.35);
+      box-shadow: 0 4px 12px rgba(225, 48, 108, 0.15);
+    }
+  </style>
+</head>
+<body class="bg-white text-[#1d1d1f]">
+
+  <!-- Top Navigation -->
+  <nav class="top-nav" aria-label="Main Navigation">
+    <div class="top-nav-container">
+      <a href="index.html" class="brand-link" title="Calculee Home">
+        <img src="logo.png" alt="Calculee Logo" class="brand-logo">
+        <span class="brand-text-title">Calculee</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Notice Ribbon -->
+  <div class="bg-[#f5f5f7] border-b border-[#d6d6d6]/40 py-2 text-center">
+    <p class="text-[12px] md:text-[13px] text-[#1d1d1f]">
+      Private & Client-Side. Calculations run locally on your device with zero data transmission.
+    </p>
+  </div>
+
+  <main>
+    <!-- HERO SECTION: Cathedral of White Space -->
+    <section class="pt-20 pb-14 md:pt-28 md:pb-20 bg-white">
+      <div class="max-w-[1200px] mx-auto px-6 text-center">
+        <span class="inline-block text-[#b64400] text-[13px] md:text-[14px] font-semibold tracking-wide uppercase mb-3">
+          Academic Utility
+        </span>
+        <h1 class="text-[44px] sm:text-[64px] md:text-[84px] font-bold text-[#1d1d1f] apple-display tracking-tight max-w-4xl mx-auto mb-6">
+          Weighted Grade Calculator.
+        </h1>
+        <p class="text-[19px] sm:text-[21px] text-[#707070] max-w-2xl mx-auto leading-relaxed font-normal">
+          Calculate your real-time academic standing or determine the exact score you need on your final exam. Enter your assignment categories, earned grades, and percentage weights below to evaluate your final course mark instantly.
+        </p>
+
+        <!-- Anchor quick pills -->
+        <div class="mt-8 flex flex-wrap justify-center gap-3 text-[14px]">
+          <a href="#calculator-app" class="text-[#0066cc] hover:underline flex items-center gap-1 font-medium">
+            Jump to Tool <span class="text-sm">↓</span>
+          </a>
+          <span class="text-[#d6d6d6]">•</span>
+          <a href="#how-to-calculate" class="text-[#0066cc] hover:underline flex items-center gap-1 font-medium">
+            Read the Formula <span class="text-sm">›</span>
+          </a>
+          <span class="text-[#d6d6d6]">•</span>
+          <a href="#grading-scale" class="text-[#0066cc] hover:underline flex items-center gap-1 font-medium">
+            4.0 Conversion Table <span class="text-sm">›</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE APPLICATION SECTION (Alternating Canvas Gray #f5f5f7) -->
+    <section id="calculator-app" class="py-16 md:py-24 bg-[#f5f5f7]">
+      <div class="max-w-[1200px] mx-auto px-6">
+        
+        <!-- App Grid: Input Sheet on Left (2/3), Metric Cards on Right (1/3) -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          
+          <!-- LEFT COLUMN: Dynamic Rows Table -->
+          <div class="lg:col-span-8 bg-white apple-card p-6 sm:p-10 border-0">
+            <div class="flex flex-col sm:flex-row sm:items-center justify-between pb-6 border-b border-[#e8e8ed] gap-4">
+              <div>
+                <h2 class="text-[24px] sm:text-[28px] font-semibold text-[#1d1d1f] tracking-tight">
+                  Course Breakdown
+                </h2>
+                <p class="text-[14px] text-[#707070] mt-0.5">
+                  Input scores and their corresponding percentage weights from your syllabus.
+                </p>
+              </div>
+
+              <!-- Top Row Controls -->
+              <div class="flex items-center gap-2">
+                <button id="btn-reset-defaults" class="text-[13px] px-3.5 py-1.5 font-medium btn-apple-ghost">
+                  Reset Sample
+                </button>
+                <button id="btn-clear-all" class="text-[13px] px-3.5 py-1.5 font-medium text-[#707070] hover:text-[#1d1d1f] hover:bg-[#f5f5f7] rounded-full transition-colors">
+                  Clear
+                </button>
+              </div>
+            </div>
+
+            <!-- Table Header -->
+            <div class="grid grid-cols-12 gap-3 pt-6 pb-2 text-[12px] font-semibold uppercase tracking-wider text-[#707070] px-2">
+              <div class="col-span-5 sm:col-span-6">Category / Assessment</div>
+              <div class="col-span-3 sm:col-span-3 text-right">Grade (%)</div>
+              <div class="col-span-3 sm:col-span-2 text-right">Weight (%)</div>
+              <div class="col-span-1 text-center"></div>
+            </div>
+
+            <!-- Dynamic Rows Container -->
+            <div id="rows-container" class="space-y-2 mt-1">
+              <!-- Dynamically populated via JavaScript -->
+            </div>
+
+            <!-- Row Insertion & Total Weight Bar -->
+            <div class="mt-6 pt-6 border-t border-[#e8e8ed] flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+              <button id="btn-add-row" class="btn-apple-ghost text-[14px] font-medium px-5 py-2.5 inline-flex items-center justify-center gap-2">
+                <svg class="w-4 h-4 text-[#1d1d1f]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>
+                </svg>
+                Add Assessment Row
+              </button>
+
+              <div class="flex items-center gap-3">
+                <span class="text-[14px] text-[#707070]">Total Weight:</span>
+                <span id="label-total-weight" class="text-[17px] font-bold text-[#1d1d1f] apple-tabular">100.0%</span>
+                <span id="badge-weight-status" class="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800">
+                  Complete
+                </span>
+              </div>
+            </div>
+
+            <!-- Incomplete weight contextual tip -->
+            <div id="alert-normalization" class="mt-4 hidden p-4 bg-[#f5f5f7] rounded-[18px] text-[13px] text-[#474747] leading-relaxed">
+              <span class="font-semibold text-[#1d1d1f]">Notice:</span> Your entered weights total less than 100%. The current grade reflects your active standing normalized against the completed portions of your course.
+            </div>
+          </div>
+
+          <!-- RIGHT COLUMN: Output Stats Card & Final Exam Planner -->
+          <div class="lg:col-span-4 space-y-6">
+            
+            <!-- Result Overview Card -->
+            <div class="bg-white apple-card p-6 sm:p-8 border-0">
+              <span class="text-[12px] font-semibold uppercase tracking-wider text-[#707070] block mb-2">
+                Real-Time Standing
+              </span>
+
+              <div class="flex items-baseline justify-between mb-4">
+                <div>
+                  <div id="card-final-percent" class="text-[52px] font-bold text-[#1d1d1f] tracking-tight apple-tabular leading-none">
+                    83.4%
+                  </div>
+                  <div id="card-letter-grade" class="text-[20px] font-semibold text-[#0066cc] mt-1">
+                    Grade B (3.0 GPA)
+                  </div>
+                </div>
+              </div>
+
+              <!-- Visual progress meter -->
+              <div class="w-full bg-[#f5f5f7] h-2.5 rounded-full overflow-hidden mb-6">
+                <div id="grade-progress-bar" class="h-full bg-[#0071e3] transition-all duration-300" style="width: 83.4%;"></div>
+              </div>
+
+              <div class="space-y-3 pt-4 border-t border-[#e8e8ed] text-[14px]">
+                <div class="flex justify-between items-center">
+                  <span class="text-[#707070]">Calculated Points</span>
+                  <span id="stat-points" class="font-medium text-[#1d1d1f] apple-tabular">83.40 / 100</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#707070]">Recorded Categories</span>
+                  <span id="stat-categories" class="font-medium text-[#1d1d1f] apple-tabular">4</span>
+                </div>
+                <div class="flex justify-between items-center">
+                  <span class="text-[#707070]">Calculation Mode</span>
+                  <span id="stat-mode" class="font-medium text-[#1d1d1f]">Full Semester (100%)</span>
+                </div>
+              </div>
+
+              <div class="mt-6">
+                <button id="btn-copy-summary" class="w-full btn-apple-ghost text-[14px] font-medium py-2.5 text-center">
+                  Copy Calculation Summary
+                </button>
+                <div id="copy-toast" class="text-center text-[12px] text-emerald-600 mt-2 font-medium opacity-0 transition-opacity">
+                  Copied to clipboard
+                </div>
+              </div>
+            </div>
+
+            <!-- TARGET GRADE PLANNER CARD ("What do I need on the Final?") -->
+            <div id="target-planner" class="bg-white apple-card p-6 sm:p-8 border-0">
+              <div class="flex items-center gap-2 mb-2">
+                <span class="w-2 h-2 rounded-full bg-[#0071e3]"></span>
+                <span class="text-[12px] font-semibold uppercase tracking-wider text-[#707070]">
+                  Target Exam Planner
+                </span>
+              </div>
+              <h3 class="text-[20px] font-semibold text-[#1d1d1f] tracking-tight mb-2">
+                What do you need on the Final?
+              </h3>
+              <p class="text-[13px] text-[#707070] mb-5">
+                Calculate the minimum score required on your final assessment to achieve your goal.
+              </p>
+
+              <div class="space-y-4">
+                <div>
+                  <label for="target-desired-grade" class="block text-[13px] font-medium text-[#474747] mb-1">
+                    Target Course Grade (%)
+                  </label>
+                  <input type="number" id="target-desired-grade" value="90" min="0" max="150" step="0.5" 
+                    class="w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-4 py-2.5 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all text-right">
+                </div>
+
+                <div>
+                  <label for="target-exam-weight" class="block text-[13px] font-medium text-[#474747] mb-1">
+                    Final Exam Weight (%)
+                  </label>
+                  <input type="number" id="target-exam-weight" value="40" min="1" max="100" step="0.5" 
+                    class="w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-4 py-2.5 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all text-right">
+                </div>
+
+                <div class="pt-4 border-t border-[#e8e8ed]">
+                  <div class="text-[12px] text-[#707070] uppercase font-semibold">Required Exam Score</div>
+                  <div id="target-output-score" class="text-[34px] font-bold text-[#1d1d1f] mt-1 apple-tabular">
+                    101.5%
+                  </div>
+                  <div id="target-output-badge" class="mt-2 text-[12px] font-medium text-[#b64400] bg-orange-50 px-3 py-1.5 rounded-full inline-block">
+                    Requires extra credit or a curve
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 1: How to Calculate a Weighted Grade (Canvas White #ffffff) -->
+    <section id="how-to-calculate" class="py-20 md:py-28 bg-white">
+      <div class="max-w-[1000px] mx-auto px-6">
+        
+        <div class="text-left mb-12">
+          <span class="text-[#0066cc] text-[14px] font-semibold tracking-wide uppercase">Core Mathematical Foundations</span>
+          <h2 class="text-[36px] sm:text-[48px] font-bold text-[#1d1d1f] apple-headline mt-2 mb-6">
+            How to Calculate a Weighted Grade.
+          </h2>
+          <p class="apple-body text-[#707070]">
+            In a weighted grading system, teachers assign different levels of importance to different course components. A final exam carries more leverage than a single homework assignment. To find your grade manually, compute the weighted mean using this mathematical formula:
+          </p>
+        </div>
+
+        <!-- Formula Callout Card -->
+        <div class="bg-[#f5f5f7] apple-card p-8 sm:p-12 mb-14 text-center">
+          <div class="inline-block text-[12px] font-semibold uppercase tracking-wider text-[#707070] mb-3">
+            Universal Weighted Mean Equation
+          </div>
+          <div class="text-[24px] sm:text-[34px] font-bold text-[#1d1d1f] tracking-tight">
+            Final Grade = &Sigma; (Assignment Grade &times; Weight) &divide; &Sigma; (Weights)
+          </div>
+          <p class="text-[14px] text-[#707070] mt-3">
+            Where &Sigma; denotes the summation across all course syllabus categories.
+          </p>
+        </div>
+
+        <!-- 4-Step Process -->
+        <h3 class="text-[24px] sm:text-[28px] font-semibold text-[#1d1d1f] tracking-tight mb-8">
+          The 4-Step Calculation Process
+        </h3>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <div class="bg-[#f5f5f7] apple-card p-7">
+            <span class="text-[32px] font-bold text-[#1d1d1f] block mb-2">01</span>
+            <h4 class="text-[19px] font-semibold text-[#1d1d1f] mb-2">Convert percentage weights to decimals</h4>
+            <p class="text-[15px] text-[#707070] leading-relaxed">
+              Divide each category weight by 100. For example, a 25% laboratory weight converts to 0.25, and a 15% quiz weight becomes 0.15.
+            </p>
+          </div>
+
+          <div class="bg-[#f5f5f7] apple-card p-7">
+            <span class="text-[32px] font-bold text-[#1d1d1f] block mb-2">02</span>
+            <h4 class="text-[19px] font-semibold text-[#1d1d1f] mb-2">Multiply grade by weight</h4>
+            <p class="text-[15px] text-[#707070] leading-relaxed">
+              Multiply each category percentage by its decimal weight to determine its true weighted points toward your final grade.
+            </p>
+          </div>
+
+          <div class="bg-[#f5f5f7] apple-card p-7">
+            <span class="text-[32px] font-bold text-[#1d1d1f] block mb-2">03</span>
+            <h4 class="text-[19px] font-semibold text-[#1d1d1f] mb-2">Sum the weighted scores</h4>
+            <p class="text-[15px] text-[#707070] leading-relaxed">
+              Add all weighted point values together. This accumulated tally directly reflects the points earned toward the maximum course ceiling.
+            </p>
+          </div>
+
+          <div class="bg-[#f5f5f7] apple-card p-7">
+            <span class="text-[32px] font-bold text-[#1d1d1f] block mb-2">04</span>
+            <h4 class="text-[19px] font-semibold text-[#1d1d1f] mb-2">Normalize the total</h4>
+            <p class="text-[15px] text-[#707070] leading-relaxed">
+              If your entered weights equal 100%, that sum represents your final percentage. If your weights total less than 100% (such as during mid-semester), divide the accumulated sum by the total weight completed.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 2: Step-by-Step Syllabus Calculation Example (Canvas Gray #f5f5f7) -->
+    <section id="examples" class="py-20 md:py-28 bg-[#f5f5f7]">
+      <div class="max-w-[1000px] mx-auto px-6">
+        
+        <div class="mb-12">
+          <span class="text-[#0066cc] text-[14px] font-semibold tracking-wide uppercase">Practical Application</span>
+          <h2 class="text-[36px] sm:text-[48px] font-bold text-[#1d1d1f] apple-headline mt-2 mb-4">
+            Step-by-Step Syllabus Calculation Example.
+          </h2>
+          <p class="apple-body text-[#707070]">
+            Consider a standard college syllabus with four grading categories:
+          </p>
+        </div>
+
+        <!-- Structured Table Container -->
+        <div class="bg-white apple-card p-6 sm:p-10 overflow-x-auto mb-10">
+          <table class="w-full text-left border-collapse min-w-[560px]">
+            <thead>
+              <tr class="border-b border-[#e8e8ed] text-[13px] uppercase tracking-wider text-[#707070]">
+                <th class="py-3 px-4 font-semibold">Assessment Category</th>
+                <th class="py-3 px-4 font-semibold text-right">Weight (%)</th>
+                <th class="py-3 px-4 font-semibold text-right">Weight (Decimal)</th>
+                <th class="py-3 px-4 font-semibold text-right">Score Earned (%)</th>
+                <th class="py-3 px-4 font-semibold text-right">Calculation</th>
+                <th class="py-3 px-4 font-semibold text-right">Weighted Points</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#f5f5f7] text-[15px] apple-tabular">
+              <tr>
+                <td class="py-4 px-4 font-medium text-[#1d1d1f]">Homework</td>
+                <td class="py-4 px-4 text-right text-[#474747]">20%</td>
+                <td class="py-4 px-4 text-right text-[#474747]">0.20</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-semibold">92%</td>
+                <td class="py-4 px-4 text-right text-[#707070]">92 &times; 0.20</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-bold">18.40</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium text-[#1d1d1f]">Quizzes</td>
+                <td class="py-4 px-4 text-right text-[#474747]">15%</td>
+                <td class="py-4 px-4 text-right text-[#474747]">0.15</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-semibold">80%</td>
+                <td class="py-4 px-4 text-right text-[#707070]">80 &times; 0.15</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-bold">12.00</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium text-[#1d1d1f]">Midterm Exam</td>
+                <td class="py-4 px-4 text-right text-[#474747]">25%</td>
+                <td class="py-4 px-4 text-right text-[#474747]">0.25</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-semibold">76%</td>
+                <td class="py-4 px-4 text-right text-[#707070]">76 &times; 0.25</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-bold">19.00</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-medium text-[#1d1d1f]">Final Exam</td>
+                <td class="py-4 px-4 text-right text-[#474747]">40%</td>
+                <td class="py-4 px-4 text-right text-[#474747]">0.40</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-semibold">85%</td>
+                <td class="py-4 px-4 text-right text-[#707070]">85 &times; 0.40</td>
+                <td class="py-4 px-4 text-right text-[#1d1d1f] font-bold">34.00</td>
+              </tr>
+              <tr class="bg-[#fafafc] font-semibold text-[#1d1d1f]">
+                <td class="py-4 px-4">Total</td>
+                <td class="py-4 px-4 text-right">100%</td>
+                <td class="py-4 px-4 text-right">1.00</td>
+                <td class="py-4 px-4 text-right">—</td>
+                <td class="py-4 px-4 text-right">—</td>
+                <td class="py-4 px-4 text-right text-[17px] text-[#0066cc]">83.40% (Grade B)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="bg-white apple-card p-6 sm:p-8">
+          <p class="apple-body text-[#1d1d1f] mb-3">
+            Add the weighted point values:
+          </p>
+          <div class="text-[20px] font-bold text-[#1d1d1f] apple-tabular mb-3">
+            18.40 + 12.00 + 19.00 + 34.00 = 83.40%
+          </div>
+          <p class="text-[17px] text-[#707070] leading-relaxed">
+            The student finishes the course with an <strong class="text-[#1d1d1f]">83.40%</strong>, which equals a solid <strong class="text-[#1d1d1f]">B</strong> on a standard 4.0 grading scale.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 3: Mid-Semester Grades (Canvas White #ffffff) -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-[1000px] mx-auto px-6">
+        
+        <div class="mb-10">
+          <span class="text-[#0066cc] text-[14px] font-semibold tracking-wide uppercase">Mid-Semester Normalization</span>
+          <h2 class="text-[36px] sm:text-[48px] font-bold text-[#1d1d1f] apple-headline mt-2 mb-4">
+            How to Calculate Mid-Semester Grades (Weights Under 100%).
+          </h2>
+          <p class="apple-body text-[#707070]">
+            Students often need to calculate their current standing before taking the final exam. When completed weights do not add up to 100%, divide the points earned by the completed fraction:
+          </p>
+        </div>
+
+        <div class="bg-[#f5f5f7] apple-card p-8 sm:p-10 mb-10 text-center">
+          <div class="text-[22px] sm:text-[30px] font-bold text-[#1d1d1f] tracking-tight">
+            Current Grade = (Sum of Earned Weighted Points) &divide; (Sum of Completed Weights)
+          </div>
+        </div>
+
+        <div class="bg-[#f5f5f7] apple-card p-8 sm:p-10 space-y-4 text-[17px] text-[#474747]">
+          <p class="font-semibold text-[#1d1d1f]">Using the table above before taking the final exam:</p>
+          <ul class="space-y-2 list-disc list-inside text-[#707070]">
+            <li><strong class="text-[#1d1d1f]">Completed Weight:</strong> 20% + 15% + 25% = 60% (or 0.60)</li>
+            <li><strong class="text-[#1d1d1f]">Earned Weighted Points:</strong> 18.40 + 12.00 + 19.00 = 49.40</li>
+          </ul>
+
+          <div class="py-4 my-2 border-y border-[#e8e8ed] text-[22px] font-bold text-[#1d1d1f] apple-tabular">
+            Current Standing = 49.40 &divide; 0.60 = 82.33%
+          </div>
+
+          <p class="text-[#707070]">
+            The student currently holds an <strong class="text-[#1d1d1f]">82.33% (B-)</strong> heading into finals week.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 4: Final Exam Target (Canvas Gray #f5f5f7) -->
+    <section class="py-20 md:py-28 bg-[#f5f5f7]">
+      <div class="max-w-[1000px] mx-auto px-6">
+        
+        <div class="mb-10">
+          <span class="text-[#0066cc] text-[14px] font-semibold tracking-wide uppercase">Reverse Planning</span>
+          <h2 class="text-[36px] sm:text-[48px] font-bold text-[#1d1d1f] apple-headline mt-2 mb-4">
+            What Grade Do You Need on Your Final Exam?
+          </h2>
+          <p class="apple-body text-[#707070]">
+            Use this reverse formula to identify the minimum score required on a final exam to reach your target letter grade:
+          </p>
+        </div>
+
+        <div class="bg-white apple-card p-8 sm:p-10 mb-10 text-center">
+          <div class="text-[20px] sm:text-[28px] font-bold text-[#1d1d1f] tracking-tight">
+            Required Final Score = [Target Overall Grade - Current Earned Weighted Points] &divide; Weight of Final Exam
+          </div>
+        </div>
+
+        <!-- Example Scenario Card -->
+        <div class="bg-white apple-card p-8 sm:p-10">
+          <h3 class="text-[22px] font-bold text-[#1d1d1f] mb-4">
+            Example: Securing an &ldquo;A&rdquo; (90%)
+          </h3>
+
+          <ul class="space-y-2 text-[17px] text-[#707070] mb-6">
+            <li>• <strong class="text-[#1d1d1f]">Target Grade:</strong> 90%</li>
+            <li>• <strong class="text-[#1d1d1f]">Current Points Earned (over 60% of class):</strong> 49.40</li>
+            <li>• <strong class="text-[#1d1d1f]">Final Exam Weight:</strong> 40% (0.40)</li>
+          </ul>
+
+          <div class="p-6 bg-[#f5f5f7] rounded-[20px] mb-6">
+            <div class="text-[18px] sm:text-[22px] font-bold text-[#1d1d1f] apple-tabular">
+              Required Final Score = (90 - 49.40) &divide; 0.40 = 40.60 &divide; 0.40 = 101.5%
+            </div>
+          </div>
+
+          <p class="apple-body text-[#707070]">
+            The student needs a <strong class="text-[#1d1d1f]">101.5%</strong> on the final exam. Because this value exceeds 100%, the student cannot achieve an A without extra credit or a curve.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 5: Weighted vs Unweighted (Canvas White #ffffff) -->
+    <section class="py-20 md:py-28 bg-white">
+      <div class="max-w-[1000px] mx-auto px-6">
+        
+        <div class="mb-12">
+          <span class="text-[#0066cc] text-[14px] font-semibold tracking-wide uppercase">Academic Systems Compared</span>
+          <h2 class="text-[36px] sm:text-[48px] font-bold text-[#1d1d1f] apple-headline mt-2 mb-4">
+            Weighted Grades vs. Unweighted (Points-Based) Grades.
+          </h2>
+          <p class="apple-body text-[#707070]">
+            Academic institutions use two primary grading methodologies:
+          </p>
+        </div>
+
+        <!-- Comparison Table -->
+        <div class="bg-[#f5f5f7] apple-card p-6 sm:p-10 overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[560px]">
+            <thead>
+              <tr class="border-b border-[#e8e8ed] text-[13px] uppercase tracking-wider text-[#707070]">
+                <th class="py-3 px-4 font-semibold w-1/3">Grading Attribute</th>
+                <th class="py-3 px-4 font-semibold w-1/3">Weighted Grade System</th>
+                <th class="py-3 px-4 font-semibold w-1/3">Unweighted / Points-Based System</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#e8e8ed] text-[15px]">
+              <tr>
+                <td class="py-4 px-4 font-semibold text-[#1d1d1f]">Calculation Method</td>
+                <td class="py-4 px-4 text-[#474747]">Proportional category percentages</td>
+                <td class="py-4 px-4 text-[#474747]">Total Earned Points &divide; Total Possible Points</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-semibold text-[#1d1d1f]">Assignment Impact</td>
+                <td class="py-4 px-4 text-[#474747]">High-weight categories drive the grade</td>
+                <td class="py-4 px-4 text-[#474747]">Every single point carries identical weight</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-semibold text-[#1d1d1f]">Syllabus Structure</td>
+                <td class="py-4 px-4 text-[#474747]">Categories with fixed percentages (e.g., 40% Exams)</td>
+                <td class="py-4 px-4 text-[#474747]">Flat points scale (e.g., 1,000 total points)</td>
+              </tr>
+              <tr>
+                <td class="py-4 px-4 font-semibold text-[#1d1d1f]">Risk Factor</td>
+                <td class="py-4 px-4 text-[#474747]">Bombing one high-weight exam lowers your final standing</td>
+                <td class="py-4 px-4 text-[#474747]">Consistent daily homework performance offsets bad test days</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 6: Grading Scale (Canvas Gray #f5f5f7) -->
+    <section id="grading-scale" class="py-20 md:py-28 bg-[#f5f5f7]">
+      <div class="max-w-[1000px] mx-auto px-6">
+        
+        <div class="mb-12">
+          <span class="text-[#0066cc] text-[14px] font-semibold tracking-wide uppercase">Standard Benchmarks</span>
+          <h2 class="text-[36px] sm:text-[48px] font-bold text-[#1d1d1f] apple-headline mt-2 mb-4">
+            Standard Grade Scale &amp; 4.0 GPA Conversion.
+          </h2>
+          <p class="apple-body text-[#707070]">
+            Most high schools and colleges map final percentage brackets to standard letter grades and quality points:
+          </p>
+        </div>
+
+        <div class="bg-white apple-card p-6 sm:p-10 overflow-x-auto">
+          <table class="w-full text-left border-collapse min-w-[480px]">
+            <thead>
+              <tr class="border-b border-[#e8e8ed] text-[13px] uppercase tracking-wider text-[#707070]">
+                <th class="py-3 px-4 font-semibold">Letter Grade</th>
+                <th class="py-3 px-4 font-semibold">Percentage Range</th>
+                <th class="py-3 px-4 font-semibold text-right">4.0 Scale GPA Value</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-[#f5f5f7] text-[15px] apple-tabular">
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">A+</td>
+                <td class="py-3.5 px-4 text-[#474747]">97% – 100%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">4.0</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">A</td>
+                <td class="py-3.5 px-4 text-[#474747]">93% – 96%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">4.0</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">A-</td>
+                <td class="py-3.5 px-4 text-[#474747]">90% – 92%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">3.7</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">B+</td>
+                <td class="py-3.5 px-4 text-[#474747]">87% – 89%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">3.3</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">B</td>
+                <td class="py-3.5 px-4 text-[#474747]">83% – 86%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">3.0</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">B-</td>
+                <td class="py-3.5 px-4 text-[#474747]">80% – 82%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">2.7</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">C+</td>
+                <td class="py-3.5 px-4 text-[#474747]">77% – 79%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">2.3</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">C</td>
+                <td class="py-3.5 px-4 text-[#474747]">73% – 76%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">2.0</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">C-</td>
+                <td class="py-3.5 px-4 text-[#474747]">70% – 72%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">1.7</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">D</td>
+                <td class="py-3.5 px-4 text-[#474747]">60% – 69%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">1.0</td>
+              </tr>
+              <tr>
+                <td class="py-3.5 px-4 font-bold text-[#1d1d1f]">F</td>
+                <td class="py-3.5 px-4 text-[#474747]">Below 60%</td>
+                <td class="py-3.5 px-4 text-right font-semibold text-[#1d1d1f]">0.0</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- CONTENT SECTION 7: FAQ (Canvas White #ffffff) -->
+    <section id="faq" class="py-20 md:py-28 bg-white">
+      <div class="max-w-[1000px] mx-auto px-6">
+        
+        <div class="mb-12">
+          <span class="text-[#0066cc] text-[14px] font-semibold tracking-wide uppercase">Common Inquiries</span>
+          <h2 class="text-[36px] sm:text-[48px] font-bold text-[#1d1d1f] apple-headline mt-2 mb-4">
+            Frequently Asked Questions.
+          </h2>
+          <p class="apple-body text-[#707070]">
+            Everything you need to know about calculating weighted academic scores.
+          </p>
+        </div>
+
+        <div class="space-y-4">
+          
+          <!-- FAQ 1 -->
+          <div class="bg-[#f5f5f7] apple-card p-6 sm:p-8 cursor-pointer faq-item">
+            <div class="flex justify-between items-center">
+              <h3 class="text-[19px] sm:text-[21px] font-semibold text-[#1d1d1f]">
+                Can a weighted grade exceed 100%?
+              </h3>
+              <span class="text-[#707070] text-2xl font-light faq-icon transition-transform">+</span>
+            </div>
+            <div class="faq-content mt-4 pt-4 border-t border-[#e8e8ed] text-[16px] text-[#707070] leading-relaxed hidden">
+              Yes. If an instructor offers extra credit within a high-weight category or applies bonus percentage points directly to your final grade, your weighted score can surpass 100%.
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-[#f5f5f7] apple-card p-6 sm:p-8 cursor-pointer faq-item">
+            <div class="flex justify-between items-center">
+              <h3 class="text-[19px] sm:text-[21px] font-semibold text-[#1d1d1f]">
+                How do I calculate raw points inside a weighted category?
+              </h3>
+              <span class="text-[#707070] text-2xl font-light faq-icon transition-transform">+</span>
+            </div>
+            <div class="faq-content mt-4 pt-4 border-t border-[#e8e8ed] text-[16px] text-[#707070] leading-relaxed hidden">
+              Average your scores within the category first. If you scored 45/50 on Quiz 1 and 40/50 on Quiz 2, sum your points (85/100 = 85%). Multiply that 85% average by your syllabus quiz weight.
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-[#f5f5f7] apple-card p-6 sm:p-8 cursor-pointer faq-item">
+            <div class="flex justify-between items-center">
+              <h3 class="text-[19px] sm:text-[21px] font-semibold text-[#1d1d1f]">
+                Does this calculator save my personal data?
+              </h3>
+              <span class="text-[#707070] text-2xl font-light faq-icon transition-transform">+</span>
+            </div>
+            <div class="faq-content mt-4 pt-4 border-t border-[#e8e8ed] text-[16px] text-[#707070] leading-relaxed hidden">
+              No. The calculator executes all calculations locally inside your web browser. The tool does not store, transmit, or monitor your academic records.
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Uniform Footer -->
+  <footer class="footer" style="margin-top: 60px; background-color: var(--color-canvas); padding: 52px 24px 36px; border-top: 1px solid var(--color-hairline);">
+    <div style="max-width: 1100px; margin: 0 auto;">
+      <!-- Top Grid: Brand & Categorized Navigation -->
+      <div class="footer-grid">
+        <!-- Brand & Social Column -->
+        <div class="footer-brand-col">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 12px;">
+            <img src="logo.png" alt="Calculee Logo" style="width: 44px; height: 52px; object-fit: contain; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));">
+            <div>
+              <div style="font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 22px; font-weight: 700; color: var(--color-primary-ink); letter-spacing: -0.4px; line-height: 1.1;">Calculee</div>
+              <div style="font-size: 13px; color: var(--color-mid-gray); font-weight: 400; margin-top: 2px;">Precision Laboratory &amp; Scientific Calculators</div>
+            </div>
+          </div>
+          <p style="font-size: 13px; color: var(--color-mid-gray); line-height: 1.5; max-width: 320px; margin-bottom: 16px;">
+            Open-access, laboratory-grade calculation suite engineered for volumetric dilution, concentration scaling, and scientific workflows.
+          </p>
+
+          <!-- Social Media Links -->
+          <div class="footer-social-bar">
+            <a href="https://www.facebook.com/profile.php?id=61594989034904&amp;sk=directory_links&amp;fb_profile_edit_entry_point=%7B%22feature%22%3A%22profile_directory%22%2C%22click_point%22%3A%22pencil_edit_directory_section%22%2C%22additional_metadata%22%3A%7B%22section_type%22%3A%22links%22%7D%7D" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="footer-social-btn btn-facebook" 
+               aria-label="Follow Calculee on Facebook"
+               title="Follow Calculee on Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+              </svg>
+              <span>Facebook</span>
+            </a>
+
+            <a href="https://www.instagram.com/calculee.io/?fbclid=IwY2xjawUu7aVleHRuA2FlbQIxMABwZG9mAWJyaWQRMWJrSE1hUjIwYlUzMFBBdzlzcnRjBmFwcF9pZBAyMjIwMzkxNzg4MjAwODkyAAEeaR0nrwJCkACKWrILw9JS_hzgcvDu1CM60XqR2vmfFV7mycvGGJvblZX3yv4_aem_cYlBZlRtVVpRVWvDHA7eWA" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="footer-social-btn btn-instagram" 
+               aria-label="Follow Calculee on Instagram"
+               title="Follow Calculee on Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Links Column 1: English Calculators -->
+        <div class="footer-nav-col">
+          <h3 class="footer-col-title">Calculators</h3>
+          <ul class="footer-nav-list">
+            <li><a href="index.html" class="footer-nav-link">Tocris Dilution Calculator</a></li>
+            <li><a href="standard-deviation-calculator.html" class="footer-nav-link">Standard Deviation Calculator</a></li>
+            <li><a href="weighted_grade_calculator.html" class="footer-nav-link">Weighted Grade Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 2: German Calculators -->
+        <div class="footer-nav-col">
+          <h3 class="footer-col-title">German Calculators (DE)</h3>
+          <ul class="footer-nav-list">
+            <li><a href="de/poisson-verteilung-rechner.html" class="footer-nav-link">Poisson-Verteilung Rechner</a></li>
+            <li><a href="de/volumenrechner.html" class="footer-nav-link">Volumenrechner</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 3: About / Company -->
+        <div class="footer-nav-col">
+          <h3 class="footer-col-title">About</h3>
+          <ul class="footer-nav-list">
+            <li><a href="about.html" class="footer-nav-link">About Us</a></li>
+            <li><a href="contact.html" class="footer-nav-link">Contact Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Links Column 4: Privacy & Legal -->
+        <div class="footer-nav-col">
+          <h3 class="footer-col-title">Privacy &amp; Legal</h3>
+          <ul class="footer-nav-list">
+            <li><a href="privacy.html" class="footer-nav-link">Privacy Policy</a></li>
+            <li><a href="terms.html" class="footer-nav-link">Terms of Service</a></li>
+            <li><a href="disclaimer.html" class="footer-nav-link">Disclaimer</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom Bar with Copyright -->
+      <div class="footer-bottom-bar">
+        <span style="color: var(--color-mid-gray); font-size: 12px; font-weight: 400;">&copy; 2026 Calculee. All rights reserved.</span>
+        <span style="color: var(--color-mid-gray); font-size: 12px; font-weight: 400;">Designed for scientific research &amp; laboratory accuracy.</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JAVASCRIPT: Application Logic & Reactive Store -->
+  <script>
+    // Initial Default Data (Preserving the requested prompt sample)
+    const DEFAULT_ROWS = [
+      { id: '1', name: 'Homework', grade: 92, weight: 20 },
+      { id: '2', Quizzes: 'Quizzes', name: 'Quizzes', grade: 80, weight: 15 },
+      { id: '3', name: 'Midterm Exam', grade: 76, weight: 25 },
+      { id: '4', name: 'Final Exam', grade: 85, weight: 40 }
+    ];
+
+    let currentRows = [];
+
+    // Local Storage Hydration
+    function initStore() {
+      try {
+        const saved = localStorage.getItem('apple_weighted_grade_data');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            currentRows = parsed;
+            return;
+          }
+        }
+      } catch (e) {
+        console.warn('LocalStorage unavailable');
+      }
+      currentRows = JSON.parse(JSON.stringify(DEFAULT_ROWS));
+    }
+
+    function saveStore() {
+      try {
+        localStorage.setItem('apple_weighted_grade_data', JSON.stringify(currentRows));
+      } catch (e) {}
+    }
+
+    // Determine Letter Grade and GPA Equivalent
+    function getGradeBadge(percentage) {
+      if (percentage >= 97) return { letter: 'A+', gpa: '4.0' };
+      if (percentage >= 93) return { letter: 'A', gpa: '4.0' };
+      if (percentage >= 90) return { letter: 'A-', gpa: '3.7' };
+      if (percentage >= 87) return { letter: 'B+', gpa: '3.3' };
+      if (percentage >= 83) return { letter: 'B', gpa: '3.0' };
+      if (percentage >= 80) return { letter: 'B-', gpa: '2.7' };
+      if (percentage >= 77) return { letter: 'C+', gpa: '2.3' };
+      if (percentage >= 73) return { letter: 'C', gpa: '2.0' };
+      if (percentage >= 70) return { letter: 'C-', gpa: '1.7' };
+      if (percentage >= 60) return { letter: 'D', gpa: '1.0' };
+      return { letter: 'F', gpa: '0.0' };
+    }
+
+    // Render Rows into DOM
+    function renderRows() {
+      const container = document.getElementById('rows-container');
+      container.innerHTML = '';
+
+      currentRows.forEach((row, index) => {
+        const rowEl = document.createElement('div');
+        rowEl.className = 'grid grid-cols-12 gap-3 items-center py-2 px-2 rounded-[16px] transition-colors hover:bg-[#fafafc]';
+        rowEl.dataset.id = row.id;
+
+        rowEl.innerHTML = `
+          <div class="col-span-5 sm:col-span-6">
+            <input type="text" value="${escapeHtml(row.name)}" placeholder="Category (e.g. Lab)"
+              class="row-name w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-3.5 py-2 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all">
+          </div>
+          <div class="col-span-3 sm:col-span-3">
+            <input type="number" value="${row.grade !== null ? row.grade : ''}" min="0" max="200" step="any" placeholder="%"
+              class="row-grade w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-3.5 py-2 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all text-right apple-tabular">
+          </div>
+          <div class="col-span-3 sm:col-span-2">
+            <input type="number" value="${row.weight !== null ? row.weight : ''}" min="0" max="100" step="any" placeholder="%"
+              class="row-weight w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-3.5 py-2 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all text-right apple-tabular">
+          </div>
+          <div class="col-span-1 text-center">
+            <button class="btn-delete text-[#707070] hover:text-red-500 p-1.5 rounded-full hover:bg-red-50 transition-colors" title="Delete assessment">
+              <svg class="w-4 h-4 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
+              </svg>
+            </button>
+          </div>
+        `;
+
+        // Bind events
+        const nameInput = rowEl.querySelector('.row-name');
+        const gradeInput = rowEl.querySelector('.row-grade');
+        const weightInput = rowEl.querySelector('.row-weight');
+        const delBtn = rowEl.querySelector('.btn-delete');
+
+        nameInput.addEventListener('input', (e) => {
+          row.name = e.target.value;
+          saveStore();
+        });
+
+        gradeInput.addEventListener('input', (e) => {
+          row.grade = e.target.value === '' ? 0 : parseFloat(e.target.value);
+          saveStore();
+          calculateAll();
+        });
+
+        weightInput.addEventListener('input', (e) => {
+          row.weight = e.target.value === '' ? 0 : parseFloat(e.target.value);
+          saveStore();
+          calculateAll();
+        });
+
+        delBtn.addEventListener('click', () => {
+          if (currentRows.length <= 1) {
+            row.name = '';
+            row.grade = 0;
+            row.weight = 0;
+          } else {
+            currentRows.splice(index, 1);
+          }
+          saveStore();
+          renderRows();
+          calculateAll();
+        });
+
+        container.appendChild(rowEl);
+      });
+    }
+
+    function escapeHtml(string) {
+      if (!string) return '';
+      return String(string).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    }
+
+    // Master Calculation Method
+    function calculateAll() {
+      let totalWeight = 0;
+      let totalWeightedPoints = 0;
+      let validRowCount = 0;
+
+      currentRows.forEach(row => {
+        const w = parseFloat(row.weight) || 0;
+        const g = parseFloat(row.grade) || 0;
+        if (w > 0) {
+          totalWeight += w;
+          totalWeightedPoints += (g * (w / 100));
+          validRowCount++;
+        }
+      });
+
+      // Update Total Weight indicator
+      const totalWeightEl = document.getElementById('label-total-weight');
+      const badgeStatusEl = document.getElementById('badge-weight-status');
+      const alertNormEl = document.getElementById('alert-normalization');
+      const statModeEl = document.getElementById('stat-mode');
+
+      totalWeightEl.textContent = `${totalWeight.toFixed(1)}%`;
+
+      let finalPercentage = 0;
+
+      if (totalWeight === 0) {
+        finalPercentage = 0;
+        badgeStatusEl.className = 'text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-gray-200 text-gray-700';
+        badgeStatusEl.textContent = 'Empty';
+        alertNormEl.classList.add('hidden');
+        statModeEl.textContent = 'No weights entered';
+      } else if (Math.abs(totalWeight - 100) < 0.01) {
+        finalPercentage = totalWeightedPoints;
+        badgeStatusEl.className = 'text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800';
+        badgeStatusEl.textContent = '100% Complete';
+        alertNormEl.classList.add('hidden');
+        statModeEl.textContent = 'Full Semester (100%)';
+      } else if (totalWeight < 100) {
+        // Incomplete normalization
+        finalPercentage = (totalWeightedPoints / (totalWeight / 100));
+        badgeStatusEl.className = 'text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-800';
+        badgeStatusEl.textContent = 'Under 100%';
+        alertNormEl.classList.remove('hidden');
+        statModeEl.textContent = `Normalized to ${totalWeight.toFixed(1)}%`;
+      } else {
+        // Over 100%
+        finalPercentage = (totalWeightedPoints / (totalWeight / 100));
+        badgeStatusEl.className = 'text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-indigo-100 text-indigo-800';
+        badgeStatusEl.textContent = 'Over 100%';
+        alertNormEl.classList.add('hidden');
+        statModeEl.textContent = 'Extra Credit Scale';
+      }
+
+      // Update Right Card Metrics
+      const percentEl = document.getElementById('card-final-percent');
+      const letterEl = document.getElementById('card-letter-grade');
+      const progressBar = document.getElementById('grade-progress-bar');
+      const statPoints = document.getElementById('stat-points');
+      const statCategories = document.getElementById('stat-categories');
+
+      const gradeDetails = getGradeBadge(finalPercentage);
+
+      percentEl.textContent = `${finalPercentage.toFixed(1)}%`;
+      letterEl.textContent = `Grade ${gradeDetails.letter} (${gradeDetails.gpa} GPA)`;
+      statPoints.textContent = `${totalWeightedPoints.toFixed(2)} / ${totalWeight.toFixed(1)}`;
+      statCategories.textContent = validRowCount;
+
+      const visualWidth = Math.min(Math.max(finalPercentage, 0), 100);
+      progressBar.style.width = `${visualWidth}%`;
+
+      // Update Target Final Exam Calculation
+      calculateTargetExam(totalWeightedPoints, totalWeight);
+    }
+
+    // Reverse Calculation: Target Final Exam
+    function calculateTargetExam(currentPoints, currentWeight) {
+      const targetGradeInput = document.getElementById('target-desired-grade');
+      const examWeightInput = document.getElementById('target-exam-weight');
+      const outputScore = document.getElementById('target-output-score');
+      const outputBadge = document.getElementById('target-output-badge');
+
+      const targetGrade = parseFloat(targetGradeInput.value) || 0;
+      const finalWeight = parseFloat(examWeightInput.value) || 0;
+
+      if (finalWeight <= 0) {
+        outputScore.textContent = '—';
+        outputBadge.textContent = 'Exam weight must be greater than 0%';
+        outputBadge.className = 'mt-2 text-[12px] font-medium text-[#707070] bg-[#f5f5f7] px-3 py-1.5 rounded-full inline-block';
+        return;
+      }
+
+      // Formula: Required Score = [Target - CurrentWeightedPoints] / (FinalWeight / 100)
+      const requiredScore = (targetGrade - currentPoints) / (finalWeight / 100);
+
+      outputScore.textContent = `${requiredScore.toFixed(1)}%`;
+
+      if (requiredScore > 100) {
+        outputBadge.textContent = 'Requires extra credit or a curve';
+        outputBadge.className = 'mt-2 text-[12px] font-medium text-[#b64400] bg-orange-50 px-3 py-1.5 rounded-full inline-block';
+      } else if (requiredScore <= 0) {
+        outputBadge.textContent = 'Target already achieved (0% needed)';
+        outputBadge.className = 'mt-2 text-[12px] font-medium text-emerald-800 bg-emerald-50 px-3 py-1.5 rounded-full inline-block';
+      } else {
+        outputBadge.textContent = 'Achievable with final exam preparation';
+        outputBadge.className = 'mt-2 text-[12px] font-medium text-[#0066cc] bg-blue-50 px-3 py-1.5 rounded-full inline-block';
+      }
+    }
+
+    // Event Handlers for Global Controls
+    document.addEventListener('DOMContentLoaded', () => {
+      initStore();
+      renderRows();
+      calculateAll();
+
+      // Add Row Button
+      document.getElementById('btn-add-row').addEventListener('click', () => {
+        const newId = String(Date.now());
+        currentRows.push({ id: newId, name: '', grade: 0, weight: 0 });
+        saveStore();
+        renderRows();
+        calculateAll();
+      });
+
+      // Clear All
+      document.getElementById('btn-clear-all').addEventListener('click', () => {
+        currentRows = [{ id: '1', name: '', grade: 0, weight: 0 }];
+        saveStore();
+        renderRows();
+        calculateAll();
+      });
+
+      // Reset Defaults
+      document.getElementById('btn-reset-defaults').addEventListener('click', () => {
+        currentRows = JSON.parse(JSON.stringify(DEFAULT_ROWS));
+        saveStore();
+        renderRows();
+        calculateAll();
+      });
+
+      // Target Planner Inputs
+      document.getElementById('target-desired-grade').addEventListener('input', calculateAll);
+      document.getElementById('target-exam-weight').addEventListener('input', calculateAll);
+
+      // Copy Calculation Summary
+      document.getElementById('btn-copy-summary').addEventListener('click', () => {
+        const percent = document.getElementById('card-final-percent').textContent;
+        const letter = document.getElementById('card-letter-grade').textContent;
+        const weight = document.getElementById('label-total-weight').textContent;
+        
+        let report = `Weighted Grade Summary\nCourse Standing: ${percent} (${letter})\nTotal Weight Logged: ${weight}\n\nAssessments:\n`;
+        currentRows.forEach(r => {
+          if (r.name || r.weight > 0) {
+            report += `• ${r.name || 'Untitled'}: ${r.grade}% (Weight: ${r.weight}%)\n`;
+          }
+        });
+
+        // Safe fallback copy
+        const tempTextarea = document.createElement('textarea');
+        tempTextarea.value = report;
+        document.body.appendChild(tempTextarea);
+        tempTextarea.select();
+        try {
+          document.execCommand('copy');
+          const toast = document.getElementById('copy-toast');
+          toast.classList.remove('opacity-0');
+          setTimeout(() => toast.classList.add('opacity-0'), 2500);
+        } catch (err) {
+          console.error('Copy failed');
+        }
+        document.body.removeChild(tempTextarea);
+      });
+
+      // FAQ Accordion Interaction
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+          const content = item.querySelector('.faq-content');
+          const icon = item.querySelector('.faq-icon');
+          const isHidden = content.classList.contains('hidden');
+
+          // Close other FAQs
+          faqItems.forEach(other => {
+            other.querySelector('.faq-content').classList.add('hidden');
+            other.querySelector('.faq-icon').style.transform = 'rotate(0deg)';
+          });
+
+          if (isHidden) {
+            content.classList.remove('hidden');
+            icon.style.transform = 'rotate(45deg)';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -62,5 +62,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <!-- Weighted Grade Calculator -->
+  <url>
+    <loc>https://calculee.io/weighted_grade_calculator.html</loc>
+    <lastmod>2026-10-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
 </urlset>
 
