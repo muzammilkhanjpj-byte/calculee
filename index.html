@@ -8,9 +8,14 @@
   <meta name="google-site-verification" content="L2O9oelgyc3wjVsgtxBoHBLhENrUp0VAzMoscRGueIE" />
 
   <!-- Primary Technical SEO & Meta Tags -->
-  <title>Tocris Dilution Calculator — C1V1 Solution &amp; Mass Solver</title>
-  <meta name="description" content="Calculate solution dilutions (C1V1=C2V2), stock reconstitutions, and serial dilutions with instant precision. Free, accurate, and privacy-first lab tool.">
+  <title>Dilution Calculator (C1V1) – Molarity & Solution Solver | Calculee</title>
+  <meta name="description" content="Free lab dilution calculator: solve C1V1=C2V2, mass molarity, stock reconstitution, and serial dilutions with instant steps. Fast, accurate, and private.">
   <link rel="canonical" href="https://calculee.io/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="en" href="https://calculee.io/" />
+  <link rel="alternate" hreflang="de" href="https://calculee.io/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://calculee.io/" />
   
   <!-- Favicon and App Icons -->
   <link rel="icon" href="/favicon.ico">
@@ -21,16 +26,16 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calculee.io/">
-  <meta property="og:title" content="Tocris Dilution Calculator — C1V1 Solution &amp; Mass Solver">
-  <meta property="og:description" content="Calculate solution dilutions (C1V1=C2V2), stock reconstitutions, and serial dilutions with instant precision. Free, accurate, and privacy-first lab tool.">
+  <meta property="og:title" content="Dilution Calculator (C1V1) – Molarity &amp; Solution Solver | Calculee">
+  <meta property="og:description" content="Free lab dilution calculator: solve C1V1=C2V2, mass molarity, stock reconstitution, and serial dilutions with instant steps. Fast, accurate, and private.">
   <meta property="og:image" content="https://calculee.io/logo.png">
   <meta property="og:site_name" content="Calculee">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://calculee.io/">
-  <meta name="twitter:title" content="Tocris Dilution Calculator — C1V1 Solution &amp; Mass Solver">
-  <meta name="twitter:description" content="Calculate solution dilutions (C1V1=C2V2), stock reconstitutions, and serial dilutions with instant precision. Free, accurate, and privacy-first lab tool.">
+  <meta name="twitter:title" content="Dilution Calculator (C1V1) – Molarity &amp; Solution Solver | Calculee">
+  <meta name="twitter:description" content="Free lab dilution calculator: solve C1V1=C2V2, mass molarity, stock reconstitution, and serial dilutions with instant steps. Fast, accurate, and private.">
   <meta name="twitter:image" content="https://calculee.io/logo.png">
 
   <!-- Schema.org JSON-LD (WebApplication + FAQPage + WebSite) -->
@@ -41,8 +46,8 @@
       {
         "@type": "WebApplication",
         "@id": "https://calculee.io/#webapp",
-        "name": "Tocris Dilution Calculator",
-        "alternateName": "Calculee Lab Solution & Dilution Calculator",
+        "name": "Calculee Lab Solution & Dilution Calculator",
+        "alternateName": "Dilution Calculator (C1V1)",
         "url": "https://calculee.io/",
         "description": "Professional laboratory dilution calculator for C1V1 = C2V2 equations, dry powder reconstitutions, and serial dilution series.",
         "applicationCategory": "EducationalApplication",
@@ -60,7 +65,7 @@
         "mainEntity": [
           {
             "@type": "Question",
-            "name": "What is the mathematical formula behind the Tocris Dilution Calculator?",
+            "name": "What is the mathematical formula behind the Laboratory Dilution Calculator?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "The calculator operates on the fundamental conservation of mass equation: C1 * V1 = C2 * V2, where C1 is initial stock concentration, V1 is stock volume required, C2 is target final concentration, and V2 is total final volume. Diluent volume is calculated as Vdiluent = V2 - V1."
@@ -108,7 +113,7 @@
           },
           {
             "@type": "Question",
-            "name": "How should reconstituted Tocris stock solutions be stored?",
+            "name": "How should reconstituted chemical stock solutions (e.g., Tocris, Sigma) be stored?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "Immediately divide reconstituted stocks into single-use aliquots to prevent repeated freeze-thaw cycles. Store at -20°C or -80°C in airtight containers, protected from light using amber vials or aluminum foil."
@@ -1753,6 +1758,52 @@
         justify-content: center;
       }
     }
+
+    /* Language Switcher & Preset Buttons */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: var(--color-cool-wash);
+      border-radius: var(--radius-buttons);
+      padding: 3px;
+      gap: 2px;
+      margin-left: 16px;
+    }
+    .lang-btn {
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-deep-gray);
+      text-decoration: none;
+      border-radius: var(--radius-buttons);
+      transition: all 0.2s ease;
+    }
+    .lang-btn.active {
+      background: var(--color-paper);
+      color: var(--color-primary-ink);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+    .lang-btn:hover:not(.active) {
+      color: var(--color-electric-blue);
+    }
+
+    .preset-chip-btn {
+      background: var(--color-cool-wash);
+      color: var(--color-primary-ink);
+      border: 1px solid var(--color-hairline);
+      padding: 6px 14px;
+      border-radius: var(--radius-buttons);
+      font-size: 13px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+    .preset-chip-btn:hover {
+      background: #dcdce0;
+      border-color: #a0a0a5;
+      color: var(--color-electric-blue);
+    }
   </style>
 </head>
 <body>
@@ -1776,6 +1827,11 @@
         <li><a href="#single-dilution" class="nav-btn nav-btn-single" id="nav-link-single">Single Dilution (C₁V₁)</a></li>
         <li><a href="#serial-dilution" class="nav-btn nav-btn-serial" id="nav-link-serial">Serial Dilution</a></li>
       </ul>
+
+      <div class="lang-switcher" aria-label="Language Selector">
+        <a href="index.html" class="lang-btn active" title="English Tools">EN</a>
+        <a href="de/index.html" class="lang-btn" title="Deutsche Rechner">DE</a>
+      </div>
     </div>
   </nav>
 
@@ -1784,10 +1840,10 @@
        ========================================================================== -->
   <header class="hero-section">
     <div class="hero-container">
-      <h1 class="hero-headline">Tocris Dilution Calculator.</h1>
+      <h1 class="hero-headline">Solution Dilution &amp; C₁V₁ Calculator</h1>
       <p class="hero-subhead">
         Calculate stock dilutions and compound reconstitutions with our free laboratory tool.<br>
-        Designed as a faster alternative to the standard Tocris Dilution Calculator,<br>
+        Compatible with reagent preparation protocols from Tocris, Sigma-Aldrich, and standard lab workflows,<br>
         it automatically handles unit conversions, balances solvent ratios,<br>
         and solves the <em>C₁V₁ = C₂V₂</em> equation instantly.
       </p>
@@ -1811,6 +1867,15 @@
           
           <!-- LEFT CARD: INPUTS & SOLVER CONTROLS -->
           <div class="card" id="calculator-input-card">
+
+            <!-- Quick Presets -->
+            <div class="presets-bar" style="margin-bottom: 20px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px;">
+              <span style="font-size: 13px; font-weight: 600; color: var(--color-mid-gray);">Quick Presets:</span>
+              <button type="button" class="preset-chip-btn" onclick="applyDilutionPreset('pbs')">10x PBS to 1x</button>
+              <button type="button" class="preset-chip-btn" onclick="applyDilutionPreset('tris')">1M Tris-HCl</button>
+              <button type="button" class="preset-chip-btn" onclick="applyDilutionPreset('antibody')">1:1000 Antibody</button>
+              <button type="button" class="preset-chip-btn" onclick="applyDilutionPreset('dmso')">DMSO Vehicle Check</button>
+            </div>
             
             <!-- Solver Target Selector -->
             <div class="solver-selector-wrapper">
@@ -2153,7 +2218,7 @@
   </main>
 
   <!-- ==========================================================================
-       WHAT IS A TOCRIS DILUTION CALCULATOR SECTION (WHITE CANVAS)
+       WHAT IS A LABORATORY DILUTION CALCULATOR SECTION (WHITE CANVAS)
        ========================================================================== -->
   <section class="section-band section-band-white" id="about-tocris">
     <div class="band-container">
@@ -2161,10 +2226,10 @@
       <!-- Section Header -->
       <div class="band-header" style="max-width: 920px; margin-bottom: var(--spacing-40);">
         <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: var(--spacing-16); color: var(--color-primary-ink);">
-          About the Tocris Dilution Calculator &amp; Chemical Stoichiometry
+          About Laboratory Solution Dilution &amp; Chemical Stoichiometry
         </h2>
         <p style="font-size: var(--text-body-sm); line-height: 1.6; color: var(--color-deep-gray); margin-bottom: 0;">
-          A Tocris Dilution Calculator is a specialized laboratory utility used by pharmacologists, biochemists, and life-science researchers to prepare working experimental solutions from concentrated stock vials. Originally designed to handle high-purity bioactive chemicals—such as receptor agonists, antagonists, enzyme inhibitors, and ion channel modulators supplied by Tocris Bioscience (a Bio-Techne brand)—the tool determines the precise aliquot of stock solution and diluent required to reach a specific target concentration.
+          A laboratory dilution calculator is a specialized utility used by pharmacologists, biochemists, and life-science researchers to prepare working experimental solutions from concentrated stock vials. Compatible with high-purity bioactive chemicals—such as receptor agonists, antagonists, enzyme inhibitors, and ion channel modulators supplied by Tocris Bioscience, Sigma-Aldrich, and standard chemical vendors—the tool determines the precise aliquot of stock solution and diluent required to reach a specific target concentration.
         </p>
       </div>
 
@@ -2269,7 +2334,7 @@
       <!-- Section Header -->
       <div class="band-header" style="max-width: 920px; margin-bottom: var(--spacing-40);">
         <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: var(--spacing-16); color: var(--color-primary-ink);">
-          Reconstitution and Dilution of Tocris Compounds
+          Reconstitution and Dilution of Bioactive Compounds
         </h2>
         <p style="font-size: var(--text-body-sm); line-height: 1.6; color: var(--color-deep-gray); margin-bottom: 0;">
           Reconstitution and dilution are two distinct, consecutive procedures in laboratory solution preparation. Reconstitution dissolves a dry lyophilized compound into a concentrated liquid stock, while dilution applies the mass conservation formula (<em>C₁V₁ = C₂V₂</em>) to lower that concentrated stock to a working concentration for biological assays.
@@ -2396,7 +2461,7 @@
       <!-- Section Header -->
       <div class="band-header" style="max-width: 920px; margin-bottom: var(--spacing-40);">
         <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: var(--spacing-16); color: var(--color-primary-ink);">
-          Tocris Compound Dilution Factors
+          Bioactive Compound Dilution Factors
         </h2>
         <p style="font-size: var(--text-body-sm); line-height: 1.6; color: var(--color-deep-gray); margin-bottom: 0;">
           In pharmacological assays, the Dilution Factor (<em>DF</em>) represents the mathematical ratio between initial stock concentration and final working concentration, or final total volume relative to starting stock volume. Determining the correct dilution factor ensures precise dosing of bioactive ligands, kinase inhibitors, and receptor agonists while maintaining organic vehicle solvents (such as DMSO or ethanol) safely below cytotoxic thresholds.
@@ -2467,7 +2532,7 @@
       <div class="card card-gray" style="border-radius: var(--radius-cards); padding: var(--spacing-32); overflow-x: auto;">
         <div style="margin-bottom: var(--spacing-16);">
           <h3 style="font-size: var(--text-body-sm); font-weight: 600; color: var(--color-primary-ink); margin-bottom: 4px;">
-            Common Dilution Factors for Tocris Bioactive Compounds
+            Common Dilution Factors for Laboratory Bioactive Compounds
           </h3>
           <p style="font-size: var(--text-caption); color: var(--color-mid-gray); margin: 0;">
             Because Tocris small molecules are typically reconstituted at high stock concentrations (10 mM or 100 mM) in 100% DMSO, standard experimental dilution factors usually range from 100&times; to 10,000&times;:
@@ -2526,7 +2591,7 @@
   </section>
 
   <!-- ==========================================================================
-       STEP-BY-STEP TOCRIS DILUTION CALCULATOR GUIDE SECTION (CANVAS GRAY)
+       STEP-BY-STEP DILUTION CALCULATOR GUIDE SECTION (CANVAS GRAY)
        ========================================================================== -->
   <section class="section-band section-band-gray" id="guide">
     <div class="band-container">
@@ -2534,10 +2599,10 @@
       <!-- Section Header -->
       <div class="band-header" style="max-width: 920px; margin-bottom: var(--spacing-40);">
         <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: var(--spacing-16); color: var(--color-primary-ink);">
-          Step-by-Step Tocris Dilution Calculator Guide
+          Step-by-Step Solution Dilution Calculation Guide
         </h2>
         <p style="font-size: var(--text-body-sm); line-height: 1.6; color: var(--color-deep-gray); margin-bottom: 0;">
-          Preparing accurate working solutions from concentrated chemical stocks requires a systematic workflow. This laboratory protocol breaks down the exact 5-step process used to calculate stock volumes, align metric units, and dilute Tocris bioactive compounds without pipetting or solvent errors.
+          Preparing accurate working solutions from concentrated chemical stocks requires a systematic workflow. This laboratory protocol breaks down the exact 5-step process used to calculate stock volumes, align metric units, and dilute laboratory bioactive compounds without pipetting or solvent errors.
         </p>
       </div>
 
@@ -2721,7 +2786,7 @@
       <!-- Section Header -->
       <div class="band-header" style="max-width: 920px; margin-bottom: var(--spacing-40);">
         <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: var(--spacing-16); color: var(--color-primary-ink);">
-          Serial Dilutions for Dose-Response with Tocris Compounds
+          Serial Dilutions for Dose-Response Bioactive Compounds
         </h2>
         <p style="font-size: var(--text-body-sm); line-height: 1.6; color: var(--color-deep-gray); margin-bottom: 0;">
           In quantitative pharmacology and in vitro screening, generating accurate <strong>dose-response curves</strong> (EC₅₀ or IC₅₀ determination) requires a systematic serial dilution. Performing stepwise dilutions ensures compound concentrations span several orders of magnitude across 96-well or 384-well microplates while maintaining a uniform vehicle concentration (such as DMSO) across every treatment well.
@@ -2898,7 +2963,7 @@
           Worked Example: Preparing an Assay Solution
         </h2>
         <p style="font-size: var(--text-body-sm); line-height: 1.6; color: var(--color-deep-gray); margin: 0 auto; text-wrap: balance;">
-          To understand how the Tocris dilution principles apply in a practical laboratory setting, consider a standard pharmacological workflow: preparing a working inhibitor solution for an in vitro enzymatic or cell-based assay.
+          To understand how these dilution principles apply in a practical laboratory setting, consider a standard pharmacological workflow: preparing a working inhibitor solution for an in vitro enzymatic or cell-based assay.
         </p>
       </div>
 
@@ -3258,7 +3323,7 @@
       <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: var(--spacing-20); margin-bottom: var(--spacing-36);">
         <div style="max-width: 780px;">
           <h2 style="font-size: clamp(32px, 5vw, 48px); font-weight: 700; letter-spacing: -0.8px; line-height: 1.1; margin-bottom: var(--spacing-16); color: var(--color-primary-ink);">
-            Frequently Asked Questions: Tocris &amp; Laboratory Dilution
+            Frequently Asked Questions: Laboratory Solution &amp; Dilution Calculations
           </h2>
           <p style="font-size: var(--text-body-sm); line-height: 1.6; color: var(--color-deep-gray); margin-bottom: 0;">
             Everything you need to know about working with dilution formulas, preparing stock solutions, managing vehicle toxicity, and reconstituting bioactive compounds accurately. Click any question below to view the detailed laboratory answer.
@@ -3282,7 +3347,7 @@
           <summary class="faq-accordion-summary">
             <div class="faq-accordion-title-row">
               <span class="faq-badge">Q1</span>
-              <h2 class="faq-question-text">What is the mathematical formula behind the Tocris Dilution Calculator?</h2>
+              <h2 class="faq-question-text">What is the mathematical formula behind the Laboratory Dilution Calculator?</h2>
             </div>
             <div class="faq-chevron" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -3444,7 +3509,7 @@
           <summary class="faq-accordion-summary">
             <div class="faq-accordion-title-row">
               <span class="faq-badge">Q7</span>
-              <h2 class="faq-question-text">How should reconstituted Tocris stock solutions be stored?</h2>
+              <h2 class="faq-question-text">How should reconstituted chemical stock solutions (e.g., Tocris, Sigma) be stored?</h2>
             </div>
             <div class="faq-chevron" aria-hidden="true">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -3531,7 +3596,7 @@
         <div class="footer-nav-col">
           <h3 class="footer-col-title">Calculators</h3>
           <ul class="footer-nav-list">
-            <li><a href="index.html" class="footer-nav-link">Tocris Dilution Calculator</a></li>
+            <li><a href="index.html" class="footer-nav-link">Dilution Calculator (C1V1)</a></li>
             <li><a href="standard-deviation-calculator.html" class="footer-nav-link">Standard Deviation Calculator</a></li>
             <li><a href="weighted_grade_calculator.html" class="footer-nav-link">Weighted Grade Calculator</a></li>
           </ul>
@@ -3568,12 +3633,12 @@
 
       <!-- Fine Print Disclaimer -->
       <p class="footer-fine-print">
-        Tocris Dilution Calculator is calibrated for standard liquid-phase volumetric calculations. Volumetric additivity is assumed for standard dilute aqueous buffers. For high-viscosity solvents, concentrated acids (always add acid to water), or non-ideal mixtures with significant excess enthalpy of mixing, gravimetric verification is recommended.
+        Calculee Dilution Calculator is calibrated for standard liquid-phase volumetric calculations. Volumetric additivity is assumed for standard dilute aqueous buffers. For high-viscosity solvents, concentrated acids (always add acid to water), or non-ideal mixtures with significant excess enthalpy of mixing, gravimetric verification is recommended.
       </p>
 
       <!-- Bottom Bar with Copyright -->
       <div class="footer-bottom-bar">
-        <span style="color: var(--color-mid-gray); font-size: var(--text-micro); font-weight: 400;">&copy; 2026 Calculee (Tocris Dilution Calculator). All rights reserved.</span>
+        <span style="color: var(--color-mid-gray); font-size: var(--text-micro); font-weight: 400;">&copy; 2026 Calculee.io (Dilution Calculator C1V1). All rights reserved.</span>
         <span style="color: var(--color-mid-gray); font-size: var(--text-micro); font-weight: 400;">Designed for scientific research &amp; laboratory accuracy.</span>
       </div>
     </div>
@@ -3813,6 +3878,33 @@
           setSolveTarget(pill.dataset.solve);
         });
       });
+
+      // Quick Presets Handler
+      window.applyDilutionPreset = function(preset) {
+        setSolveTarget('V1');
+        if (preset === 'pbs') {
+          inputC1.value = '10'; unitC1.value = 'X';
+          inputC2.value = '1'; unitC2.value = 'X';
+          inputV2.value = '1000'; unitV2.value = 'mL';
+          showToast('Loaded Preset: 10x PBS to 1x (1000 mL)');
+        } else if (preset === 'tris') {
+          inputC1.value = '1'; unitC1.value = 'M';
+          inputC2.value = '50'; unitC2.value = 'mM';
+          inputV2.value = '500'; unitV2.value = 'mL';
+          showToast('Loaded Preset: 1M Tris-HCl to 50 mM (500 mL)');
+        } else if (preset === 'antibody') {
+          inputC1.value = '1000'; unitC1.value = 'X';
+          inputC2.value = '1'; unitC2.value = 'X';
+          inputV2.value = '10'; unitV2.value = 'mL';
+          showToast('Loaded Preset: 1:1000 Antibody Dilution');
+        } else if (preset === 'dmso') {
+          inputC1.value = '100'; unitC1.value = '%';
+          inputC2.value = '0.1'; unitC2.value = '%';
+          inputV2.value = '10'; unitV2.value = 'mL';
+          showToast('Loaded Preset: DMSO Vehicle Control (0.1% in 10 mL)');
+        }
+        calculateSingleDilution();
+      };
 
       // ==========================================
       // CONCENTRATION CONVERSION HELPER

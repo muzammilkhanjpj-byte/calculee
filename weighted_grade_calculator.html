@@ -3,10 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Weighted Grade Calculator – Instant Semester Grade &amp; Final</title>
-  <meta name="description" content="Calculate your weighted grade easily. Find your current course standing and the exact score you need on your final exam. Free, fast, and 100% private tool">
-  <meta name="keywords" content="weighted grade calculator, calculate weighted grade, final grade calculator, semester grade planner, weighted average formula">
+  <title>Weighted Grade Calculator – What Score Do I Need on My Final? | Calculee</title>
+  <meta name="description" content="Free weighted grade calculator: enter assignment weights and scores to find your course standing. Includes a final exam target mode – see exactly what you need on the final. Works on any device.">
+  <meta name="keywords" content="weighted grade calculator, calculate weighted grade, final grade calculator, semester grade planner, weighted average formula, what score do I need on my final">
   <link rel="canonical" href="https://calculee.io/weighted_grade_calculator.html">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="en" href="https://calculee.io/weighted_grade_calculator.html" />
+  <link rel="alternate" hreflang="de" href="https://calculee.io/de/" />
+  <link rel="alternate" hreflang="x-default" href="https://calculee.io/weighted_grade_calculator.html" />
 
   <!-- Favicon and App Icons -->
   <link rel="icon" href="/favicon.ico">
@@ -17,16 +22,16 @@
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calculee.io/weighted_grade_calculator.html">
-  <meta property="og:title" content="Weighted Grade Calculator – Instant Semester Grade &amp; Final">
-  <meta property="og:description" content="Calculate your weighted grade easily. Find your current course standing and the exact score you need on your final exam. Free, fast, and 100% private tool">
+  <meta property="og:title" content="Weighted Grade Calculator – What Score Do I Need on My Final? | Calculee">
+  <meta property="og:description" content="Free weighted grade calculator: enter assignment weights and scores to find your course standing. Includes a final exam target mode – see exactly what you need on the final.">
   <meta property="og:image" content="https://calculee.io/logo.png">
   <meta property="og:site_name" content="Calculee">
 
   <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="https://calculee.io/weighted_grade_calculator.html">
-  <meta name="twitter:title" content="Weighted Grade Calculator – Instant Semester Grade &amp; Final">
-  <meta name="twitter:description" content="Calculate your weighted grade easily. Find your current course standing and the exact score you need on your final exam. Free, fast, and 100% private tool">
+  <meta name="twitter:title" content="Weighted Grade Calculator – What Score Do I Need on My Final? | Calculee">
+  <meta name="twitter:description" content="Free weighted grade calculator: enter assignment weights and scores to find your course standing. Includes a final exam target mode – see exactly what you need on the final.">
   <meta name="twitter:image" content="https://calculee.io/logo.png">
 
   <!-- Inter / System Font for Apple typography fidelity -->
@@ -381,6 +386,10 @@
         <img src="logo.png" alt="Calculee Logo" class="brand-logo">
         <span class="brand-text-title">Calculee</span>
       </a>
+      <div style="display: inline-flex; background: #e8e8ed; border-radius: 980px; padding: 3px; margin-left: auto;">
+        <a href="weighted_grade_calculator.html" style="padding: 4px 14px; border-radius: 980px; font-size: 13px; font-weight: 600; text-decoration: none; background: #fff; color: #1d1d1f; box-shadow: 0 1px 3px rgba(0,0,0,.12);">EN</a>
+        <a href="de/" style="padding: 4px 14px; border-radius: 980px; font-size: 13px; font-weight: 500; text-decoration: none; color: #6e6e73; background: transparent;">DE</a>
+      </div>
     </div>
   </nav>
 
@@ -392,7 +401,7 @@
           Academic Utility
         </span>
         <h1 class="text-[44px] sm:text-[64px] md:text-[84px] font-bold text-[#1d1d1f] apple-display tracking-tight max-w-4xl mx-auto mb-6">
-          Weighted Grade Calculator.
+          Weighted Grade & Final Exam Target Calculator.
         </h1>
         <p class="text-[19px] sm:text-[21px] text-[#707070] max-w-2xl mx-auto leading-relaxed font-normal">
           Calculate your real-time academic standing or determine the exact score you need on your final exam. Enter your assignment categories, earned grades, and percentage weights below to evaluate your final course mark instantly.
@@ -418,6 +427,63 @@
     <!-- INTERACTIVE APPLICATION SECTION (Alternating Canvas Gray #f5f5f7) -->
     <section id="calculator-app" class="py-16 md:py-24 bg-[#f5f5f7]">
       <div class="max-w-[1200px] mx-auto px-6">
+        
+        <!-- Calculator Mode Tabs & Presets Bar -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+          <div class="inline-flex bg-[#e8e8ed] p-1 rounded-full self-start">
+            <button id="tab-mode-calc" type="button" class="px-5 py-2 rounded-full text-[14px] font-semibold transition-all bg-white text-[#1d1d1f] shadow-sm">
+              Grade Breakdown
+            </button>
+            <button id="tab-mode-final" type="button" class="px-5 py-2 rounded-full text-[14px] font-medium transition-all text-[#6e6e73] hover:text-[#1d1d1f]">
+              Final Exam Target
+            </button>
+          </div>
+          <div class="flex items-center gap-2 overflow-x-auto pb-1 sm:pb-0 text-[13px]">
+            <span class="text-[#707070] font-medium whitespace-nowrap">Presets:</span>
+            <button id="preset-hs" type="button" class="px-3 py-1.5 rounded-full bg-white border border-[#d2d2d7] text-[#1d1d1f] font-medium hover:border-[#0071e3] hover:text-[#0071e3] transition-colors whitespace-nowrap shadow-sm">
+              High School (40/40/20)
+            </button>
+            <button id="preset-college" type="button" class="px-3 py-1.5 rounded-full bg-white border border-[#d2d2d7] text-[#1d1d1f] font-medium hover:border-[#0071e3] hover:text-[#0071e3] transition-colors whitespace-nowrap shadow-sm">
+              College (3 Exams + Homework)
+            </button>
+          </div>
+        </div>
+
+        <!-- Standalone Final Exam Target Mode Panel (Initially hidden or scrollable) -->
+        <div id="standalone-final-panel" class="hidden mb-8 bg-white apple-card p-6 sm:p-8 border-0 shadow-sm">
+          <div class="max-w-2xl mx-auto">
+            <div class="flex items-center gap-2 mb-2">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#0071e3]"></span>
+              <span class="text-[12px] font-semibold uppercase tracking-wider text-[#0066cc]">Target Grade Calculator</span>
+            </div>
+            <h2 class="text-[26px] font-bold text-[#1d1d1f] tracking-tight mb-2">What Score Do I Need on My Final Exam?</h2>
+            <p class="text-[14px] text-[#707070] mb-6">Calculate the exact score required on your final test to achieve your desired semester letter grade.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-6">
+              <div>
+                <label for="standalone-current-grade" class="block text-[13px] font-medium text-[#474747] mb-1">Current Grade (%)</label>
+                <input type="number" id="standalone-current-grade" value="85" min="0" max="150" step="0.5" class="w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-4 py-2.5 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all text-right">
+              </div>
+              <div>
+                <label for="standalone-target-grade" class="block text-[13px] font-medium text-[#474747] mb-1">Target Grade (%)</label>
+                <input type="number" id="standalone-target-grade" value="90" min="0" max="150" step="0.5" class="w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-4 py-2.5 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all text-right">
+              </div>
+              <div>
+                <label for="standalone-final-weight" class="block text-[13px] font-medium text-[#474747] mb-1">Final Exam Weight (%)</label>
+                <input type="number" id="standalone-final-weight" value="25" min="1" max="100" step="0.5" class="w-full bg-[#f5f5f7] text-[#1d1d1f] text-[15px] font-medium px-4 py-2.5 rounded-[12px] outline-none focus:ring-2 focus:ring-[#0071e3]/40 transition-all text-right">
+              </div>
+            </div>
+            <div class="p-5 rounded-2xl bg-[#f5f5f7] flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div>
+                <div class="text-[12px] uppercase tracking-wider text-[#707070] font-semibold">Required Exam Score</div>
+                <div id="standalone-output-score" class="text-[38px] font-extrabold text-[#1d1d1f] apple-tabular leading-tight">105.0%</div>
+                <div id="standalone-output-note" class="text-[13px] text-[#707070] mt-0.5">Needed on final to finish with 90% overall</div>
+              </div>
+              <div id="standalone-output-badge" class="px-4 py-2 rounded-full text-[13px] font-semibold bg-orange-100 text-[#b64400]">
+                Requires extra credit
+              </div>
+            </div>
+          </div>
+        </div>
         
         <!-- App Grid: Input Sheet on Left (2/3), Metric Cards on Right (1/3) -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
@@ -1074,7 +1140,7 @@
         <div class="footer-nav-col">
           <h3 class="footer-col-title">Calculators</h3>
           <ul class="footer-nav-list">
-            <li><a href="index.html" class="footer-nav-link">Tocris Dilution Calculator</a></li>
+            <li><a href="index.html" class="footer-nav-link">Dilution Calculator (C1V1)</a></li>
             <li><a href="standard-deviation-calculator.html" class="footer-nav-link">Standard Deviation Calculator</a></li>
             <li><a href="weighted_grade_calculator.html" class="footer-nav-link">Weighted Grade Calculator</a></li>
           </ul>
@@ -1436,6 +1502,86 @@
             icon.style.transform = 'rotate(45deg)';
           }
         });
+      });
+
+      // Tab Switching: Breakdown vs Final Exam Target
+      const tabCalc = document.getElementById('tab-mode-calc');
+      const tabFinal = document.getElementById('tab-mode-final');
+      const finalPanel = document.getElementById('standalone-final-panel');
+      const mainGrid = document.querySelector('#calculator-app .grid');
+
+      if (tabCalc && tabFinal && finalPanel && mainGrid) {
+        tabCalc.addEventListener('click', () => {
+          tabCalc.className = 'px-5 py-2 rounded-full text-[14px] font-semibold transition-all bg-white text-[#1d1d1f] shadow-sm';
+          tabFinal.className = 'px-5 py-2 rounded-full text-[14px] font-medium transition-all text-[#6e6e73] hover:text-[#1d1d1f]';
+          finalPanel.classList.add('hidden');
+          mainGrid.classList.remove('hidden');
+        });
+
+        tabFinal.addEventListener('click', () => {
+          tabFinal.className = 'px-5 py-2 rounded-full text-[14px] font-semibold transition-all bg-white text-[#1d1d1f] shadow-sm';
+          tabCalc.className = 'px-5 py-2 rounded-full text-[14px] font-medium transition-all text-[#6e6e73] hover:text-[#1d1d1f]';
+          finalPanel.classList.remove('hidden');
+          mainGrid.classList.add('hidden');
+          calcStandaloneFinal();
+        });
+      }
+
+      // Standalone Final Exam Target Logic
+      function calcStandaloneFinal() {
+        const cGrade = parseFloat(document.getElementById('standalone-current-grade')?.value) || 0;
+        const tGrade = parseFloat(document.getElementById('standalone-target-grade')?.value) || 0;
+        const fWeight = parseFloat(document.getElementById('standalone-final-weight')?.value) || 0;
+        const scoreEl = document.getElementById('standalone-output-score');
+        const badgeEl = document.getElementById('standalone-output-badge');
+        const noteEl = document.getElementById('standalone-output-note');
+
+        if (!scoreEl || !badgeEl || fWeight <= 0) return;
+        const wDec = fWeight / 100;
+        const needed = (tGrade - cGrade * (1 - wDec)) / wDec;
+        scoreEl.textContent = needed.toFixed(1) + '%';
+        if (noteEl) noteEl.textContent = `Needed on final (${fWeight}% weight) to finish with ${tGrade}%`;
+
+        if (needed > 100) {
+          badgeEl.textContent = 'Requires extra credit or a curve';
+          badgeEl.className = 'px-4 py-2 rounded-full text-[13px] font-semibold bg-orange-100 text-[#b64400]';
+        } else if (needed <= 0) {
+          badgeEl.textContent = 'Goal reached (0% required)';
+          badgeEl.className = 'px-4 py-2 rounded-full text-[13px] font-semibold bg-emerald-100 text-emerald-800';
+        } else {
+          badgeEl.textContent = 'Achievable with preparation';
+          badgeEl.className = 'px-4 py-2 rounded-full text-[13px] font-semibold bg-blue-100 text-[#0066cc]';
+        }
+      }
+
+      ['standalone-current-grade', 'standalone-target-grade', 'standalone-final-weight'].forEach(id => {
+        document.getElementById(id)?.addEventListener('input', calcStandaloneFinal);
+      });
+
+      // Quick Presets
+      document.getElementById('preset-hs')?.addEventListener('click', () => {
+        currentRows = [
+          { id: '1', name: 'Quarter 1', grade: 88, weight: 40 },
+          { id: '2', name: 'Quarter 2', grade: 92, weight: 40 },
+          { id: '3', name: 'Semester Final Exam', grade: 85, weight: 20 }
+        ];
+        saveStore();
+        renderRows();
+        calculateAll();
+        if (tabCalc) tabCalc.click();
+      });
+
+      document.getElementById('preset-college')?.addEventListener('click', () => {
+        currentRows = [
+          { id: '1', name: 'Homework & Labs', grade: 95, weight: 20 },
+          { id: '2', name: 'Midterm 1', grade: 82, weight: 20 },
+          { id: '3', name: 'Midterm 2', grade: 87, weight: 20 },
+          { id: '4', name: 'Cumulative Final', grade: 80, weight: 40 }
+        ];
+        saveStore();
+        renderRows();
+        calculateAll();
+        if (tabCalc) tabCalc.click();
       });
     });
   </script>

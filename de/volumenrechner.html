@@ -5,23 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
   
   <!-- SEO & Technische Meta-Tags -->
-  <title>Volumenrechner für Behälter in Litern (mit Summe) | Calculee</title>
-  <meta name="description" content="Volumen von Behältern präzise in Litern (L) berechnen: Quader, Zylinder, Kugel &amp; Kegel. Mit praktischer Summenfunktion, Füllgewicht (kg) und Formelweg.">
+  <title>Volumenrechner (Liter) – Berechnen in m³, cm³ & Litern | Calculee</title>
+  <meta name="description" content="Kostenloser Volumenrechner: Berechnen Sie Volumen und Fassungsvermögen in Litern (L) für Quader, Zylinder, Kugel & Behälter mit Formelweg. Jetzt berechnen!">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://calculee.io/de/volumenrechner.html">
   
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="de" href="https://calculee.io/de/" />
+  <link rel="alternate" hreflang="en" href="https://calculee.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://calculee.io/" />
+
   <!-- Open Graph / Social -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://calculee.io/de/volumenrechner.html">
-  <meta property="og:title" content="Volumenrechner für Behälter in Litern (mit Summe) | Calculee">
-  <meta property="og:description" content="Volumen von Behältern präzise in Litern (L) berechnen: Quader, Zylinder, Kugel &amp; Kegel. Mit praktischer Summenfunktion, Füllgewicht (kg) und Formelweg.">
+  <meta property="og:title" content="Volumenrechner (Liter) – Berechnen in m³, cm³ &amp; Litern | Calculee">
+  <meta property="og:description" content="Kostenloser Volumenrechner: Berechnen Sie Volumen und Fassungsvermögen in Litern (L) für Quader, Zylinder, Kugel &amp; Behälter mit Formelweg. Jetzt berechnen!">
   <meta property="og:site_name" content="Calculee">
   <meta property="og:locale" content="de_DE">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Volumenrechner für Behälter in Litern (mit Summe) | Calculee">
-  <meta name="twitter:description" content="Volumen von Behältern präzise in Litern (L) berechnen: Quader, Zylinder, Kugel &amp; Kegel. Mit praktischer Summenfunktion, Füllgewicht (kg) und Formelweg.">
+  <meta name="twitter:title" content="Volumenrechner (Liter) – Berechnen in m³, cm³ &amp; Litern | Calculee">
+  <meta name="twitter:description" content="Kostenloser Volumenrechner: Berechnen Sie Volumen und Fassungsvermögen in Litern (L) für Quader, Zylinder, Kugel &amp; Behälter mit Formelweg. Jetzt berechnen!">
 
   <!-- Schema.org JSON-LD -->
   <script type="application/ld+json">
@@ -1447,11 +1452,17 @@
 
   <!-- Global Sticky Nav -->
   <header class="global-nav">
-    <div class="nav-container">
+    <div class="nav-container" style="display: flex; justify-content: space-between; align-items: center;">
       <a class="nav-brand" href="#top" aria-label="Calculee Startseite" style="display: inline-flex; align-items: center; gap: 12px; color: #1d1d1f; font-family: var(--font-sf-pro-display); font-weight: 700; font-size: 26px; letter-spacing: -0.03em; text-decoration: none;">
         <img src="logo.png" alt="Calculee Logo" style="height: 42px; width: auto; max-height: 42px; object-fit: contain; display: block;">
         <span>Calculee</span>
       </a>
+
+      <!-- Language Selector -->
+      <div class="lang-switcher" style="display: inline-flex; align-items: center; background: #e8e8ed; border-radius: 980px; padding: 3px; gap: 2px;">
+        <a href="../index.html" class="lang-btn" style="padding: 5px 12px; font-size: 13px; font-weight: 600; color: #474747; text-decoration: none; border-radius: 980px;">EN</a>
+        <a href="volumenrechner.html" class="lang-btn active" style="padding: 5px 12px; font-size: 13px; font-weight: 600; color: #1d1d1f; background: #fff; border-radius: 980px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); text-decoration: none;">DE</a>
+      </div>
     </div>
   </header>
 
@@ -1461,7 +1472,7 @@
       <div class="hero-wrap">
         <div>
           <span class="eyebrow-badge">Kostenloser Online-Rechner</span>
-          <h1 class="hero-title">Volumenrechner für Behälter in Litern</h1>
+          <h1 class="hero-title">Volumenrechner in Litern (L) &amp; Rauminhalt</h1>
           <p class="hero-lead">Berechnen Sie das Fassungsvermögen von Behältern sofort in Litern (L). Wählen Sie die Körperform, tragen Sie die Innenmaße ein und rechnen Sie das Volumen präzise in Kubikmeter, Gallonen und cm³ mit vollständigen Formeln um.</p>
           
           <!-- Preset Chips -->
@@ -1471,6 +1482,7 @@
             <button class="preset-btn" type="button" onclick="loadPreset('aquarium')">Aquarium · 30 × 30 × 30 cm</button>
             <button class="preset-btn" type="button" onclick="loadPreset('cylinder')">Zylinder · Ø 20 cm, H 30 cm</button>
             <button class="preset-btn" type="button" onclick="loadPreset('cone')">Kegel · r 18 cm, H 35 cm</button>
+            <button class="preset-btn" type="button" onclick="loadPreset('pool')">Pool · 6 × 3 × 1,5 m</button>
           </div>
         </div>
 
@@ -1540,6 +1552,10 @@
             <button class="shape-tab" id="tab-cone" type="button" onclick="selectShape('cone')" role="tab" aria-selected="false">
               <svg viewBox="0 0 24 24"><ellipse cx="12" cy="19" rx="8" ry="3"></ellipse><path d="M4 19L12 2l8 17"></path></svg>
               <span>Kegel</span>
+            </button>
+            <button class="shape-tab" id="tab-pool" type="button" onclick="selectShape('pool')" role="tab" aria-selected="false">
+              <svg viewBox="0 0 24 24"><path d="M2 19c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1M2 15c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1M2 11c2 0 3-1 5-1s3 1 5 1 3-1 5-1 3 1 5 1M18 4v7M14 4h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path></svg>
+              <span>Pool / Becken</span>
             </button>
           </div>
 
@@ -2286,7 +2302,7 @@
         <div>
           <div style="font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.6px; color: var(--color-primary-ink); margin-bottom: 12px;">Calculators (EN)</div>
           <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 8px; font-size: 14px;">
-            <li><a href="../index.html" style="color: var(--color-deep-gray); text-decoration: none;">Tocris Dilution Calculator</a></li>
+            <li><a href="../index.html" style="color: var(--color-deep-gray); text-decoration: none;">Dilution Calculator (C1V1)</a></li>
             <li><a href="../standard-deviation-calculator.html" style="color: var(--color-deep-gray); text-decoration: none;">Standard Deviation Calculator</a></li>
             <li><a href="../weighted_grade_calculator.html" style="color: var(--color-deep-gray); text-decoration: none;">Weighted Grade Calculator</a></li>
           </ul>
@@ -2325,7 +2341,8 @@
         rectangular: { length: 60, width: 30, height: 35 },
         cylinder: { radius: 20, height: 60 },
         sphere: { radius: 20 },
-        cone: { radius: 18, height: 35 }
+        cone: { radius: 18, height: 35 },
+        pool: { length: 600, width: 300, height: 150 }
       },
       accumulator: []
     };
@@ -2366,6 +2383,16 @@
         fields: [
           { id: 'radius', label: 'Grundkreisradius', diameterLabel: 'Grundkreisdurchmesser', default: 18 },
           { id: 'height', label: 'Senkrechte Höhe', default: 35 }
+        ]
+      },
+      pool: {
+        title: 'Pool / Becken (Quader)',
+        formula: 'V = Länge × Breite × Tiefe',
+        hasCircleMode: false,
+        fields: [
+          { id: 'length', label: 'Innenlänge', default: 600 },
+          { id: 'width', label: 'Innenbreite', default: 300 },
+          { id: 'height', label: 'Tiefe', default: 150 }
         ]
       }
     };
@@ -2533,7 +2560,7 @@
       let volCubicMeters = 0;
       let volInUnitCubed = 0;
 
-      if (s === 'rectangular') {
+      if (s === 'rectangular' || s === 'pool') {
         const l_m = rawValues.length * factor;
         const w_m = rawValues.width * factor;
         const h_m = rawValues.height * factor;
@@ -2597,7 +2624,7 @@
       const box = document.getElementById('shape-preview-box');
       let svgContent = '';
 
-      if (shape === 'rectangular') {
+      if (shape === 'rectangular' || shape === 'pool') {
         svgContent = `
           <svg class="shape-preview-svg" viewBox="0 0 260 140" fill="none">
             <polygon points="40,55 130,20 220,55 130,90" fill="#0071e3" fill-opacity="0.12" stroke="#0071e3" stroke-width="2"/>
@@ -2663,6 +2690,10 @@
         state.unit = 'cm';
         state.circleMode = 'radius';
         state.values.cone = { radius: 18, height: 35 };
+      } else if (presetKey === 'pool') {
+        state.shape = 'pool';
+        state.unit = 'cm';
+        state.values.pool = { length: 600, width: 300, height: 150 };
       }
 
       document.getElementById('unit-select').value = state.unit;
@@ -2690,7 +2721,7 @@
       if (!calc) return;
 
       let dimStr = '';
-      if (calc.shape === 'rectangular') {
+      if (calc.shape === 'rectangular' || calc.shape === 'pool') {
         dimStr = `${calc.rawValues.length} × ${calc.rawValues.width} × ${calc.rawValues.height} ${calc.unit}`;
       } else if (calc.shape === 'cylinder') {
         dimStr = `r = ${formatGerman(calc.rawValues.radius, 1)}, H = ${calc.rawValues.height} ${calc.unit}`;

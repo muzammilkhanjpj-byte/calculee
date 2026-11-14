@@ -15,6 +15,13 @@
   # Redirect /index.html to root /
   RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
   RewriteRule ^index\.html$ / [R=301,L]
+
+  # Redirect /de/index.html to /de/
+  RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /de/index\.html\ HTTP/
+  RewriteRule ^de/index\.html$ /de/ [R=301,L]
+
+  # Directory index configuration
+  DirectoryIndex index.html
 </IfModule>
 
 # Security Headers

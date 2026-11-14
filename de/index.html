@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+
+  <!-- SEO & Technische Meta-Tags -->
+  <title>Online-Rechner &amp; Mathematische Tools | Calculee Deutschland</title>
+  <meta name="description"
+    content="Kostenlose mathematische Online-Rechner: Volumenrechner für Liter, Poisson-Verteilung und statistische Tools mit Formelweg. Jetzt kostenlos berechnen.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://calculee.io/de/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="de" href="https://calculee.io/de/" />
+  <link rel="alternate" hreflang="en" href="https://calculee.io/" />
+  <link rel="alternate" hreflang="x-default" href="https://calculee.io/" />
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://calculee.io/de/">
+  <meta property="og:title" content="Online-Rechner &amp; Mathematische Tools | Calculee Deutschland">
+  <meta property="og:description"
+    content="Kostenlose mathematische Online-Rechner: Volumenrechner für Liter, Poisson-Verteilung und statistische Tools mit Formelweg. Jetzt kostenlos berechnen.">
+  <meta property="og:site_name" content="Calculee">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Online-Rechner &amp; Mathematische Tools | Calculee Deutschland">
+  <meta name="twitter:description"
+    content="Kostenlose mathematische Online-Rechner: Volumenrechner für Liter, Poisson-Verteilung und statistische Tools mit Formelweg. Jetzt kostenlos berechnen.">
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://calculee.io/de/#website",
+        "url": "https://calculee.io/de/",
+        "name": "Calculee Deutschland",
+        "description": "Kostenlose mathematische Online-Rechner: Volumenrechner für Liter, Poisson-Verteilung und statistische Tools mit Formelweg.",
+        "inLanguage": "de-DE"
+      },
+      {
+        "@type": "CollectionPage",
+        "@id": "https://calculee.io/de/#collectionpage",
+        "url": "https://calculee.io/de/",
+        "name": "Online-Rechner & Mathematische Tools | Calculee Deutschland",
+        "isPartOf": {
+          "@id": "https://calculee.io/de/#website"
+        },
+        "description": "Übersicht über deutsche Online-Rechner für Geometrie, Statistik und Naturwissenschaften."
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      /* Apple Design System Tokens */
+      --color-primary-ink: #1d1d1f;
+      --color-mid-gray: #707070;
+      --color-deep-gray: #474747;
+      --color-hairline: #d6d6d6;
+      --color-canvas: #f5f5f7;
+      --color-paper: #ffffff;
+      --color-cool-wash: #e8e8ed;
+      --color-faded-surface: #fafafc;
+      --color-electric-blue: #0071e3;
+      --color-electric-blue-hover: #0077ed;
+      --color-electric-blue-soft: rgba(0, 113, 227, 0.08);
+
+      /* Typography */
+      --font-sf-pro-display: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      --font-sf-pro-text: "SF Pro Text", -apple-system, BlinkMacSystemFont, "Inter", "Segoe UI", Roboto, sans-serif;
+      --font-mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+      --radius-cards: 20px;
+      --radius-badges: 36px;
+      --radius-buttons: 980px;
+      --page-max-width: 1120px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sf-pro-text);
+      color: var(--color-primary-ink);
+      background-color: var(--color-canvas);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Global Header */
+    .global-nav {
+      background: rgba(255, 255, 255, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--color-hairline);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .nav-container {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 12px 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .nav-brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      color: #1d1d1f;
+      font-family: var(--font-sf-pro-display);
+      font-weight: 700;
+      font-size: 24px;
+      letter-spacing: -0.03em;
+      text-decoration: none;
+    }
+
+    .nav-brand img {
+      height: 38px;
+      width: auto;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    /* Language Switcher */
+    .lang-switcher {
+      display: inline-flex;
+      align-items: center;
+      background: var(--color-cool-wash);
+      border-radius: var(--radius-buttons);
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .lang-btn {
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--color-deep-gray);
+      text-decoration: none;
+      border-radius: var(--radius-buttons);
+      transition: all 0.2s ease;
+    }
+
+    .lang-btn.active {
+      background: var(--color-paper);
+      color: var(--color-primary-ink);
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    }
+
+    .lang-btn:hover:not(.active) {
+      color: var(--color-electric-blue);
+    }
+
+    /* Main Container */
+    .main-wrap {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* Hero */
+    .hero-section {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 52px;
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: var(--color-electric-blue-soft);
+      color: var(--color-electric-blue);
+      border-radius: var(--radius-badges);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .hero-title {
+      font-family: var(--font-sf-pro-display);
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      color: var(--color-primary-ink);
+      margin-bottom: 16px;
+    }
+
+    .hero-lead {
+      font-size: clamp(17px, 2.5vw, 19px);
+      color: var(--color-mid-gray);
+      line-height: 1.55;
+    }
+
+    /* Tools Grid */
+    .tools-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+      margin-bottom: 60px;
+    }
+
+    .tool-card {
+      background: var(--color-paper);
+      border-radius: var(--radius-cards);
+      padding: 32px;
+      border: 1px solid var(--color-hairline);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+      border-color: #b0b0b5;
+    }
+
+    .card-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      background: var(--color-electric-blue-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-electric-blue);
+      margin-bottom: 20px;
+    }
+
+    .card-badge {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: var(--color-electric-blue);
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-family: var(--font-sf-pro-display);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 10px;
+      color: var(--color-primary-ink);
+    }
+
+    .card-desc {
+      font-size: 15px;
+      color: var(--color-deep-gray);
+      line-height: 1.5;
+      margin-bottom: 24px;
+      flex-grow: 1;
+    }
+
+    .card-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 13px;
+      color: var(--color-mid-gray);
+    }
+
+    .card-features li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .card-features li svg {
+      flex-shrink: 0;
+      color: #34c759;
+    }
+
+    .card-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-electric-blue);
+    }
+
+    .card-cta svg {
+      transition: transform 0.2s ease;
+    }
+
+    .tool-card:hover .card-cta svg {
+      transform: translateX(4px);
+    }
+
+    /* English Tools Banner */
+    .en-tools-banner {
+      background: #ffffff;
+      border-radius: var(--radius-cards);
+      border: 1px solid var(--color-hairline);
+      padding: 32px;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .en-tools-content h2 {
+      font-family: var(--font-sf-pro-display);
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 6px;
+    }
+
+    .en-tools-content p {
+      font-size: 15px;
+      color: var(--color-mid-gray);
+    }
+
+    .en-tools-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 18px;
+      background: var(--color-canvas);
+      color: var(--color-primary-ink);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: var(--radius-buttons);
+      border: 1px solid var(--color-hairline);
+      transition: all 0.2s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--color-cool-wash);
+      border-color: #b0b0b5;
+    }
+
+    /* Footer */
+    .site-footer {
+      background-color: var(--color-paper);
+      padding: 48px 24px;
+      border-top: 1px solid var(--color-hairline);
+    }
+
+    .footer-inner {
+      max-width: var(--page-max-width);
+      margin: 0 auto;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 32px;
+      margin-bottom: 36px;
+    }
+
+    @media (max-width: 860px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .footer-col-title {
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--color-primary-ink);
+      margin-bottom: 14px;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      font-size: 14px;
+    }
+
+    .footer-links a {
+      color: var(--color-deep-gray);
+      text-decoration: none;
+      transition: color 0.15s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--color-electric-blue);
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      border-top: 1px solid var(--color-hairline);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      font-size: 13px;
+      color: var(--color-mid-gray);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="global-nav">
+    <div class="nav-container">
+      <a class="nav-brand" href="index.html" aria-label="Calculee Deutschland">
+        <img src="logo.png" alt="Calculee Logo">
+        <span>Calculee</span>
+      </a>
+
+      <div class="nav-actions">
+        <!-- Language Switcher -->
+        <div class="lang-switcher" aria-label="Sprachauswahl / Language Selector">
+          <a href="../index.html" class="lang-btn" title="English Tools">EN</a>
+          <a href="index.html" class="lang-btn active" title="Deutsche Rechner">DE</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-wrap">
+    <!-- Hero -->
+    <section class="hero-section">
+      <span class="eyebrow-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="m5 12 5 5L20 7"/></svg>
+        Präzise &amp; Kostenlose Online-Rechner
+      </span>
+      <h1 class="hero-title">Online-Rechner &amp; Mathematische Tools</h1>
+      <p class="hero-lead">
+        Kostenlose mathematische und naturwissenschaftliche Rechner für Schule, Studium, Labor und Praxis. Berechnen Sie Raummaße in Litern oder diskrete Wahrscheinlichkeiten mit transparentem Rechenweg.
+      </p>
+    </section>
+
+    <!-- German Tools Cards -->
+    <section class="tools-grid">
+      <!-- Volumenrechner -->
+      <a class="tool-card" href="volumenrechner.html">
+        <div>
+          <div class="card-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"/>
+              <line x1="12" y1="22.08" x2="12" y2="12"/>
+            </svg>
+          </div>
+          <span class="card-badge">Geometrie &amp; Rauminhalt</span>
+          <h2 class="card-title">Volumenrechner für Behälter in Litern</h2>
+          <p class="card-desc">
+            Berechnen Sie das Fassungsvermögen von Behältern, Tanks, Aquarien und Pools präzise in Litern (L), m³ oder Gallonen mit Quader-, Zylinder-, Kugel- und Kegel-Formeln.
+          </p>
+          <ul class="card-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Sofortige Umrechnung: Liter (L), m³, cm³, mm³
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Quader, Zylinder, Kugel, Kegel &amp; Pool
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Wasser-Füllgewicht in kg &amp; Rechenschritte
+            </li>
+          </ul>
+        </div>
+        <div class="card-cta">
+          Volumen jetzt berechnen
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+      </a>
+
+      <!-- Poisson-Verteilung Rechner -->
+      <a class="tool-card" href="poisson-verteilung-rechner.html">
+        <div>
+          <div class="card-icon-wrap">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+              <line x1="2" y1="20" x2="22" y2="20"/>
+            </svg>
+          </div>
+          <span class="card-badge">Statistik &amp; Wahrscheinlichkeit</span>
+          <h2 class="card-title">Poisson-Verteilung Rechner</h2>
+          <p class="card-desc">
+            Ermitteln Sie Einzelwahrscheinlichkeiten P(X = k) und kumulierte Werte P(X ≤ k) sowie P(X > k) für Zählereignisse mit interaktiver grafischer Visualisierung und Formelweg.
+          </p>
+          <ul class="card-features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Exakte Berechnung mit Lambda (λ) &amp; k
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Kumulierte Verteilung &amp; Wahrscheinlichkeitsbalken
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+              Mathematische Zwischenschritte &amp; Formeln
+            </li>
+          </ul>
+        </div>
+        <div class="card-cta">
+          Poisson-Verteilung berechnen
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </div>
+      </a>
+    </section>
+
+    <!-- English Tools Crosslink Section -->
+    <section class="en-tools-banner">
+      <div class="en-tools-content">
+        <h2>Looking for English Calculators? / Weitere Tools</h2>
+        <p>Entdecken Sie unsere englischsprachigen Rechner für Laborlösungen, Notenberechnung und statistische Kennzahlen:</p>
+      </div>
+      <div class="en-tools-links">
+        <a class="btn-secondary" href="../index.html">
+          Dilution (C₁V₁) Solver
+        </a>
+        <a class="btn-secondary" href="../standard-deviation-calculator.html">
+          Standard Deviation
+        </a>
+        <a class="btn-secondary" href="../weighted_grade_calculator.html">
+          Weighted Grade Calculator
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <!-- Brand Column -->
+        <div>
+          <a class="nav-brand" href="index.html" style="font-size: 22px; margin-bottom: 12px;">
+            <img src="logo.png" alt="Calculee Logo" style="height: 34px;">
+            <span>Calculee</span>
+          </a>
+          <p style="font-size: 13px; color: var(--color-mid-gray); line-height: 1.5; max-width: 280px;">
+            Kostenlose, hochpräzise Online-Rechner für Wissenschaft, Technik und Alltag. Schnelle Ergebnisse mit detailliertem Rechenweg.
+          </p>
+        </div>
+
+        <!-- Deutsche Tools -->
+        <div>
+          <div class="footer-col-title">Rechner (DE)</div>
+          <ul class="footer-links">
+            <li><a href="volumenrechner.html">Volumenrechner</a></li>
+            <li><a href="poisson-verteilung-rechner.html">Poisson-Verteilung Rechner</a></li>
+            <li><a href="index.html">Übersicht aller Rechner</a></li>
+          </ul>
+        </div>
+
+        <!-- English Tools -->
+        <div>
+          <div class="footer-col-title">Calculators (EN)</div>
+          <ul class="footer-links">
+            <li><a href="../index.html">Dilution Calculator (C1V1)</a></li>
+            <li><a href="../standard-deviation-calculator.html">Standard Deviation Calculator</a></li>
+            <li><a href="../weighted_grade_calculator.html">Weighted Grade Calculator</a></li>
+          </ul>
+        </div>
+
+        <!-- Information / Legal -->
+        <div>
+          <div class="footer-col-title">Informationen</div>
+          <ul class="footer-links">
+            <li><a href="../about.html">Über uns / About</a></li>
+            <li><a href="../privacy.html">Datenschutz</a></li>
+            <li><a href="../terms.html">Nutzungsbedingungen</a></li>
+            <li><a href="../disclaimer.html">Haftungsausschluss</a></li>
+            <li><a href="../contact.html">Kontakt</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Calculee.io &middot; Alle Rechte vorbehalten.</div>
+        <div style="display: flex; gap: 16px;">
+          <a href="../privacy.html" style="color: var(--color-mid-gray); text-decoration: none;">Datenschutz</a>
+          <a href="../terms.html" style="color: var(--color-mid-gray); text-decoration: none;">Nutzungsbedingungen</a>
+          <a href="../disclaimer.html" style="color: var(--color-mid-gray); text-decoration: none;">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
+
