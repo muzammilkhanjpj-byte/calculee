@@ -1145,6 +1145,25 @@
       }
     }
 
+    .dilution-flow-diagram {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr auto 1fr;
+      gap: 16px;
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .dilution-flow-diagram {
+        grid-template-columns: 1fr !important;
+        gap: 12px !important;
+      }
+
+      .dilution-flow-diagram > div[style*="text-align: center"] {
+        transform: rotate(90deg);
+        margin: 4px auto;
+      }
+    }
+
     /* ==========================================================================
        PRESETS CARDS GRID (FEATURE SHOWCASE)
        ========================================================================== */
@@ -1591,31 +1610,41 @@
     @media (max-width: 768px) {
       .nav-wrapper {
         height: auto;
-        min-height: 56px;
-        padding: 8px 0;
+        min-height: 54px;
+        padding: 6px 0;
       }
 
       .nav-container {
-        padding: 0 16px;
-        gap: 12px;
+        padding: 0 12px;
+        gap: 8px;
+        flex-wrap: nowrap;
+      }
+
+      .nav-logo {
+        gap: 8px;
+        flex-shrink: 0;
       }
 
       .nav-logo-text {
-        font-size: 20px;
+        font-size: 19px;
+        letter-spacing: -0.4px;
       }
 
       .nav-logo-img {
-        width: 28px;
-        height: 34px;
+        width: 26px;
+        height: 30px;
       }
 
-      .nav-btn {
-        padding: 6px 12px;
-        font-size: 12px;
+      .nav-links {
+        display: none;
+      }
+
+      .lang-switcher {
+        margin-left: auto;
       }
 
       .hero-headline {
-        font-size: clamp(30px, 8vw, 50px);
+        font-size: clamp(28px, 7vw, 46px);
         letter-spacing: -0.8px;
       }
 
@@ -1723,18 +1752,21 @@
     /* SMALL MOBILE PHONES (max-width: 480px) */
     @media (max-width: 480px) {
       .nav-container {
-        flex-direction: row;
-        justify-content: space-between;
+        padding: 0 10px;
       }
 
-      .nav-links {
-        gap: 5px;
+      .nav-logo-text {
+        font-size: 18px;
       }
 
-      .nav-btn {
-        padding: 6px 8px;
-        font-size: 10.5px;
-        border-radius: 12px;
+      .nav-logo-img {
+        width: 24px;
+        height: 28px;
+      }
+
+      .lang-btn {
+        padding: 3px 8px;
+        font-size: 11px;
       }
 
       .hero-section {
@@ -1827,17 +1859,19 @@
       border-radius: var(--radius-buttons);
       padding: 3px;
       gap: 2px;
-      margin-left: 16px;
+      margin-left: 12px;
+      flex-shrink: 0;
     }
 
     .lang-btn {
-      padding: 5px 12px;
-      font-size: 13px;
+      padding: 4px 10px;
+      font-size: 12px;
       font-weight: 600;
       color: var(--color-deep-gray);
       text-decoration: none;
       border-radius: var(--radius-buttons);
       transition: all 0.2s ease;
+      line-height: 1.2;
     }
 
     .lang-btn.active {
@@ -1908,11 +1942,9 @@
        ========================================================================== -->
   <header class="hero-section">
     <div class="hero-container">
-      <h1 class="hero-headline">Tocris Dilution Calculator.</h1>
       <h1 class="hero-headline">Solution Dilution &amp; C₁V₁ Calculator</h1>
       <p class="hero-subhead">
         Calculate stock dilutions and compound reconstitutions with our free laboratory tool.<br>
-        Designed as a faster alternative to the standard Tocris Dilution Calculator,<br>
         Compatible with reagent preparation protocols from Tocris, Sigma-Aldrich, and standard lab workflows,<br>
         it automatically handles unit conversions, balances solvent ratios,<br>
         and solves the <em>C₁V₁ = C₂V₂</em> equation instantly.
@@ -3371,7 +3403,7 @@
         </div>
 
         <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 16px; align-items: center;"
-          class="tocris-overview-grid">
+          class="dilution-flow-diagram">
 
           <!-- Shape 1: Reconstitution Vial -->
           <div
