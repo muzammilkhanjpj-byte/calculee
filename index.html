@@ -50,94 +50,90 @@
 
   <!-- Schema.org JSON-LD (WebApplication + FAQPage + WebSite) -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "WebApplication",
-        "@id": "https://calculee.io/#webapp",
-        "name": "Tocris Dilution Calculator",
-        "alternateName": "Calculee Lab Solution & Dilution Calculator",
-        "name": "Calculee Lab Solution & Dilution Calculator",
-        "alternateName": "Dilution Calculator (C1V1)",
-        "url": "https://calculee.io/",
-        "description": "Professional laboratory dilution calculator for C1V1 = C2V2 equations, dry powder reconstitutions, and serial dilution series.",
-        "applicationCategory": "EducationalApplication",
-        "operatingSystem": "All",
-        "browserRequirements": "Requires JavaScript and HTML5",
-        "offers": {
-          "@type": "Offer",
-          "price": "0",
-          "priceCurrency": "USD"
-        }
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://calculee.io/#faq",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "What is the mathematical formula behind the Tocris Dilution Calculator?",
-            "name": "What is the mathematical formula behind the Laboratory Dilution Calculator?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The calculator operates on the fundamental conservation of mass equation: C1 * V1 = C2 * V2, where C1 is initial stock concentration, V1 is stock volume required, C2 is target final concentration, and V2 is total final volume. Diluent volume is calculated as Vdiluent = V2 - V1."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How do I calculate the volume needed to reconstitute a lyophilized powder?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "When working with dry powders, solvent volume is calculated as: Volume (µL) = [Mass (mg) / Molecular Weight (g/mol)] * [10^6 / Desired Stock Concentration (µM)]. For example, to prepare a 10 mM stock from 5 mg of compound (MW 500 g/mol), add 1,000 µL (1.0 mL) of solvent."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Why do bioactive compounds require an intermediate dilution step?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Directly transferring sub-microliter volumes (<0.5 µL) introduces significant pipetting errors due to liquid surface tension and tip retention. An intermediate stock (e.g. 100 µM) raises the required pipetting volume into a reproducible range (5-50 µL) before preparing final assay solutions."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the maximum safe DMSO concentration for cell-based assays?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Maintain final vehicle concentration at or below 0.1% (v/v) for most cell culture assays. Concentrations above 0.1% can disrupt cell membrane fluidity and cause non-specific cytotoxicity. Always include matching vehicle controls."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the difference between single-step dilution and serial dilution?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Single-step dilution is a direct transfer of stock solute into diluent in one operation. Serial dilution is a stepwise geometric progression (e.g., 2-fold, 5-fold, 10-fold) used to generate broad logarithmic concentration gradients for IC50 and EC50 dose-response curves."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "What is the Dilution Factor (DF)?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "The Dilution Factor is the ratio of final volume to initial stock aliquot: DF = V2 / V1 = C1 / C2. For example, adding 1 mL stock to 9 mL buffer creates 10 mL total volume (a 1:10 dilution, DF = 10)."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "How should reconstituted Tocris stock solutions be stored?",
-            "name": "How should reconstituted chemical stock solutions (e.g., Tocris, Sigma) be stored?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Immediately divide reconstituted stocks into single-use aliquots to prevent repeated freeze-thaw cycles. Store at -20°C or -80°C in airtight containers, protected from light using amber vials or aluminum foil."
-            }
-          }
-        ]
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "@id": "https://calculee.io/#webapp",
+      "name": "Calculee Lab Solution & Dilution Calculator",
+      "alternateName": "Dilution Calculator (C1V1)",
+      "url": "https://calculee.io/",
+      "description": "Professional laboratory dilution calculator for C1V1 = C2V2 equations, dry powder reconstitutions, and serial dilution series.",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript and HTML5",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
       }
-    ]
-  }
-  </script>
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://calculee.io/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is the mathematical formula behind the Laboratory Dilution Calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The calculator operates on the fundamental conservation of mass equation: C1 * V1 = C2 * V2, where C1 is initial stock concentration, V1 is stock volume required, C2 is target final concentration, and V2 is total final volume. Diluent volume is calculated as Vdiluent = V2 - V1."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I calculate the volume needed to reconstitute a lyophilized powder?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When working with dry powders, solvent volume is calculated as: Volume (µL) = [Mass (mg) / Molecular Weight (g/mol)] * [10^6 / Desired Stock Concentration (µM)]. For example, to prepare a 10 mM stock from 5 mg of compound (MW 500 g/mol), add 1,000 µL (1.0 mL) of solvent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why do bioactive compounds require an intermediate dilution step?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Directly transferring sub-microliter volumes (<0.5 µL) introduces significant pipetting errors due to liquid surface tension and tip retention. An intermediate stock (e.g. 100 µM) raises the required pipetting volume into a reproducible range (5-50 µL) before preparing final assay solutions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the maximum safe DMSO concentration for cell-based assays?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Maintain final vehicle concentration at or below 0.1% (v/v) for most cell culture assays. Concentrations above 0.1% can disrupt cell membrane fluidity and cause non-specific cytotoxicity. Always include matching vehicle controls."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between single-step dilution and serial dilution?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Single-step dilution is a direct transfer of stock solute into diluent in one operation. Serial dilution is a stepwise geometric progression (e.g., 2-fold, 5-fold, 10-fold) used to generate broad logarithmic concentration gradients for IC50 and EC50 dose-response curves."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the Dilution Factor (DF)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The Dilution Factor is the ratio of final volume to initial stock aliquot: DF = V2 / V1 = C1 / C2. For example, adding 1 mL stock to 9 mL buffer creates 10 mL total volume (a 1:10 dilution, DF = 10)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How should reconstituted chemical stock solutions (e.g., Tocris, Sigma) be stored?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Immediately divide reconstituted stocks into single-use aliquots to prevent repeated freeze-thaw cycles. Store at -20°C or -80°C in airtight containers, protected from light using amber vials or aluminum foil."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
   <style>
     /* ==========================================================================
        DESIGN TOKENS — APPLE (ESPAÑA) STYLE REFERENCE
@@ -4235,7 +4231,7 @@
         <div class="footer-nav-col">
           <h3 class="footer-col-title">Calculators</h3>
           <ul class="footer-nav-list">
-            <li><a href="index.html" class="footer-nav-link">Tocris Dilution Calculator</a></li>
+            <li><a href="index.html" class="footer-nav-link">Dilution Calculator (C1V1)</a></li>
             <li><a href="standard-deviation-calculator.html" class="footer-nav-link">Standard Deviation Calculator</a>
             </li>
             <li><a href="weighted_grade_calculator.html" class="footer-nav-link">Weighted Grade Calculator</a></li>
