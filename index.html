@@ -1148,15 +1148,77 @@
       align-items: center;
     }
 
+    .flow-step-card {
+      background-color: var(--color-canvas);
+      border-radius: 20px;
+      padding: 22px 18px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    .flow-arrow-indicator {
+      text-align: center;
+      color: var(--color-electric-blue);
+      font-weight: 700;
+      font-size: 13px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .flow-arrow-icon {
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    .flow-arrow-label {
+      display: block;
+      font-size: 11px;
+      white-space: nowrap;
+      margin-top: 2px;
+    }
+
+    @media (min-width: 769px) {
+      .flow-arrow-down {
+        display: none !important;
+      }
+    }
+
     @media (max-width: 768px) {
-      .dilution-flow-diagram {
-        grid-template-columns: 1fr !important;
-        gap: 12px !important;
+      .flow-arrow-right {
+        display: none !important;
       }
 
-      .dilution-flow-diagram > div[style*="text-align: center"] {
-        transform: rotate(90deg);
-        margin: 4px auto;
+      .dilution-flow-diagram {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0 !important;
+        max-width: 440px;
+        margin: 0 auto;
+      }
+
+      .flow-step-card {
+        padding: 20px 16px !important;
+      }
+
+      .flow-arrow-indicator {
+        padding: 10px 0 !important;
+        gap: 2px !important;
+      }
+
+      .flow-arrow-icon {
+        font-size: 22px !important;
+        line-height: 1 !important;
+      }
+
+      .flow-arrow-label {
+        font-size: 12px !important;
       }
     }
 
@@ -3398,12 +3460,10 @@
             Two-Phase Precision Dilution Cascade</h2>
         </div>
 
-        <div style="display: grid; grid-template-columns: 1fr auto 1fr auto 1fr; gap: 16px; align-items: center;"
-          class="dilution-flow-diagram">
+        <div class="dilution-flow-diagram">
 
           <!-- Shape 1: Reconstitution Vial -->
-          <div
-            style="background-color: var(--color-canvas); border-radius: 20px; padding: 22px 18px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <div class="flow-step-card">
             <div
               style="width: 54px; height: 64px; border: 2.5px solid var(--color-primary-ink); border-radius: 8px 8px 16px 16px; position: relative; margin-bottom: 12px; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;">
               <div
@@ -3423,14 +3483,14 @@
           </div>
 
           <!-- Transfer Arrow 1 -->
-          <div style="text-align: center; color: var(--color-electric-blue); font-weight: 700; font-size: 13px;">
-            <div style="font-size: 24px; line-height: 1;">&rarr;</div>
-            <span style="display: block; font-size: 11px; white-space: nowrap; margin-top: 2px;">Pipette 10 µL</span>
+          <div class="flow-arrow-indicator">
+            <span class="flow-arrow-label">Pipette 10 µL</span>
+            <span class="flow-arrow-icon flow-arrow-right">&rarr;</span>
+            <span class="flow-arrow-icon flow-arrow-down">&darr;</span>
           </div>
 
           <!-- Shape 2: Intermediate Tube -->
-          <div
-            style="background-color: var(--color-canvas); border-radius: 20px; padding: 22px 18px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <div class="flow-step-card">
             <div
               style="width: 36px; height: 64px; border: 2.5px solid var(--color-electric-blue); border-radius: 4px 4px 18px 18px; position: relative; margin-bottom: 12px; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;">
               <div style="height: 70%; background: linear-gradient(180deg, #0071e3 0%, #005bb5 100%); width: 100%;">
@@ -3447,14 +3507,15 @@
           </div>
 
           <!-- Transfer Arrow 2 -->
-          <div style="text-align: center; color: var(--color-electric-blue); font-weight: 700; font-size: 13px;">
-            <div style="font-size: 24px; line-height: 1;">&rarr;</div>
-            <span style="display: block; font-size: 11px; white-space: nowrap; margin-top: 2px;">Pipette 20 µL</span>
+          <div class="flow-arrow-indicator">
+            <span class="flow-arrow-label">Pipette 20 µL</span>
+            <span class="flow-arrow-icon flow-arrow-right">&rarr;</span>
+            <span class="flow-arrow-icon flow-arrow-down">&darr;</span>
           </div>
 
           <!-- Shape 3: Final Culture Flask / Reservoir -->
-          <div
-            style="background-color: #f0fdf4; border: 1.5px solid #86efac; border-radius: 20px; padding: 22px 18px; text-align: center; display: flex; flex-direction: column; align-items: center;">
+          <div class="flow-step-card"
+            style="background-color: #f0fdf4; border: 1.5px solid #86efac;">
             <div
               style="width: 58px; height: 64px; border: 2.5px solid #166534; border-radius: 12px 12px 20px 20px; position: relative; margin-bottom: 12px; background: #ffffff; overflow: hidden; display: flex; flex-direction: column; justify-content: flex-end;">
               <div style="height: 85%; background: linear-gradient(180deg, #bbf7d0 0%, #86efac 100%); width: 100%;">
