@@ -1828,6 +1828,160 @@
       </div>
     </div>
 
+    <!-- Visual Distribution Chart & Empirical Rule Card -->
+    <section class="card" style="margin-bottom: 32px;" aria-labelledby="chart-panel-title">
+      <div class="card-title">
+        <span id="chart-panel-title">Visual Distribution &amp; Normal Curve</span>
+        <div style="display: flex; gap: 12px; align-items: center;">
+          <label style="font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 4px; cursor: pointer; color: var(--color-deep-gray);">
+            <input type="radio" name="viz_type" value="bell" checked onchange="drawGraph()"> Bell Curve (PDF)
+          </label>
+          <label style="font-size: 13px; font-weight: 500; display: flex; align-items: center; gap: 4px; cursor: pointer; color: var(--color-deep-gray);">
+            <input type="radio" name="viz_type" value="box" onchange="drawGraph()"> Box Plot
+          </label>
+        </div>
+      </div>
+      
+      <div class="chart-box">
+        <canvas id="stat-canvas"></canvas>
+      </div>
+
+      <!-- Empirical Rule Legend (68-95-99.7%) -->
+      <div class="empirical-legend">
+        <div class="legend-card legend-1sd">
+          <div class="legend-header">
+            <span>68.27% of Data (&mu; &plusmn; 1&sigma;)</span>
+            <span id="emp-1sd-cnt" style="font-size: 11px; opacity: 0.85;">-</span>
+          </div>
+          <div class="legend-val" id="emp-1sd">Range: [&mdash;]</div>
+        </div>
+
+        <div class="legend-card legend-2sd">
+          <div class="legend-header">
+            <span>95.45% of Data (&mu; &plusmn; 2&sigma;)</span>
+            <span id="emp-2sd-cnt" style="font-size: 11px; opacity: 0.85;">-</span>
+          </div>
+          <div class="legend-val" id="emp-2sd">Range: [&mdash;]</div>
+        </div>
+
+        <div class="legend-card legend-3sd">
+          <div class="legend-header">
+            <span>99.73% of Data (&mu; &plusmn; 3&sigma;)</span>
+            <span id="emp-3sd-cnt" style="font-size: 11px; opacity: 0.85;">-</span>
+          </div>
+          <div class="legend-val" id="emp-3sd">Range: [&mdash;]</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Step-by-Step Solution Card -->
+    <section class="card" style="margin-bottom: 32px;" aria-labelledby="steps-panel-title">
+      <div class="card-title">
+        <span id="steps-panel-title">Step-by-Step Mathematical Solution</span>
+        <button class="btn-outline-action" onclick="copyStepTable()">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy Step Table
+        </button>
+      </div>
+
+      <div class="step-list">
+        <!-- Step 1: Mean -->
+        <div class="step-item">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <div class="step-title">Calculate the Arithmetic Mean (x̄)</div>
+            <div class="step-desc">Sum all observations in the dataset and divide by total count (n):</div>
+            <div class="step-formula" id="step-1-formula">x̄ = (&sum; x_i) / n = 0 / 0 = 0.0000</div>
+          </div>
+        </div>
+
+        <!-- Step 2: Deviations Table -->
+        <div class="step-item">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <div class="step-title">Calculate Deviations and Squared Differences</div>
+            <div class="step-desc">Subtract the mean from each observation (x_i &minus; x̄) and square each deviation (x_i &minus; x̄)&sup2;:</div>
+            <div class="step-table-wrapper">
+              <table class="step-table">
+                <thead>
+                  <tr>
+                    <th style="width: 10%; text-align: center;">#</th>
+                    <th style="width: 25%;">Value (x<sub>i</sub>)</th>
+                    <th style="width: 25%;">Deviation (x<sub>i</sub> &minus; x̄)</th>
+                    <th style="width: 25%;">Squared ((x<sub>i</sub> &minus; x̄)<sup>2</sup>)</th>
+                    <th style="width: 15%;">Z-Score</th>
+                  </tr>
+                </thead>
+                <tbody id="step-table-body">
+                  <tr><td colspan="5" style="text-align: center; color: var(--color-mid-gray); padding: 20px;">Enter data above to generate the step table.</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Variance -->
+        <div class="step-item">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <div class="step-title" id="step-3-title">Calculate Sample Variance (s²)</div>
+            <div class="step-desc" id="step-3-desc">Divide the Sum of Squares (SS) by degrees of freedom (n &minus; 1 Bessel's correction):</div>
+            <div class="step-formula" id="step-3-formula">s² = SS / (n &minus; 1) = 0.0000</div>
+          </div>
+        </div>
+
+        <!-- Step 4: Standard Deviation -->
+        <div class="step-item">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title" id="step-4-title">Calculate Standard Deviation (s)</div>
+            <div class="step-desc">Take the square root of the calculated variance:</div>
+            <div class="step-formula" id="step-4-formula">s = &radic;(s²) = 0.0000</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Software Cheat Sheet Section -->
+    <section class="software-cheat-sheet" style="background: var(--color-canvas, #f8fafc); border: 1px solid var(--color-hairline, #e2e8f0); border-radius: var(--radius-lg); padding: 28px 24px; margin-bottom: 32px;">
+      <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--color-electric-blue); margin-bottom: 6px;">Quick Reference &amp; Syntax</div>
+      <h2 style="font-size: 22px; font-weight: 700; color: var(--color-primary-ink); margin: 0 0 12px 0;">How to Calculate Standard Deviation in Software &amp; Calculators</h2>
+      <p style="color: var(--color-deep-gray); margin-bottom: 20px; font-size: 14px; line-height: 1.5;">Use these exact functions across spreadsheets, data science environments, and graphing calculators:</p>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px;">
+        <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--color-hairline); box-shadow: var(--shadow-sm);">
+          <h3 style="margin-top: 0; font-size: 16px; color: var(--color-primary-ink);">📊 Excel &amp; Google Sheets</h3>
+          <p style="font-size: 13px; color: var(--color-deep-gray); margin: 6px 0;"><strong>Sample (s):</strong> <br><code style="background: #f1f5f9; padding: 3px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 12px; display: inline-block; margin-top: 4px;">=STDEV.S(A1:A20)</code></p>
+          <p style="font-size: 13px; color: var(--color-deep-gray); margin: 6px 0;"><strong>Population (σ):</strong> <br><code style="background: #f1f5f9; padding: 3px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 12px; display: inline-block; margin-top: 4px;">=STDEV.P(A1:A20)</code></p>
+          <p style="font-size: 11.5px; color: var(--color-mid-gray); margin-top: 8px;">Note: Legacy <code>=STDEV()</code> uses Bessel's correction (n &minus; 1).</p>
+        </div>
+
+        <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--color-hairline); box-shadow: var(--shadow-sm);">
+          <h3 style="margin-top: 0; font-size: 16px; color: var(--color-primary-ink);">🐍 Python (NumPy &amp; Pandas)</h3>
+          <p style="font-size: 13px; color: var(--color-deep-gray); margin: 6px 0;"><strong>NumPy Sample:</strong> <br><code style="background: #f1f5f9; padding: 3px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 12px; display: inline-block; margin-top: 4px;">np.std(data, ddof=1)</code></p>
+          <p style="font-size: 13px; color: var(--color-deep-gray); margin: 6px 0;"><strong>NumPy Population:</strong> <br><code style="background: #f1f5f9; padding: 3px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 12px; display: inline-block; margin-top: 4px;">np.std(data, ddof=0)</code></p>
+          <p style="font-size: 11.5px; color: var(--color-mid-gray); margin-top: 8px;">Pandas <code>df['col'].std()</code> uses ddof=1 by default.</p>
+        </div>
+
+        <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--color-hairline); box-shadow: var(--shadow-sm);">
+          <h3 style="margin-top: 0; font-size: 16px; color: var(--color-primary-ink);">📈 R Language</h3>
+          <p style="font-size: 13px; color: var(--color-deep-gray); margin: 6px 0;"><strong>Sample (s):</strong> <br><code style="background: #f1f5f9; padding: 3px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 12px; display: inline-block; margin-top: 4px;">sd(x)</code></p>
+          <p style="font-size: 13px; color: var(--color-deep-gray); margin: 6px 0;"><strong>Population (σ):</strong> <br><code style="background: #f1f5f9; padding: 3px 6px; border-radius: 4px; font-family: var(--font-mono); font-size: 12px; display: inline-block; margin-top: 4px;">sqrt(mean((x - mean(x))^2))</code></p>
+          <p style="font-size: 11.5px; color: var(--color-mid-gray); margin-top: 8px;">Built-in <code>sd()</code> always computes sample standard deviation.</p>
+        </div>
+
+        <div style="background: #ffffff; padding: 18px; border-radius: var(--radius-md); border: 1px solid var(--color-hairline); box-shadow: var(--shadow-sm);">
+          <h3 style="margin-top: 0; font-size: 16px; color: var(--color-primary-ink);">📟 TI-84 Plus Calculator</h3>
+          <ol style="font-size: 12.5px; color: var(--color-deep-gray); padding-left: 18px; margin: 6px 0; line-height: 1.45;">
+            <li>Press <code>[STAT]</code> &rarr; <code>1:Edit...</code></li>
+            <li>Enter values into list <code>L1</code></li>
+            <li>Press <code>[STAT]</code> &rarr; <code>CALC</code> &rarr; <code>1:1-Var Stats</code></li>
+            <li>Outputs: <strong>Sx</strong> = Sample SD | <strong>&sigma;x</strong> = Population SD</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
     <!-- Related Tools Section -->
     <section class="related-tools" style="background: var(--color-canvas); border: 1px solid var(--color-hairline); border-radius: var(--radius-lg); padding: 28px 24px; margin-bottom: 32px;">
       <div style="font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; color: var(--color-electric-blue); margin-bottom: 6px;">Explore More Tools</div>
@@ -3416,6 +3570,23 @@
         </div>
       </div>
     </article>
+    <!-- Academic Citation Generator Section -->
+    <section class="citation-generator" style="background: #ffffff; border: 1px solid var(--color-hairline); border-radius: var(--radius-lg); padding: 24px; margin-top: 36px; box-shadow: var(--shadow-sm);">
+      <h2 style="font-size: 20px; font-weight: 700; color: var(--color-primary-ink); margin-top: 0; margin-bottom: 8px;">Cite This Calculator</h2>
+      <p style="font-size: 14px; color: var(--color-deep-gray); margin-top: 0; margin-bottom: 16px;">Using this calculator for an academic lab report, university thesis, or publication? Copy the formatted reference in your required citation style:</p>
+      
+      <div style="display: flex; gap: 8px; margin-bottom: 12px; flex-wrap: wrap;">
+        <button type="button" class="cite-tab-btn" onclick="switchCitation('apa', this)" style="padding: 7px 16px; border-radius: var(--radius-sm); border: 1px solid var(--color-hairline); background: var(--color-electric-blue); color: #fff; cursor: pointer; font-weight: 600; font-size: 13px;">APA 7th</button>
+        <button type="button" class="cite-tab-btn" onclick="switchCitation('mla', this)" style="padding: 7px 16px; border-radius: var(--radius-sm); border: 1px solid var(--color-hairline); background: var(--color-canvas); color: var(--color-deep-gray); cursor: pointer; font-weight: 500; font-size: 13px;">MLA 9th</button>
+        <button type="button" class="cite-tab-btn" onclick="switchCitation('harvard', this)" style="padding: 7px 16px; border-radius: var(--radius-sm); border: 1px solid var(--color-hairline); background: var(--color-canvas); color: var(--color-deep-gray); cursor: pointer; font-weight: 500; font-size: 13px;">Harvard</button>
+        <button type="button" class="cite-tab-btn" onclick="switchCitation('chicago', this)" style="padding: 7px 16px; border-radius: var(--radius-sm); border: 1px solid var(--color-hairline); background: var(--color-canvas); color: var(--color-deep-gray); cursor: pointer; font-weight: 500; font-size: 13px;">Chicago</button>
+      </div>
+
+      <div id="citation-box" style="padding: 14px 16px; background: var(--color-canvas); border-radius: var(--radius-sm); border: 1px solid var(--color-hairline); font-family: var(--font-mono); font-size: 13px; color: var(--color-primary-ink); display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;">
+        <span id="citation-text" style="flex: 1; word-break: break-word;">Calculee. (2026). Standard Deviation Calculator (Sample &amp; Population Solver). Calculee Tools. https://calculee.io/standard-deviation-calculator.html</span>
+        <button type="button" onclick="copyCitationText()" class="btn-outline-action" style="white-space: nowrap; font-size: 12px; padding: 6px 14px;">Copy Citation</button>
+      </div>
+    </section>
   </main>
 
   <!-- Toast Notification -->
@@ -4308,6 +4479,33 @@ Generated via Calculee (https://calculee.io/standard-deviation-calculator.html)`
         }
       }, 150);
     });
+
+    // Citation Switcher
+    const CITATIONS = {
+      apa: "Calculee. (2026). Standard Deviation Calculator (Sample & Population Solver). Calculee Tools. https://calculee.io/standard-deviation-calculator.html",
+      mla: 'Calculee. "Standard Deviation Calculator (Sample & Population Solver)." Calculee, 2026, https://calculee.io/standard-deviation-calculator.html.',
+      harvard: "Calculee, 2026. Standard Deviation Calculator (Sample & Population Solver). [online] Available at: <https://calculee.io/standard-deviation-calculator.html>.",
+      chicago: 'Calculee. 2026. "Standard Deviation Calculator (Sample & Population Solver)." Calculee Tools. https://calculee.io/standard-deviation-calculator.html.'
+    };
+
+    function switchCitation(style, btn) {
+      document.getElementById('citation-text').innerText = CITATIONS[style];
+      document.querySelectorAll('.cite-tab-btn').forEach(b => {
+        b.style.background = 'var(--color-canvas)';
+        b.style.color = 'var(--color-deep-gray)';
+        b.style.fontWeight = '500';
+      });
+      btn.style.background = 'var(--color-electric-blue)';
+      btn.style.color = '#fff';
+      btn.style.fontWeight = '600';
+    }
+
+    function copyCitationText() {
+      const text = document.getElementById('citation-text').innerText;
+      navigator.clipboard.writeText(text).then(() => {
+        showToast("Citation copied to clipboard!");
+      });
+    }
   </script>
 </body>
 </html>
